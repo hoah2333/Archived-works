@@ -1,3 +1,4 @@
+/* Dark Mode */
 :root {
     --bg-image: url("http://backrooms-wiki.wdfiles.com/local--files/level-1/artistlivesinme.jpg");
 
@@ -14,7 +15,6 @@
     --link-newpage-color: #F2001D;
     --black-color: #FFFFFF;
     --black-color-trans: #FFFFFF19;
-    --black-color-trans-2: #FFFFFF99;
     --white-color: #000000;
     --text-color: #E6E6E6;
     --text-color-trans: #E6E6E699;
