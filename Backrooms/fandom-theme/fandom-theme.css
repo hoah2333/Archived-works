@@ -709,6 +709,10 @@ div#container-wrap {
     clip-path: inset(0);
 }
 
+iframe.scpnet-interwiki-frame {
+    height: 300px;
+}
+
 #main-content {
     margin: 0;
     width: calc(900px - 72px);
