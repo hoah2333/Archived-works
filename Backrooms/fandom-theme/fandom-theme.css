@@ -731,9 +731,11 @@ iframe.scpnet-interwiki-frame {
     padding: 0 0 12px 0;
 }
 
-.page-tags span {
+#main-content .page-tags span {
     border: none;
     font-size: unset;
+    display: initial;
+    max-width: initial;
 }
 
 .page-tags::before {
@@ -764,6 +766,11 @@ iframe.scpnet-interwiki-frame {
     margin: 0;
     color: var(--text-color);
     font-weight: 300;
+}
+
+#page-title,
+#main-content .page-tags {
+    max-width: calc(100% - 155px);
 }
 
 #breadcrumbs,
@@ -1573,6 +1580,7 @@ div[id*="page-options-bottom"]>a {
     cursor: pointer;
     margin: 0;
     font-size: 100%;
+    white-space: nowrap;
     transition:
         color var(--trans-time),
         background-color var(--trans-time);
@@ -4836,6 +4844,10 @@ html {
     .fakeHeader .fakeTopbar div[class*="top-bar"]>ul>li>ul {
         left: unset;
         right: 0;
+    }
+
+    .fakeHeader .fakeTopbar div[class*="top-bar"]>ul>li::after {
+        margin: 0 12px 0 3px;
     }
 
     #main-content {
