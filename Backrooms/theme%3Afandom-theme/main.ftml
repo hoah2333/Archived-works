@@ -1,0 +1,525 @@
+[!-- {$inc-css}
+[[module ThemePreviewer noUi="true" theme_url="https://sigma9.scpwikicn.com/cn/cn/sigma9_ch.min.css"]]
+[[module css]]
+@import url('https://fastly.jsdelivr.net/gh/hoah2333/Archived-works@main/Backrooms/fandom-theme/fandom-theme.css');
+@import url('https://fastly.jsdelivr.net/gh/hoah2333/Archived-works@main/Backrooms/fandom-theme/fandom-theme-level.css');
+[[/module]]
+
+[[embed]]
+<iframe src="//interwiki.pages.dev/styleFrame.html?priority=0&type=sidebar&theme=https%3A%2F%2Finterwiki.scpwikicn.com%2Fcss%2Fstyle.css&override=1" style="display: none"></iframe>
+[[/embed]]
+
+[[embed]]
+<iframe src="//interwiki.pages.dev/styleFrame.html?priority=1&type=sidebar&css=%23interwiki%7B--link-color%3A%23922C2C%3B--link-color-trans%3A%23922C2C19%3B--black-color%3A%23000000%3B--link-hover-color%3A%20%23491B00%3B--trans-time%3A0.25s%20cubic-bezier(0.4%2C0%2C0.2%2C1)%3B%7D.side-block%7Bbackground%3Atransparent%3Bborder%3Anone%3Bbox-shadow%3Anone%3Bborder-radius%3A0%3Bpadding%3A0%2018px%2024px%3Bmargin%3A24px%200%200%200%3B%7D.side-block%20.heading%7Bbackground-image%3Alinear-gradient(to%20top%2Cvar(--link-color-trans)%2054%25%2Ctransparent%2054%25%2Ctransparent%20100%25)%3Bborder%3Anone%3Bmargin%3A0%20-3px%2015px%3Bpadding%3A0%203px%3B%7D.side-block%20.heading%20p%7Bfont-size%3A16px%3Bline-height%3A1.25%3Bcolor%3Avar(--black-color)%3B%7D.side-block%20.menu-item%7Bmargin%3A9px%200%3B%7D.side-block%20.menu-item%3Eimg%7Bdisplay%3Anone%3B%7D.side-block%20div.menu-item%20a%7Bcolor%3Avar(--link-color)%3Btransition%3Acolor%20var(--trans-time)%3Bfont-size%3A14px%3Bline-height%3A1.5%3Bfont-weight%3Anormal%3B%7D.side-block%20.menu-item%20a%3Ahover%7Bcolor%3Avar(--link-hover-color)%3B%7D" style="display: none"></iframe>
+[[/embed]]
+
+[[module ListPages offset="@URL|0" range="."]]
+%%content{0}%%
+[[/module]]
+[[module ListPages limit="@URL|0" range="." urlAttrPrefix="dark"]]
+[[%%content{0}%%module css]]
+@import url('https://fastly.jsdelivr.net/gh/hoah2333/Archived-works@main/Backrooms/fandom-theme/fandom-theme-dark.css');
+[[%%content{0}%%/module]]
+[[embed]]
+<iframe src="//interwiki.pages.dev/styleFrame.html?priority=1&type=sidebar&css=%23interwiki%7B--link-color%3A%23AA9956%3B--link-color-trans%3A%23AA995619%3B--black-color%3A%23FFFFFF%3B--link-hover-color%3A%20%23CCC199%3B%7D" style="display: none"></iframe>
+[[/embed]]
+[[/module]]
+[[div_ class="fakeToggleSidebar"]]
+[[a href="#container" class="openSidebar"]][[/a]]
+[[a href="###" class="closeSidebar"]][[/a]]
+[[/div]]
+[[div class="fakeHeader"]]
+[[a class="fakeHomeIcon" href="/"]][[/a]]
+[[a class="fakeH1"]][[/a]]
+[[div class="fakeH2"]]
+[[/div]]
+[[div class="fakeTopbar"]]
+[[include :backrooms-wiki-cn:nav:top]]
+[[/div]]
+[[div class="toolBar"]]
+[[module countpages category="*"]]
+[[span class="pageCount"]]%%total%%[[/span]]
+个页面
+[[/module]]
+[[module listpages offset="@URL|0" range="."]]
+[[a_ class="fakeSearchBtn" href="#u-fakeSearch"]][[/a]]
+[[a_ class="fakeDiscussBtn" href="/forum:recent-posts"]][[/a]]
+[[a_ class="fakeRecentBtn" href="/system:recent-changes"]][[/a]]
+[[a_ class="fakeLightBtn" href="/%%fullname%%/offset/0/dark_limit/1"]][[/a]]
+[[div_ class="fakeMoreBtn"]]
+[[div_ class="fakeMore"]]
+[[a class="fakeCreateBtn" href="#u-fakeCreate"]]添加新页面[[/a]]
+[[button files text="上传新文件" class="fakeUploadBtn"]]
+[[/div]]
+[[/div]]
+[[/module]]
+[[module listpages limit="@URL|0" range="." urlAttrPrefix="dark"]]
+[[a_ class="fakeSearchBtn" href="#u-fakeSearch"]][[/a]]
+[[a_ class="fakeDiscussBtn" href="/forum:recent-posts"]][[/a]]
+[[a_ class="fakeRecentBtn" href="/system:recent-changes"]][[/a]]
+[[a_ class="fakeLightBtn" href="/%%fullname%%"]][[/a]]
+[[div_ class="fakeMoreBtn"]]
+[[div_ class="fakeMore"]]
+[[a class="fakeCreateBtn" href="#u-fakeCreate"]]添加新页面[[/a]]
+[[button files text="上传新文件" class="fakeUploadBtn"]]
+[[/div]]
+[[/div]]
+[[/module]]
+[[div_ id="fakeSearch"]]
+[[/div]]
+[[div_ class="fakeSearch"]]
+[[a class="fakeSearchClose" href="###"]][[/a]]
+[[include :crom:wiki-search
+|lang=zh-cn
+|wiki=backrooms-cn
+]]
+[[/div]]
+[[div_ id="fakeCreate"]]
+[[/div]]
+[[div_ class="fakeCreate"]]
+[[div_ class="fakeCreateContainer"]]
+[[div_ class="fakeCreateTitle"]]
+创建新页面
+[[a class="fakeCreateClose" href="###"]][[/a]]
+[[/div]]
+在这里填写你的页面标题：
+[[module NewPage size="30" button="继续"]]
+[[module countpages category="*"]]
+我们目前在Backrooms Wiki上有%%total%%个页面。我们需要检查一下此名称是否可用。
+[[/module]]
+----
+[[/div]]
+[[/div]]
+[[/div]]
+[[/div]]
+
+[[div class="extraTool"]]
+[[div class="fakeLanguage"]]
+[[module listpages range="."]]
+[[div_ class="langZhBtn"]]
+[[div_ class="langZh"]]
+[[a class="fakeSimpleBtn" href="/%%fullname%%"]]简体[[/a]]
+[[a class="fakeTraditionalBtn" href="/tr:%%name%%"]]繁體[[/a]]
+[[/div]]
+[[/div]]
+[[div_ class="langEnBtn"]]
+[[div_ class="langEn"]]
+[[a class="fakeEnglishBtn" href="http://backrooms-wiki.wikidot.com/%%fullname%%"]]English[[/a]]
+[[/div]]
+[[/div]]
+[[/module]]
+[[/div]]
+[[div_ class="fakeTool"]]
+[[a class="fakeCommentsBtn" href="#comments"]][[/a]]
+[[button edit class="fakeEditBtn"]]
+[[div_ class="fakeMoreBtn"]]
+[[div_ class="fakeMore"]]
+[[button edit text="编辑源代码" class="fakeEditBtn"]]
+[[button history text="历史" class="fakeHistoryBtn"]]
+[[button rename text="移动" class="fakeRenameBtn"]]
+[[a class="fakeRefreshBtn" href=""]]刷新[[/a]]
+[[/div]]
+[[/div]]
+[[/div]]
+[[/div]]
+
+[[div_ class="fakeSide"]]
+[[a class="fakeWikidot" href="https://www.wikidot.com"]]WIKIDOT[[/a]]
+[[a class="fakeSearchBtn" href="#u-fakeSearch"]][[/a]]
+[[a class="fakeGameBtn" href="###"]]游戏[[/a]]
+[[a class="fakeMovieBtn" href="###"]]电影[[/a]]
+[[a class="fakeTVBtn" href="###"]]电视[[/a]]
+[[div_ class="fakeWikiBtn"]]
+[[div_ class="fakeWiki"]]
+[[a class="fakeExploreBtn" href="/random-site.php"]]探索Wiki[[/a]]
+[[a class="fakeCommunity" href="http://community.wikidot.com"]]社区中心[[/a]]
+[[/div]]
+[[/div]]
+[[a class="fakeCreateSite" href="https://www.wikidot.com/new-site/"]]创建WIKI[[/a]]
+[[/div]]
+[!-- --]
+
+[!-- {inc-comments}
+[[div class="fakeComments"]]
+[[# comments]]
+[[module comments title=""]]
+[[/div]]
+[!-- --]
+
+[[iftags +版式]]
+[[module ThemePreviewer noUi="true" theme_url="https://sigma9.scpwikicn.com/cn/cn/sigma9_ch.min.css"]]
+[[module css]]
+@import url('https://fastly.jsdelivr.net/gh/hoah2333/Archived-works@main/Backrooms/fandom-theme/fandom-theme.css');
+@import url('https://fastly.jsdelivr.net/gh/hoah2333/Archived-works@main/Backrooms/fandom-theme/fandom-theme-level.css');
+[[/module]]
+
+[[include :backrooms-wiki-cn:component:interwiki-style
+| priority=0
+| type=sidebar
+| override=1
+| css=priority=0&type=sidebar&theme=https%3A%2F%2Finterwiki.scpwikicn.com%2Fcss%2Fstyle.css
+]]
+
+[[include :backrooms-wiki-cn:component:interwiki-style
+| priority=1
+| type=sidebar
+| css=%23interwiki%7B--link-color%3A%23922C2C%3B--link-color-trans%3A%23922C2C19%3B--black-color%3A%23000000%3B--link-hover-color%3A%20%23491B00%3B--trans-time%3A0.25s%20cubic-bezier(0.4%2C0%2C0.2%2C1)%3B%7D.side-block%7Bbackground%3Atransparent%3Bborder%3Anone%3Bbox-shadow%3Anone%3Bborder-radius%3A0%3Bpadding%3A0%2018px%2024px%3Bmargin%3A24px%200%200%200%3B%7D.side-block%20.heading%7Bbackground-image%3Alinear-gradient(to%20top%2Cvar(--link-color-trans)%2054%25%2Ctransparent%2054%25%2Ctransparent%20100%25)%3Bborder%3Anone%3Bmargin%3A0%20-3px%2015px%3Bpadding%3A0%203px%3B%7D.side-block%20.heading%20p%7Bfont-size%3A16px%3Bline-height%3A1.25%3Bcolor%3Avar(--black-color)%3B%7D.side-block%20.menu-item%7Bmargin%3A9px%200%3B%7D.side-block%20.menu-item%3Eimg%7Bdisplay%3Anone%3B%7D.side-block%20div.menu-item%20a%7Bcolor%3Avar(--link-color)%3Btransition%3Acolor%20var(--trans-time)%3Bfont-size%3A14px%3Bline-height%3A1.5%3Bfont-weight%3Anormal%3B%7D.side-block%20.menu-item%20a%3Ahover%7Bcolor%3Avar(--link-hover-color)%3B%7D
+]]
+
+[[module ListPages offset="@URL|0" range="."]]
+%%content{0}%%
+[[/module]]
+[[module ListPages limit="@URL|0" range="." urlAttrPrefix="dark"]]
+[[%%content{0}%%module css]]
+@import url('https://fastly.jsdelivr.net/gh/hoah2333/Archived-works@main/Backrooms/fandom-theme/fandom-theme-dark.css');
+[[%%content{0}%%/module]]
+[[include :backrooms-wiki-cn:component:interwiki-style
+| priority=2
+| type=sidebar
+| css=%23interwiki%7B--link-color%3A%23AA9956%3B--link-color-trans%3A%23AA995619%3B--black-color%3A%23FFFFFF%3B--link-hover-color%3A%20%23CCC199%3B%7D
+]]
+[[/module]]
+[[div_ class="fakeToggleSidebar"]]
+[[a href="#container" class="openSidebar"]][[/a]]
+[[a href="###" class="closeSidebar"]][[/a]]
+[[/div]]
+[[div class="fakeHeader"]]
+[[a class="fakeHomeIcon" href="/"]][[/a]]
+[[a class="fakeH1"]][[/a]]
+[[div class="fakeH2"]]
+[[/div]]
+[[div class="fakeTopbar"]]
+[[include :backrooms-wiki-cn:nav:top]]
+[[/div]]
+[[div class="toolBar"]]
+[[module countpages category="*"]]
+[[span class="pageCount"]]%%total%%[[/span]]
+个页面
+[[/module]]
+[[module listpages offset="@URL|0" range="."]]
+[[a_ class="fakeSearchBtn" href="#u-fakeSearch"]][[/a]]
+[[a_ class="fakeDiscussBtn" href="/forum:recent-posts"]][[/a]]
+[[a_ class="fakeRecentBtn" href="/system:recent-changes"]][[/a]]
+[[a_ class="fakeLightBtn" href="/%%fullname%%/offset/0/dark_limit/1"]][[/a]]
+[[div_ class="fakeMoreBtn"]]
+[[div_ class="fakeMore"]]
+[[a class="fakeCreateBtn" href="#u-fakeCreate"]]添加新页面[[/a]]
+[[button files text="上传新文件" class="fakeUploadBtn"]]
+[[/div]]
+[[/div]]
+[[/module]]
+[[module listpages limit="@URL|0" range="." urlAttrPrefix="dark"]]
+[[a_ class="fakeSearchBtn" href="#u-fakeSearch"]][[/a]]
+[[a_ class="fakeDiscussBtn" href="/forum:recent-posts"]][[/a]]
+[[a_ class="fakeRecentBtn" href="/system:recent-changes"]][[/a]]
+[[a_ class="fakeLightBtn" href="/%%fullname%%"]][[/a]]
+[[div_ class="fakeMoreBtn"]]
+[[div_ class="fakeMore"]]
+[[a class="fakeCreateBtn" href="#u-fakeCreate"]]添加新页面[[/a]]
+[[button files text="上传新文件" class="fakeUploadBtn"]]
+[[/div]]
+[[/div]]
+[[/module]]
+[[div_ id="fakeSearch"]]
+[[/div]]
+[[div_ class="fakeSearch"]]
+[[a class="fakeSearchClose" href="###"]][[/a]]
+[[module CSS]]
+@keyframes sweep{0%{transform:translateY(-120px)}100%{transform:translateY(720px)}}#u-framewrapper{position:relative;min-height:720px;border-radius:8px;overflow:hidden;background-color:#f8f1f1}#u-framewrapper iframe{position:relative;border-radius:8px}#u-loading{position:absolute;top:0;left:0;width:100%;height:200px;background:linear-gradient(to bottom, #f8f1f1 10%, #ffffff 50%, #f8f1f1 90%);animation:sweep 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite}
+[[/module]]
+[[div_ id="u-framewrapper"]]
+[[div_ id="u-loading"]]
+[[/div]]
+[[html]]
+<style>#crom-frame{border:0;width:100%;min-height:720px;background-color:#f8f1f1;--modern-background-color:transparent;background-color:var(--modern-background-color)}</style>
+<iframe id="crom-frame" sandbox="allow-scripts allow-same-origin allow-popups" scrolling="no"></iframe>
+<script>
+const lang = "{$lang}";
+const wiki = "{$wiki}";
+const tagConfig = "{$tagconfig}";
+let params = [];
+if (lang.indexOf("{$") !== 0) params.push("lang=" + encodeURIComponent(lang));
+if (wiki.indexOf("{$") !== 0) params.push("wiki=" + encodeURIComponent(wiki));
+if (tagConfig.indexOf("{$") !== 0) params.push("tag_config=" + encodeURIComponent(tagConfig));
+document.getElementById("crom-frame").src = (
+  "https://crom.avn.sh/embed/search?" + params.join("&")
+);
+window.addEventListener("message", function (event) {
+  if (event.origin !== "https://crom.avn.sh") return;
+  document.getElementById("crom-frame").style.height = event.data.pageHeight + "px";
+}, false);
+window.addEventListener("DOMContentLoaded", function () {
+  if (window.onload) window.onload();
+});
+</script>
+[[/html]]
+[[/div]]
+[[/div]]
+[[div_ id="fakeCreate"]]
+[[/div]]
+[[div_ class="fakeCreate"]]
+[[div_ class="fakeCreateContainer"]]
+[[div_ class="fakeCreateTitle"]]
+创建新页面
+[[a class="fakeCreateClose" href="###"]][[/a]]
+[[/div]]
+在这里填写你的页面标题：
+[[module NewPage size="30" button="继续"]]
+[[module countpages category="*"]]
+我们目前在Backrooms Wiki上有%%total%%个页面。我们需要检查一下此名称是否可用。
+[[/module]]
+----
+[[/div]]
+[[/div]]
+[[/div]]
+[[/div]]
+
+[[div class="extraTool"]]
+[[div class="fakeLanguage"]]
+[[module listpages range="."]]
+[[div_ class="langZhBtn"]]
+[[div_ class="langZh"]]
+[[a class="fakeSimpleBtn" href="/%%fullname%%"]]简体[[/a]]
+[[a class="fakeTraditionalBtn" href="/tr:%%name%%"]]繁體[[/a]]
+[[/div]]
+[[/div]]
+[[div_ class="langEnBtn"]]
+[[div_ class="langEn"]]
+[[a class="fakeEnglishBtn" href="http://backrooms-wiki.wikidot.com/%%fullname%%"]]English[[/a]]
+[[/div]]
+[[/div]]
+[[/module]]
+[[/div]]
+[[div_ class="fakeTool"]]
+[[a class="fakeCommentsBtn" href="#comments"]][[/a]]
+[[button edit class="fakeEditBtn"]]
+[[div_ class="fakeMoreBtn"]]
+[[div_ class="fakeMore"]]
+[[button edit text="编辑源代码" class="fakeEditBtn"]]
+[[button history text="历史" class="fakeHistoryBtn"]]
+[[button rename text="移动" class="fakeRenameBtn"]]
+[[a class="fakeRefreshBtn" href=""]]刷新[[/a]]
+[[/div]]
+[[/div]]
+[[/div]]
+[[/div]]
+
+[[div_ class="fakeSide"]]
+[[a class="fakeWikidot" href="https://www.wikidot.com"]]WIKIDOT[[/a]]
+[[a class="fakeSearchBtn" href="#u-fakeSearch"]][[/a]]
+[[a class="fakeGameBtn" href="###"]]游戏[[/a]]
+[[a class="fakeMovieBtn" href="###"]]电影[[/a]]
+[[a class="fakeTVBtn" href="###"]]电视[[/a]]
+[[div_ class="fakeWikiBtn"]]
+[[div_ class="fakeWiki"]]
+[[a class="fakeExploreBtn" href="/random-site.php"]]探索Wiki[[/a]]
+[[a class="fakeCommunity" href="http://community.wikidot.com"]]社区中心[[/a]]
+[[/div]]
+[[/div]]
+[[a class="fakeCreateSite" href="https://www.wikidot.com/new-site/"]]创建WIKI[[/a]]
+[[/div]]
+
+[[>]]
+**评分：**
+[[module Rate]]
+[[/>]]
+
+[[>]]
+**评分模块与著作信息模块：**
+[[/>]]
+
+[[include :backrooms-wiki-cn:credit:start]]
+页面信息
+[[include :backrooms-wiki-cn:credit:more]]
+更多页面信息
+[[include :backrooms-wiki-cn:credit:end]]
+
+[[>]]
+**著作信息模块：**
+[[/>]]
+
+[[include :backrooms-wiki-cn:credit:start-standalone]]
+页面信息
+[[include :backrooms-wiki-cn:credit:more-standalone]]
+更多页面信息
+[[include :backrooms-wiki-cn:credit:end-standalone]]
+
+这是由 [[*user hoah2333]] 制作的美学版式，不与任何层级、物品、实体、现象、故事、设定所挂钩。在设计上参考了[[[theme:bedrock|基岩版式]]]与 [https://backrooms.fandom.com/zh/wiki/Backrooms_Wiki Backrooms Fandom 维基]的设计与配色。
+
+若需使用本版式，请在所需使用的文章开头加上以下代码：
+[[div class="code"]]
+@@[[include :backrooms-wiki-cn:theme:fandom inc-css=--]]]@@
+[[/div]]
+
+你可以在 [[include]] 之后使用如下 CSS 模块来修改标题、副标题、标志以及背景图片。
+[[div class="blockquote code"]]
+:root {
+@@    --header-title: "页眉大标题";@@
+@@    --header-subtitle: "页眉副标题";@@
+@@    --header-logo: url("自定义标志链接");@@
+@@    --bg-image: url("自定义背景图片链接");@@
+}
+[[/div]]
+
++ 示例
+
+[[include component:image-block name=https://s2.loli.net/2022/05/25/LpiSmdMy5QhfNZx.jpg|caption=图像。
+图片来源于[http://backrooms-wiki-cn.wikidot.com/theme:iceberg 冰山版式] 
+|width=200px]]
+
+可通过五个连字符“@@-----@@”创建水平分割线。若它未被放在其他部件（诸如引用块）中，则会左右延伸贯穿页面。这种将文件分割为多个部分的线就是分割线。
+
+标题可通过在一行字起始处输入 1 至 6 个加号“+”来创建。
+
+一个普通的__下划__**加粗**//斜体//--删除--{{等宽}}__**//--{{字}}--//**__
+
+另一个普通的 __下划__ **加粗** //斜体// --删除-- {{等宽}} __**//--{{字}}--//**__
+
+| [https://www.baidu.com/ 这是一个链接！] | [[[4o4-n0t-f0und|一个空链接！]]] | [[a href="http://scp-wiki-cn.wikidot.com/"]]一个普通的__下划__**加粗**//斜体//--删除--{{等宽}}__**//--{{链接}}--//**__[[/a]] | [[a href="http://scp-wiki-cn.wikidot.com/"]]另一个普通的 __下划__ **加粗** //斜体// --删除-- {{等宽}} __**//--{{链接}}--//**__[[/a]]
+
+@@ @@
+@@ @@
+@@ @@
+@@ @@
+
+[[collapsible show="+ 折叠 - 点击这里" hide="- 折叠 - 点击这里"]]
+[[f>toc]]
++ 1 级标题
+
+++ 2 级标题
+
++++ 3 级标题
+
+++++ 4 级标题
+
++++++ 5 级标题
+
+++++++ 6 级标题
+[[/collapsible]]
+
+@@ @@
+~~~~
+[[tabview]]
+[[tab 分页]]
+此为分页（tab view）。
+[[/tab]]
+[[tab 分页]]
+看，这有更多文字。
+
+多么精巧绝伦。
+[[/tab]]
+[[tab 长 Tab]]
+这是一个长的 tab，它有很多文字。[[footnote]]这是一个脚注。[[/footnote]]
+
+这是一个长的 tab，它有很多文字。
+
+这是一个长的 tab，它有很多文字。
+
+这是一个长的 tab，它有很多文字。
+
+这是一个长的 tab，它有很多文字。
+
+这是一个长的 tab，它有很多文字。
+
+这是一个长的 tab，它有很多文字。
+
+这是一个长的 tab，它有很多文字。
+[[/tab]]
+[[tab 更长的 Tab]]
+这也是一个长的 tab，它有很多文字。
+
+这也是一个长的 tab，它有很多文字。
+
+这也是一个长的 tab，它有很多文字。
+
+这也是一个长的 tab，它有很多文字。
+
+这也是一个长的 tab，它有很多文字。
+
+这也是一个长的 tab，它有很多文字。
+
+这也是一个长的 tab，它有很多文字。
+
+这也是一个长的 tab，它有很多文字。
+
+这也是一个长的 tab，它有很多文字。
+
+这也是一个长的 tab，它有很多文字。
+
+这也是一个长的 tab，它有很多文字。
+
+这也是一个长的 tab，它有很多文字。
+
+这也是一个长的 tab，它有很多文字。
+
+这也是一个长的 tab，它有很多文字。
+[[/tab]]
+[[tab 空 Tab]]
+[[/tab]]
+[[tab 空 Tab]]
+[[/tab]]
+[[tab 这里的空 tab 有着一个特别特别长的名字，我想知道为什么会有这么长？]]
+[[/tab]]
+[[tab 空 Tab]]
+[[/tab]]
+[[tab 空 Tab]]
+[[/tab]]
+[[tab 空 Tab]]
+[[/tab]]
+[[/tabview]]
+
+@@ @@
+
+> 这是一个引用块，在一行字的起始处加上“> ”来创建。
+> 
+> 更多文字
+> -----
+> 一条分割线
+> 
+>> 嵌套引用块
+>> -----
+>> 嵌套引用块里的分割线
+>> 
+>>> 嵌套嵌套引用块
+>>> -----
+>>> 嵌套嵌套引用块里的分割线
+>>> 
+>>>> 够了，禁止套娃
+
+@@ @@
+
+||~ 这是 ||~ 表格 ||
+|| 你应该老早 || 就知道怎么 ||
+|||| 做这个了吧 ||
+|| 1 || 2 ||
+|| 3 || 4 ||
+|| 谁是这里 || 最厉害的？ ||
+|| #十六进制 || #至高无上 ||
+
+[[footnoteblock]]
++ 可选功能
+你可以将下方的代码放置在页面的底部，以嵌入一个本页面的讨论区。非常建议在引入版式的同时嵌入评论区，以能更真实地模仿 Fandom 维基的排版，且若不引入，则页面顶部的讨论区按钮将无法生效。
+[[div class="code"]]
+@@[[include :backrooms-wiki-cn:theme:fandom inc-comments=--]]]@@
+[[/div]]
+[[div class="fakeComments"]]
+[[# comments]]
+[[module comments title=""]]
+[[/div]]
+
++ 代码
+注意：此处的代码可能不是最新的。若需查看最新代码，请移步 [https://github.com/hoah2333/Archived-works/tree/main/Backrooms/fandom-theme github 代码页]。
+[[collapsible show="+ 代码" hide="- 代码"]]
+[[code type="css"]]
+@import url("./fandom-theme.css");
+[[/code]]
+
+[[code type="css"]]
+@import url("./fandom-theme-dark.css");
+[[/code]]
+
+[[code type="css"]]
+@import url("./fandom-theme-level.css");
+[[/code]]
+[[/collapsible]]
+[[/iftags]]
