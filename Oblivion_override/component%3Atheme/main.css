@@ -6,8 +6,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.5; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
 /* Sections
@@ -34,7 +36,8 @@ h1 {
    * 1. Add the correct box sizing in Firefox.
    */
 hr {
-  box-sizing: content-box; /* 1 */
+  box-sizing: content-box;
+  /* 1 */
 }
 
 /**
@@ -42,8 +45,10 @@ hr {
    * 2. Correct the odd `em` font sizing in all browsers.
    */
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /* Text-level semantics
@@ -70,8 +75,10 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /**
@@ -112,10 +119,14 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.25; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.25;
+  /* 1 */
+  margin: 0;
+  /* 2 */
 }
 
 /**
@@ -123,7 +134,8 @@ textarea {
    * 1. Remove the inheritance of text transform in Firefox.
    */
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -171,8 +183,10 @@ button:-moz-focusring,
    * 2. Correct the outline style in Safari.
    */
 [type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 /**
@@ -187,8 +201,10 @@ button:-moz-focusring,
    * 2. Change font properties to `inherit` in Safari.
    */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /* -------------- */
@@ -349,7 +365,8 @@ button:-moz-focusring,
   transition: clip-path 0.15s linear;
   transition: clip-path 0.15s linear, -webkit-clip-path 0.15s linear;
 }
-#header #login-status #account-options ul, #header #login-status #account-options ul li {
+#header #login-status #account-options ul,
+#header #login-status #account-options ul li {
   display: contents;
 }
 #header #login-status #account-options a {
@@ -372,9 +389,20 @@ button:-moz-focusring,
 }
 #content-wrap::before {
   content: "";
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 100%;
+  max-height: 100%;
+  position: fixed;
   left: 0;
   top: 50vh;
+  background-image: url("https://scp-wiki.wdfiles.com/local--files/component%3Acollapsible-sidebar/sidebar-tab.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  background-size: 1rem;
 }
 #content-wrap #side-bar {
   display: flex;
@@ -388,4 +416,12 @@ button:-moz-focusring,
 #content-wrap #main-content {
   width: 90rem;
   margin: 0 auto;
+}
+
+/* ----- */
+/* Basic */
+/* ----- */
+body {
+  color: #EEEEEE;
+  background-color: #05060A;
 }/*# sourceMappingURL=main.css.map */

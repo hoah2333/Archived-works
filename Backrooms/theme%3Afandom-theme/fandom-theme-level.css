@@ -1,22 +1,16 @@
-/* Level Class Component
-  Convert from SCSS */
-
 @charset "UTF-8";
-
 #page-content .sd-container > * {
-  --sd-bg-gradient: linear-gradient(to right, #ffffff 0%, #dcdcdc 20%);
+  --sd-bg-gradient: linear-gradient(to right, #ffffff 0%, #DCDCDC 20%);
   --sd-font: var(--font);
-  --sd-border: #dcdcdc;
+  --sd-border: #DCDCDC;
   --sd-text-color: #696969;
   --sd-top-text-color: var(--sd-text-color);
   --sd-bottom-text-color: var(--sd-text-color);
 }
-
 #page-content .sd-container .top-box,
 #page-content .sd-container .diamond-color {
   background-image: var(--sd-bg-gradient);
 }
-
 #page-content .sd-container .top-box {
   border-left: initial;
   border-right: initial;
@@ -25,18 +19,15 @@
   border-radius: 5px;
   height: initial;
 }
-
 #page-content .sd-container .top-box::before {
   display: none;
 }
-
 #page-content .sd-container .top-box .gradient-box {
   top: 0;
   background: none;
   height: initial;
   width: initial;
 }
-
 #page-content .sd-container .top-box .top-text p,
 #page-content .sd-container .top-box .bottom-text p,
 #page-content .sd-container .top-box .bottom-text::after {
@@ -44,15 +35,12 @@
   line-height: 1.75;
   color: var(--sd-top-text-color);
 }
-
 #page-content .sd-container .top-box .top-text p {
   font-size: 32px;
 }
-
 #page-content .sd-container .top-box .bottom-text p {
   font-size: 24px;
 }
-
 #page-content .sd-container .top-box .header-diamond {
   height: 200%;
   width: 200px;
@@ -60,12 +48,9 @@
   right: 0;
   z-index: initial;
 }
-
-#page-content .sd-container .top-box .header-diamond .diamondy,
-#page-content .sd-container .top-box .header-diamond::after {
+#page-content .sd-container .top-box .header-diamond .diamondy, #page-content .sd-container .top-box .header-diamond::after {
   display: none;
 }
-
 #page-content .sd-container .top-box .header-diamond .bg {
   -webkit-mask: none;
   mask: none;
@@ -73,11 +58,9 @@
   background-size: 100% 200px;
   z-index: initial;
 }
-
 #page-content .sd-container .bottom-box ul {
   margin: 0;
 }
-
 #page-content .sd-container .bottom-box ul li {
   list-style: "》";
   line-height: 1.75;
@@ -85,12 +68,10 @@
   display: flex;
   color: var(--sd-bottom-text-color);
 }
-
 #page-content .sd-container .bottom-box ul li,
 #page-content .sd-container .bottom-box ul li .default::after {
   font-size: 20px;
 }
-
 #page-content .sd-container .bottom-box ul li::before {
   content: "》";
   background: initial;
@@ -100,154 +81,105 @@
   left: initial;
   top: initial;
 }
-
 #page-content .sd-container .class-0 {
-  --sd-bg-gradient: linear-gradient(to right, #ffffff 0%, #dcdcdc 20%);
-  --sd-border: #dcdcdc;
+  --sd-bg-gradient: linear-gradient(to right, #FFFFFF 0%, #DCDCDC 20%);
+  --sd-border: #DCDCDC;
   --sd-text-color: #696969;
   --sd-image: url(https://7bye.com/hoah/i/2023/03/23/ig6w.png);
 }
-
 #page-content .sd-container .class-1 {
-  --sd-bg-gradient: linear-gradient(to right, #7fff00 0%, #008000 40%);
+  --sd-bg-gradient: linear-gradient(to right, #7FFF00 0%, #008000 40%);
   --sd-border: #008000;
   --sd-text-color: #696969;
   --sd-image: url(https://7bye.com/hoah/i/2023/03/23/ko7h.png);
 }
-
 #page-content .sd-container .class-2 {
-  --sd-bg-gradient: linear-gradient(to right, #94b020 0%, #c7e252 90%);
-  --sd-border: #576d01;
-  --sd-text-color: #576d01;
+  --sd-bg-gradient: linear-gradient(to right, #94B020 0%, #C7E252 90%);
+  --sd-border: #576D01;
+  --sd-text-color: #576D01;
   --sd-image: url(https://7bye.com/hoah/i/2023/03/23/40p12.png);
 }
-
 #page-content .sd-container .class-3 {
-  --sd-bg-gradient: linear-gradient(to right, #ac9920 0%, #dfcc52 90%);
-  --sd-border: #695b00;
-  --sd-text-color: #695b00;
+  --sd-bg-gradient: linear-gradient(to right, #AC9920 0%, #DFCC52 90%);
+  --sd-border: #695B00;
+  --sd-text-color: #695B00;
   --sd-image: url(https://7bye.com/hoah/i/2023/03/23/kfu.svg);
 }
-
 #page-content .sd-container .class-4 {
-  --sd-bg-gradient: linear-gradient(to right, #c3772a 0%, #f6aa5d 90%);
-  --sd-border: #7a4108;
-  --sd-text-color: #7a4108;
+  --sd-bg-gradient: linear-gradient(to right, #C3772A 0%, #F6AA5D 90%);
+  --sd-border: #7A4108;
+  --sd-text-color: #7A4108;
   --sd-image: url(https://7bye.com/hoah/i/2023/03/23/4mte.svg);
 }
-
 #page-content .sd-container .class-5 {
-  --sd-bg-gradient: linear-gradient(to right, #560602 0%, #ac0a02 90%);
-  --sd-border: #e60000;
-  --sd-text-color: #aa6000;
+  --sd-bg-gradient: linear-gradient(to right, #560602 0%, #AC0A02 90%);
+  --sd-border: #E60000;
+  --sd-text-color: #AA6000;
   --sd-image: url(https://7bye.com/hoah/i/2023/03/23/uh18.svg);
 }
-
 #page-content .sd-container .class-0 {
   --sd-top-text-color: #000000;
 }
-
 #page-content .sd-container .class-5 {
-  --sd-top-text-color: #ffffff;
+  --sd-top-text-color: #FFFFFF;
 }
-
-#page-content .sd-container .class-unknown,
-#page-content .sd-container .class-未知,
-#page-content .sd-container .class-未知 {
+#page-content .sd-container .class-unknown, #page-content .sd-container .class-未知, #page-content .sd-container .class-未知 {
   --sd-bg-gradient: linear-gradient(to right, #777777 30%, #444444 78%);
   --sd-border: #000000;
   --sd-text-color: #000000;
   --sd-image: url(https://7bye.com/hoah/i/2023/03/23/27vuk.png);
 }
-
-#page-content .sd-container .class-habitable,
-#page-content .sd-container .class-宜居,
-#page-content .sd-container .class-宜居 {
-  --sd-bg-gradient: linear-gradient(to right, #077e0a 10%, #1a806f 70%);
-  --sd-border: #2dde2e;
-  --sd-text-color: #077e0a;
+#page-content .sd-container .class-habitable, #page-content .sd-container .class-宜居, #page-content .sd-container .class-宜居 {
+  --sd-bg-gradient: linear-gradient(to right, #077E0A 10%, #1A806F 70%);
+  --sd-border: #2DDE2E;
+  --sd-text-color: #077E0A;
   --sd-image: url(https://7bye.com/hoah/i/2023/03/23/bxu0.png);
 }
-
-#page-content .sd-container .class-deadzone,
-#page-content .sd-container .class-死区,
-#page-content .sd-container .class-死區 {
+#page-content .sd-container .class-deadzone, #page-content .sd-container .class-死区, #page-content .sd-container .class-死區 {
   --sd-bg-gradient: linear-gradient(to right, #381146 20%, #714382 80%);
   --sd-border: #000000;
   --sd-text-color: #000000;
   --sd-image: url(https://7bye.com/hoah/i/2023/03/23/1pil.png);
 }
-
-#page-content .sd-container .class-pending,
-#page-content .sd-container .class-等待分级,
-#page-content .sd-container .class-等待分級 {
-  --sd-bg-gradient: linear-gradient(to right, #aaaaaa 30%, #777777 78%);
+#page-content .sd-container .class-pending, #page-content .sd-container .class-等待分级, #page-content .sd-container .class-等待分級 {
+  --sd-bg-gradient: linear-gradient(to right, #AAAAAA 30%, #777777 78%);
   --sd-border: #000000;
   --sd-text-color: #000000;
   --sd-image: url(https://7bye.com/hoah/i/2023/03/23/1q9d.png);
 }
-
-#page-content .sd-container .class-n\/a,
-#page-content .sd-container .class-不适用,
-#page-content .sd-container .class-不適用 {
-  --sd-bg-gradient: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+#page-content .sd-container .class-n\/a, #page-content .sd-container .class-不适用, #page-content .sd-container .class-不適用 {
+  --sd-bg-gradient: linear-gradient(to right, #FFFFFF 0%, #FFFFFF 100%);
   --sd-border: #000000;
   --sd-text-color: #000000;
   --sd-image: url(https://7bye.com/hoah/i/2023/03/23/27vuk.png);
 }
-
-#page-content .sd-container .class-amended,
-#page-content .sd-container .class-运变,
-#page-content .sd-container .class-運變 {
-  --sd-bg-gradient: linear-gradient(to right, #000080 20%, #4169e1 80%);
+#page-content .sd-container .class-amended, #page-content .sd-container .class-运变, #page-content .sd-container .class-運變 {
+  --sd-bg-gradient: linear-gradient(to right, #000080 20%, #4169E1 80%);
   --sd-border: #000080;
   --sd-text-color: #000000;
   --sd-image: url(https://7bye.com/hoah/i/2023/03/23/2iz64.png);
 }
-
-#page-content .sd-container .class-omega,
-#page-content .sd-container .class-终结,
-#page-content .sd-container .class-終結 {
-  --sd-bg-gradient: linear-gradient(to right, #363636 0%, #00008b 90%);
-  --sd-border: #0000cd;
-  --sd-text-color: #0000cd;
+#page-content .sd-container .class-omega, #page-content .sd-container .class-终结, #page-content .sd-container .class-終結 {
+  --sd-bg-gradient: linear-gradient(to right, #363636 0%, #00008B 90%);
+  --sd-border: #0000CD;
+  --sd-text-color: #0000CD;
   --sd-image: url(https://7bye.com/hoah/i/2023/03/23/hzgza.png);
 }
-
-#page-content .sd-container .class-unknown,
-#page-content .sd-container .class-未知,
-#page-content .sd-container .class-未知 {
+#page-content .sd-container .class-unknown, #page-content .sd-container .class-未知, #page-content .sd-container .class-未知 {
   --sd-top-text-color: #333333;
 }
-
-#page-content .sd-container .class-habitable,
-#page-content .sd-container .class-宜居,
-#page-content .sd-container .class-宜居 {
-  --sd-top-text-color: #7fff00;
+#page-content .sd-container .class-habitable, #page-content .sd-container .class-宜居, #page-content .sd-container .class-宜居 {
+  --sd-top-text-color: #7FFF00;
 }
-
-#page-content .sd-container .class-deadzone,
-#page-content .sd-container .class-死区,
-#page-content .sd-container .class-死區 {
-  --sd-top-text-color: #c0c0c0;
+#page-content .sd-container .class-deadzone, #page-content .sd-container .class-死区, #page-content .sd-container .class-死區 {
+  --sd-top-text-color: #C0C0C0;
 }
-
-#page-content .sd-container .class-pending,
-#page-content .sd-container .class-等待分级,
-#page-content .sd-container .class-等待分級 {
+#page-content .sd-container .class-pending, #page-content .sd-container .class-等待分级, #page-content .sd-container .class-等待分級 {
   --sd-top-text-color: #333333;
 }
-
-#page-content .sd-container .class-amended,
-#page-content .sd-container .class-运变,
-#page-content .sd-container .class-運變 {
-  --sd-top-text-color: #ffffff;
+#page-content .sd-container .class-amended, #page-content .sd-container .class-运变, #page-content .sd-container .class-運變 {
+  --sd-top-text-color: #FFFFFF;
 }
-
-#page-content .sd-container .class-omega,
-#page-content .sd-container .class-终结,
-#page-content .sd-container .class-終結 {
-  --sd-top-text-color: #4169e1;
-}
-
-/*# sourceMappingURL=fandom-theme-level.css.map */
+#page-content .sd-container .class-omega, #page-content .sd-container .class-终结, #page-content .sd-container .class-終結 {
+  --sd-top-text-color: #4169E1;
+}/*# sourceMappingURL=fandom-theme-level.css.map */
