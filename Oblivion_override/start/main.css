@@ -1,0 +1,135 @@
+/*
+    Oblivion Override Main Page CSS
+    by hoah2333
+*/
+#page-title {
+  display: none;
+}
+
+#page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#page-content .navigator-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#page-content .navigator-container .navigator {
+  position: relative;
+  display: flex;
+  height: 2rem;
+  width: calc(var(--main-content-width) / 3 - 3rem);
+  background-color: #A5ACB2;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#page-content .navigator-container .navigator .nav-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 32.2px;
+  width: 10rem;
+  background-color: #FEFEFE;
+  -webkit-clip-path: inset(0 -10rem 100% 0);
+          clip-path: inset(0 -10rem 100% 0);
+  transition: -webkit-clip-path 0.15s ease 0.05s;
+  transition: clip-path 0.15s ease 0.05s;
+  transition: clip-path 0.15s ease 0.05s, -webkit-clip-path 0.15s ease 0.05s;
+}
+#page-content .navigator-container .navigator .nav-menu br {
+  display: none;
+}
+#page-content .navigator-container .navigator .nav-menu .nav-submenu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 10rem;
+  top: 0;
+  background-color: #FEFEFE;
+  width: 10rem;
+  -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0);
+  transition: -webkit-clip-path 0.15s ease 0.05s;
+  transition: clip-path 0.15s ease 0.05s;
+  transition: clip-path 0.15s ease 0.05s, -webkit-clip-path 0.15s ease 0.05s;
+}
+#page-content .navigator-container .navigator .nav-menu span {
+  width: 10rem;
+}
+#page-content .navigator-container .navigator .nav-menu span:hover + .nav-submenu,
+#page-content .navigator-container .navigator .nav-menu .nav-submenu:is(:hover, :focus-within) {
+  -webkit-clip-path: inset(0 0 -10rem 0);
+          clip-path: inset(0 0 -10rem 0);
+}
+#page-content .navigator-container .navigator:is(:hover, :focus-within) .nav-menu {
+  -webkit-clip-path: inset(0 -10rem -24.2px 0);
+          clip-path: inset(0 -10rem -24.2px 0);
+}
+#page-content .intro-container {
+  display: grid;
+  grid-template-areas: "intro intro intro intro intro" ". . . . .";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: max-content 1fr;
+  grid-column-gap: 0.75rem;
+}
+#page-content .intro-container .intro {
+  grid-area: intro;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#page-content .intro-container .media {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.6);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#page-content .menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 33.3333333333%;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+  background-color: #FFFFFF;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+#page-content .menu-container .item {
+  width: calc(33.3333333333% - 2rem);
+}
+#page-content .announce-container {
+  display: grid;
+  grid-template-areas: "blog blog" "feature video";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+}
+#page-content .announce-container .container {
+  width: 100%;
+}
+#page-content .announce-container .container .title {
+  background-color: #8CBEDE;
+  width: 100%;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#page-content .announce-container .container.blog {
+  grid-area: blog;
+}
+#page-content .announce-container .container.feature {
+  grid-area: feature;
+}
+#page-content .announce-container .container.video {
+  grid-area: video;
+}/*# sourceMappingURL=main.css.map */
