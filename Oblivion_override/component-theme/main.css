@@ -15,22 +15,29 @@
 
 :root {
     --basalt-primary-color: 220, 218, 219;
-    --basalt-secondary-color: 97, 98, 100;
-    --basalt-undertone: 141, 191, 223;
+    --basalt-secondary-color: 99, 198, 249;
+    --basalt-tertiary-color: 25, 0, 66;
+    --basalt-undertone: 61, 91, 173;
+    --basalt-bright-element-color: var(--basalt-undertone);
+    --basalt-dark-element-color: 29, 0, 66;
 
-    --header-logo: none;
+    --header-logo: url("https://7bye.com/hoah/i/2023/05/25/3qtn.png");
     --header-title: "Oblivion       \AOverride";
     --header-subtitle: "Welcome to Oblivion Override official wiki";
     --header-subtitle-color: var(--basalt-main-text-color);
     --title-size: 3.5rem;
     --subtitle-size: 1rem;
     --base-header-height: calc((var(--title-size) * 2 + var(--subtitle-size)) *1.325 + 1rem + var(--search-button-width));
+    --header-border-width: 0px;
     --header-mobile-height: var(--header-desktop-height);
     --search-icon-color: var(--basalt-main-text-color);
     --search-background-color: var(--basalt-UI-dark-palette);
-    --login-status-text-color-hover: var(--basalt-main-text-color);
 
     --side-bar-button-width: 1rem;
+
+    --bottom-area-text-color: var(--basalt-light-text-color);
+    --bottom-area-background-color: var(--basalt-dark-element-color);
+    --license-area-divider-color: var(--basalt-primary-color);
 }
 
 /* -------------- */
@@ -63,6 +70,11 @@
 
 #header h1 a span::before {
     white-space: pre;
+    color: transparent;
+    background-image: url("https://7bye.com/hoah/i/2023/05/25/mtkp.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 /* --- Topbar --- */
@@ -76,6 +88,7 @@
 
 div#account-options {
     inset-inline-start: 0;
+    inset-inline-end: unset;
 }
 
 #account-options,
@@ -83,14 +96,20 @@ div#account-options {
     clip-path: inset(0 100% 0 0);
 }
 
-div#account-options>ul>li>a:is(:hover, :focus) {
-    transition: color var(--header-link-transition-1st);
-}
-
 div#account-options>ul>li>a::before,
 #login-status a:is(.login-status-create-account, .login-status-sign-in)::before {
     right: initial;
     left: 0;
+}
+
+#login-status a:is(.login-status-create-account, .login-status-sign-in) {
+    inset-inline-start: 0;
+    inset-inline-end: unset;
+}
+
+#login-status a.login-status-create-account {
+    inset-inline-start: calc(var(--login-status-width)/2);
+    inset-inline-end: unset;
 }
 
 /* --- Search --- */
@@ -130,8 +149,31 @@ div#account-options>ul>li>a::before,
 
 #side-bar:is(:hover, :focus-within)::after {
     left: -5rem;
+    background-color: transparent;
 }
 
-:root {
-    --side-bar-button-mask: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDE2IDIwNiI+PHRpdGxlPnNpZGViYXItdGFiPC90aXRsZT48cGF0aCBkPSJNLjUsMjA1LjVWLjVINmM1LjcsMCw5LjUsMy44LDkuNSw5LjVWMTk2YzAsNS44LTMuNyw5LjUtOS41LDkuNVoiIGZpbGw9IiM0MzQzNDgiLz48cGF0aCBkPSJNNiwxYzUuNSwwLDksMy41LDksOVYxOTZjMCw1LjUtMy41LDktOSw5SDFWMUg2TTYsMEgwVjIwNkg2YzYsMCwxMC00LDEwLTEwVjEwQzE2LDQsMTIsMCw2LDBaIiBmaWxsPSIjMTYxNjE2Ii8+PHBvbHlnb24gcG9pbnRzPSIxMyAxMDAgOCAxMDAgOCA5OCAzIDEwMiA4IDEwNiA4IDEwNCAxMyAxMDQgMTMgMTAwIiBmaWxsPSIjZmRmZWZlIi8+PHBvbHlnb24gcG9pbnRzPSIxMyA0MCA4IDQwIDggMzggMyA0MiA4IDQ2IDggNDQgMTMgNDQgMTMgNDAiIGZpbGw9IiNmZGZlZmUiLz48cG9seWdvbiBwb2ludHM9IjEzIDE2MCA4IDE2MCA4IDE1OCAzIDE2MiA4IDE2NiA4IDE2NCAxMyAxNjQgMTMgMTYwIiBmaWxsPSIjZmRmZWZlIi8+PC9zdmc+");
+/* ------------------------------- */
+/* ---- Footer & License area ---- */
+/* ------------------------------- */
+
+#footer {
+    border-top: .125rem solid var(--general-border-color);
+}
+
+
+/* ------------- */
+/* --- Basic --- */
+/* ------------- */
+
+body {
+    background-color: rgb(var(--basalt-UI-dark-palette));
+    background-image: url("https://7bye.com/hoah/i/2023/05/25/3pz8.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0 0;
+}
+
+#main-content {
+    padding: 0 2rem 2rem 2rem;
+    background-color: rgba(var(--basalt-primary-color), var(--basalt-UI-opacity));
 }
