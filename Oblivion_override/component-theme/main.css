@@ -35,9 +35,13 @@
 
     --side-bar-button-width: 1rem;
 
+    --main-content-background-color: 5, 6, 10;
+
     --bottom-area-text-color: var(--basalt-light-text-color);
     --bottom-area-background-color: var(--basalt-dark-element-color);
     --license-area-divider-color: var(--basalt-primary-color);
+
+    --edit-area-toolbar-background-color: var(--basalt-dark-element-color);
 }
 
 /* -------------- */
@@ -71,7 +75,7 @@
 #header h1 a span::before {
     white-space: pre;
     color: transparent;
-    background-image: url("https://7bye.com/hoah/i/2023/05/25/mtkp.png");
+    background-image: url("https://7bye.com/hoah/i/2023/05/25/39d4.png");
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -152,6 +156,11 @@ div#account-options>ul>li>a::before,
     background-color: transparent;
 }
 
+#side-bar .side-block .menu-item.subtitle a {
+    background-color: rgba(var(--basalt-UI-dark-palette), .2);
+    padding: 0 0.575rem
+}
+
 /* ------------------------------- */
 /* ---- Footer & License area ---- */
 /* ------------------------------- */
@@ -166,8 +175,8 @@ div#account-options>ul>li>a::before,
 /* ------------- */
 
 body {
-    background-color: rgb(var(--basalt-UI-dark-palette));
-    background-image: url("https://7bye.com/hoah/i/2023/05/25/3pz8.png");
+    background-color: rgb(var(--main-content-background-color));
+    background-image: url("https://7bye.com/hoah/i/2023/05/25/4bmm.png");
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: 0 0;
@@ -176,4 +185,8 @@ body {
 #main-content {
     padding: 0 2rem 2rem 2rem;
     background-color: rgba(var(--basalt-primary-color), var(--basalt-UI-opacity));
+}
+
+:where(#action-area) a.action-area-close {
+    --button-text-color: var(--basalt-main-text-color);
 }
