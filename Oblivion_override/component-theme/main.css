@@ -183,7 +183,7 @@ body {
 }
 
 #main-content {
-    padding: 0 2rem 2rem 2rem;
+    padding: 1rem 2rem 2rem 2rem;
     background-color: rgba(var(--basalt-primary-color), var(--basalt-UI-opacity));
 }
 
