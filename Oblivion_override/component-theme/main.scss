@@ -4,10 +4,14 @@
     by hoah2333
         Based on Bedrock theme by EstrellaYoshte
 */
+
 /* Import Bedrock theme */
+
+
 /* ----------------- */
 /* --- Variables --- */
 /* ----------------- */
+
 :root {
     --basalt-primary-color: 220, 218, 219;
     --basalt-secondary-color: 108, 198, 244;
@@ -15,8 +19,9 @@
     --basalt-undertone: 61, 91, 173;
     --basalt-bright-element-color: var(--basalt-undertone);
     --basalt-dark-element-color: 29, 0, 66;
+
     --header-logo: url("https://7bye.com/hoah/i/2023/05/25/3qtn.png");
-    --header-title: "Oblivion       \aOverride";
+    --header-title: "Oblivion       \AOverride";
     --header-subtitle: "Welcome to Oblivion Override official wiki";
     --header-subtitle-color: var(--basalt-main-text-color);
     --title-size: 3.5rem;
@@ -26,27 +31,35 @@
     --header-mobile-height: var(--header-desktop-height);
     --search-icon-color: var(--basalt-main-text-color);
     --search-background-color: var(--basalt-UI-dark-palette);
+
     --side-bar-button-width: 1rem;
+
     --main-content-background-color: 5, 6, 10;
+
     --bottom-area-text-color: var(--basalt-light-text-color);
     --bottom-area-background-color: var(--basalt-dark-element-color);
     --license-area-divider-color: var(--basalt-primary-color);
+
     --edit-area-toolbar-background-color: var(--basalt-secondary-color);
 }
 
 /* -------------- */
 /* --- Header --- */
 /* -------------- */
+
 #header {
     position: relative;
     background-color: transparent;
-    grid-template-areas: "user . h-link h-link"". . h-link h-link"". . . search";
+    grid-template-areas:
+        "user . h-link h-link"
+        ". . h-link h-link"
+        ". . . search";
     grid-template-columns: var(--user-button-width) 1fr max-content var(--search-button-width);
     grid-template-rows: var(--user-button-width) max-content var(--search-button-width);
 }
 
 #header h1 a {
-    padding-right: calc(var(--base-header-height) * 0.05);
+    padding-right: calc(var(--base-header-height) * .05);
 }
 
 #header h1 a::before {
@@ -69,11 +82,13 @@
 
 /* --- Topbar --- */
 /* Not used for now */
+
 #top-bar {
     display: none;
 }
 
 /* --- Login status --- */
+
 div#account-options {
     inset-inline-start: 0;
     inset-inline-end: unset;
@@ -81,7 +96,6 @@ div#account-options {
 
 #account-options,
 :where(#login-status)> :is(.login-status-create-account, .login-status-sign-in) {
-    -webkit-clip-path: inset(0 100% 0 0);
     clip-path: inset(0 100% 0 0);
 }
 
@@ -97,11 +111,12 @@ div#account-options>ul>li>a::before,
 }
 
 #login-status a.login-status-create-account {
-    inset-inline-start: calc(var(--login-status-width) / 2);
+    inset-inline-start: calc(var(--login-status-width)/2);
     inset-inline-end: unset;
 }
 
 /* --- Search --- */
+
 #search-top-box {
     top: 2rem;
 }
@@ -113,6 +128,7 @@ div#account-options>ul>li>a::before,
 /* --------------- */
 /* --- Sidebar --- */
 /* --------------- */
+
 #side-bar {
     margin-top: 0;
     height: 100vh;
@@ -147,13 +163,16 @@ div#account-options>ul>li>a::before,
 /* ------------------------------- */
 /* ---- Footer & License area ---- */
 /* ------------------------------- */
+
 #footer {
-    border-top: 0.125rem solid var(--general-border-color);
+    border-top: .125rem solid var(--general-border-color);
 }
+
 
 /* ------------- */
 /* --- Basic --- */
 /* ------------- */
+
 body {
     background-color: rgb(var(--main-content-background-color));
     background-image: url("https://7bye.com/hoah/i/2023/05/25/4bmm.png");
@@ -170,5 +189,3 @@ body {
 :where(#action-area) a.action-area-close {
     --button-text-color: var(--basalt-main-text-color);
 }
-
-/*# sourceMappingURL=main.css.map */

@@ -73,11 +73,9 @@
     color: rgb(var(--basalt-light-text-color));
     border-left: 0.25rem solid rgba(var(--basalt-dark-element-color), 0.9);
     box-sizing: border-box;
-    -webkit-clip-path: inset(0 -10rem 100% 0);
     clip-path: inset(0 -10rem 100% 0);
     transition: -webkit-clip-path 0.15s ease 0.05s;
     transition: clip-path 0.15s ease 0.05s;
-    transition: clip-path 0.15s ease 0.05s, -webkit-clip-path 0.15s ease 0.05s;
 }
 
 #page-content .navigator-container .navigator .nav-menu br {
@@ -95,11 +93,9 @@
     border-left: 0.25rem solid rgba(var(--basalt-dark-element-color), 0.9);
     box-sizing: border-box;
     width: calc(var(--main-content-width) / 6 - 1.5rem);
-    -webkit-clip-path: inset(0 100% 0 0);
     clip-path: inset(0 100% 0 0);
     transition: -webkit-clip-path 0.15s ease 0.05s;
     transition: clip-path 0.15s ease 0.05s;
-    transition: clip-path 0.15s ease 0.05s, -webkit-clip-path 0.15s ease 0.05s;
 }
 
 #page-content .navigator-container .navigator :is(.nav-menu > div, .nav-menu .nav-submenu span) {
@@ -109,18 +105,18 @@
 
 #page-content .navigator-container .navigator .nav-menu>div:is(:hover, :focus, :focus-within) .nav-submenu,
 #page-content .navigator-container .navigator .nav-menu .nav-submenu:is(:hover, :focus, :focus-within) {
-    -webkit-clip-path: inset(0 0 -100% 0);
     clip-path: inset(0 0 -100% 0);
 }
 
 #page-content .navigator-container .navigator:is(:hover, :focus-within) .nav-menu {
-    -webkit-clip-path: inset(0 -100% -40rem 0);
     clip-path: inset(0 -100% -40rem 0);
 }
 
 #page-content .intro-container {
     display: grid;
-    grid-template-areas: "intro intro intro intro intro"". . . . .";
+    grid-template-areas:
+        "intro intro intro intro intro"
+        ". . . . .";
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: max-content 1fr;
     grid-column-gap: 0.75rem;
@@ -142,7 +138,6 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: -moz-min-content;
     height: min-content;
     transition: margin 0.15s ease 0.05s;
     margin-bottom: 1rem;
@@ -172,7 +167,6 @@
     display: flex;
     flex-wrap: wrap;
     flex-basis: 33.3333333333%;
-    -moz-column-gap: 3rem;
     column-gap: 3rem;
     row-gap: 1rem;
     background-color: rgba(var(--basalt-secondary-color), 0.9);
@@ -194,7 +188,9 @@
 
 #page-content .announce-container {
     display: grid;
-    grid-template-areas: "blog blog""feature video";
+    grid-template-areas:
+        "blog blog"
+        "feature video";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-gap: 1rem;
@@ -225,5 +221,3 @@
 #page-content .announce-container .container.video {
     grid-area: video;
 }
-
-/*# sourceMappingURL=main.css.map */
