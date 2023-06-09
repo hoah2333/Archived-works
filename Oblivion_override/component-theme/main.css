@@ -5,6 +5,9 @@
         Based on Bedrock theme by EstrellaYoshte
 */
 /* Import Bedrock theme */
+@import url("https://basalt-team.github.io/Basalt/normalize-min.css");
+@import url("https://basalt-team.github.io/Basalt/basalt-bedrock-min.css");
+
 /* ----------------- */
 /* --- Variables --- */
 /* ----------------- */
