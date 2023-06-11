@@ -24,8 +24,7 @@ $(document).ready(function () {
     }
 
     $("#confirm").click(function () {
-        function check_input();
-        
+
         var total_input = $("#main-input").val();
         for (output_number = 1; output_number <= wrapper_number; output_number++) {
             if (total_input != "") {
