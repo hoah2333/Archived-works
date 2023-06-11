@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $("#main-input").load("http://backrooms-oversight-cn.wdfiles.com/local--code/crom-search-tag-list/1 pre", function (responseTxt) {
+        $("#main-input").val(responseTxt.slice(0, -1));
+    });
     var wrapper_number = 1;
 
     $("#add").click(function () {
@@ -24,7 +27,6 @@ $(document).ready(function () {
     }
 
     $("#confirm").click(function () {
-
         var total_input = $("#main-input").val();
         for (output_number = 1; output_number <= wrapper_number; output_number++) {
             if (total_input != "") {
