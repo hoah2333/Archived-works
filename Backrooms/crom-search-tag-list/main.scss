@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap');
+
+body,
+textarea {
+    font-family: Inter, "Noto Sans SC", "Noto Sans TC";
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#component-wrapper {
+    position: relative;
+    max-width: 960px;
+    width: 100%;
+}
+
+#component-wrapper p {
+    margin: 0;
+}
+
+#component-wrapper .addition {
+    display: grid;
+    grid-template-areas:
+        "text . button1 button2"
+        "textarea textarea textarea textarea"
+        ". . confirm confirm";
+    grid-template-columns: max-content 1fr max-content max-content;
+    column-gap: 1rem;
+    row-gap: 0.25rem;
+}
+
+button {
+    font-family: Inter, "Noto Sans SC", "Noto Sans TC";
+}
+
+#component-wrapper .addition button#minus {
+    grid-area: button1;
+}
+
+#component-wrapper .addition button#add {
+    grid-area: button2;
+}
+
+#component-wrapper .addition button#confirm {
+    grid-area: confirm;
+}
+
+#addition-wrapper {
+    grid-area: textarea;
+    display: grid;
+    grid-template-areas: 
+        "name . description";
+    grid-template-columns: 1fr 10rem 1fr;
+    grid-template-rows: 1fr;
+}
+
+#addition-wrapper > p.name {
+    grid-area: name;
+}
+#addition-wrapper > p.description {
+    grid-area: description;
+}
+#addition-wrapper .input-wrapper {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 10rem 1fr;
+    grid-template-rows: 1fr;
+}
+#addition-wrapper .input-wrapper textarea {
+    margin-bottom: 1rem;
+}
+#addition-wrapper .input-wrapper textarea.textarea1 {
+    grid-column: 1/2;
+}
+#addition-wrapper .input-wrapper textarea.textarea2 {
+    grid-column: 3/4;
+}
+
+#addition-wrapper .input-wrapper .arrow {
+    grid-column: 2/3;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
