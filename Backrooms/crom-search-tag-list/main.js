@@ -30,7 +30,7 @@ $(document).ready(function () {
         var description = "这是一个 [https://toml.io/cn/v1.0.0 TOML] 配置文件，被 [https://backrooms-wiki-cn.wikidot.com/tag-search Crom 标签搜索]利用以为终端用户提供标签的纯文本描述。\n";
         description += "\n";
         description += "配置文件生成器在[http://backrooms-oversight-cn.wdfiles.com/local--code/crom-search-tag-list-manifester/1 此处]。\n";
-        description += "[[code type=\"toml\"]]";
+        description += "[[code type=\"toml\"]]\n";
         var total_input = description;
         total_input += $("#main-input").val();
         for (output_number = 1; output_number <= wrapper_number; output_number++) {
@@ -41,7 +41,7 @@ $(document).ready(function () {
             total_input += "name = \"" + $(".wrapper" + output_number + " .textarea1").val() + "\"\n";
             total_input += "description = \"" + $(".wrapper" + output_number + " .textarea2").val() + "\"";
         }
-        total_input += "[[/code]]";
+        total_input += "\n[[/code]]";
         $("#output").val(total_input);
     })
 

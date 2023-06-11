@@ -38,9 +38,16 @@
             }
 
             $("#confirm").click(function () {
-                var total_input = $("#main-input").val();
+                var description =
+                    "这是一个 [https://toml.io/cn/v1.0.0 TOML] 配置文件，被 [https://backrooms-wiki-cn.wikidot.com/tag-search Crom 标签搜索]利用以为终端用户提供标签的纯文本描述。\n";
+                description += "\n";
+                description +=
+                    "配置文件生成器在[http://backrooms-oversight-cn.wdfiles.com/local--code/crom-search-tag-list-manifester/1 此处]。\n";
+                description += "[[code type=\"toml\"]]\n";
+                var total_input = description;
+                total_input += $("#main-input").val();
                 for (output_number = 1; output_number <= wrapper_number; output_number++) {
-                    if (total_input != "") {
+                    if (total_input != description) {
                         total_input += "\n\n";
                     }
                     total_input += "[[tags]]\n";
@@ -49,6 +56,7 @@
                     total_input += "description = \"" + $(".wrapper" + output_number + " .textarea2")
                         .val() + "\"";
                 }
+                total_input += "\n[[/code]]";
                 $("#output").val(total_input);
             })
 
@@ -169,6 +177,14 @@
 <body>
     <div id="main-wrapper">
         <h1 class="title">标签搜索 TOML 生成器</h1>
+        <div class="info">
+            <h3>用法如下：</h3>
+            <ul>
+                <li>在<b>总输入</b>处黏贴下方配置文件。此处已由生成器自动填写；</li>
+                <li>在<b>添加输入</b>处填写标签名及其描述，通过右方的 <b>—</b> 与 <b>＋</b> 控制输入标签数量；</li>
+                <li>在<b>输出</b>处复制所有代码，并黏贴至此处。</li>
+            </ul>
+        </div>
         <div id="component-wrapper">
             <div class="total">
                 <p>总输入：</p>
