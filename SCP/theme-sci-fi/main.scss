@@ -216,8 +216,7 @@ h6 {
     transition: opacity var(--transition);
 }
 
-#top-bar ul li:hover ul,
-#top-bar ul li.sfhover ul {
+#top-bar ul :is(li:hover, li.sfhover) ul {
     opacity: 1;
     transition: opacity var(--transition);
 }
@@ -235,34 +234,34 @@ h6 {
     color: var(--link-color-2);
 }
 
-#top-bar [class*="top-bar"] ul li.sfhover ul li a,
-#top-bar [class*="top-bar"] ul li:hover ul li a,
-#top-bar [class*="top-bar"] ul li ul li a {
+@media (max-width: 375px) {
+    #top-bar [class*="top-bar"]>ul>li>a {
+        padding: 3.5px 8px;
+    }
+}
+
+#top-bar [class*="top-bar"] ul :is(li, li:hover, li.sfhover) ul li a {
     color: var(--link-color-2);
-    padding: 5px 12px;
+    padding: 3.5px 12px;
     background-color: transparent;
     border-color: transparent;
     width: 200px;
 }
 
-#top-bar [class*="top-bar"] ul li.sfhover ul,
-#top-bar [class*="top-bar"] ul li:hover ul,
-#top-bar [class*="top-bar"] ul li ul {
+#top-bar [class*="top-bar"] ul :is(li, li:hover, li.sfhover) ul {
     background-color: var(--topbar-bg-color-trans);
     box-shadow: 0 6px 12px var(--black-color);
     border: none;
 }
 
-#top-bar [class*="top-bar"]>ul>li.sfhover>a,
-#top-bar [class*="top-bar"]>ul>li:hover>a,
-#top-bar [class*="top-bar"] ul li.sfhover ul li a:hover,
-#top-bar [class*="top-bar"] ul li:hover ul li a:hover,
-#top-bar [class*="top-bar"] ul li ul li a:hover,
-#top-bar ul li.sfhover a:hover,
-#top-bar ul li:hover a:hover,
-#top-bar ul li.sfhover a:hover,
-#top-bar ul li:hover a:hover,
-#top-bar ul li a:hover {
+#top-bar [class*="top-bar"] ul :is(li:nth-last-of-type(1), li:nth-last-of-type(2)) ul {
+    right: 0;
+    left: unset;
+}
+
+#top-bar [class*="top-bar"]>ul>:is(li:hover, li.sfhover)>a,
+#top-bar [class*="top-bar"] ul :is(li, li:hover, li.sfhover) ul li a:hover,
+#top-bar ul :is(li, li:hover, li.sfhover) a:hover {
     background-color: var(--white-color-trans);
     border-color: transparent;
     color: var(--text-color);
@@ -337,6 +336,9 @@ h6 {
 }
 
 #search-top-box #search-top-box-form #search-top-box-input {
+    display: none;
+
+    /*
     color: var(--text-color);
     font-size: 14px;
     border-radius: 0;
@@ -347,6 +349,7 @@ h6 {
     padding: 3px 6px;
     transition: background-color var(--transition);
     font-family: var(--body-font);
+    */
 }
 
 #search-top-box #search-top-box-form>input[type=submit] {
@@ -501,8 +504,8 @@ h6 {
 }
 
 .page-rate-widget-box .btn a,
-.rate-box-with-credit-button .creditButton>p>a,
-.creditButtonStandalone>p>a {
+div.creditRate .rate-box-with-credit-button .creditButton>p>a,
+div.creditRate .creditButtonStandalone>p>a {
     display: block;
     width: 100%;
     height: 100%;
@@ -518,8 +521,8 @@ h6 {
 }
 
 .page-rate-widget-box .btn a::before,
-.rate-box-with-credit-button .creditButton>p>a::before,
-.creditButtonStandalone>p>a::before {
+div.creditRate .rate-box-with-credit-button .creditButton>p>a::before,
+div.creditRate .creditButtonStandalone>p>a::before {
     content: "";
     display: block;
     background-color: var(--text-color);
@@ -554,8 +557,8 @@ h6 {
     mask-image: var(--vote-cancel-icon);
 }
 
-.rate-box-with-credit-button .creditButton>p>a::before,
-.creditButtonStandalone>p>a::before {
+div.creditRate .rate-box-with-credit-button .creditButton>p>a::before,
+div.creditRate .creditButtonStandalone>p>a::before {
     -webkit-mask-image: var(--vote-info-icon);
     mask-image: var(--vote-info-icon);
     -webkit-mask-size: 27.5%;
@@ -571,13 +574,14 @@ h6 {
 }
 
 .page-rate-widget-box .cancel a:hover,
-.rate-box-with-credit-button .creditButton>p>a:hover,
-.creditButtonStandalone>p>a:hover {
+div.creditRate .rate-box-with-credit-button .creditButton>p>a:hover,
+div.creditRate .creditButtonStandalone>p>a:hover {
     background-color: var(--bg-color-3);
+    border-radius: 0;
 }
 
 .creditRate>.rateBox,
-.rate-box-with-credit-button>.page-rate-widget-box {
+div.creditRate .rate-box-with-credit-button>.page-rate-widget-box {
     display: contents;
 }
 
@@ -592,8 +596,8 @@ div.creditRate .rateBox {
     display: contents;
 }
 
-.rate-box-with-credit-button,
-.creditButtonStandalone {
+div.creditRate .rate-box-with-credit-button,
+div.creditRate .creditButtonStandalone {
     background-color: var(--bg-color-2);
     box-shadow: none;
     border: none;
@@ -604,24 +608,24 @@ div.creditRate .rateBox {
     text-align: center;
 }
 
-.rate-box-with-credit-button .creditButton {
+div.creditRate .rate-box-with-credit-button .creditButton {
     display: block;
     width: 26px;
     height: 26px;
     padding-left: 5px;
 }
 
-.rate-box-with-credit-button .creditButton>p,
-.creditButtonStandalone>p {
+div.creditRate .rate-box-with-credit-button .creditButton>p,
+div.creditRate .creditButtonStandalone>p {
     display: contents;
 }
 
-.creditButtonStandalone {
+div.creditRate .creditButtonStandalone {
     width: 26px;
     height: 26px;
 }
 
-.creditButtonStandalone>p>a {
+div.creditRate .creditButtonStandalone>p>a {
     box-shadow: none;
 }
 
@@ -1038,6 +1042,7 @@ textarea {
 
 #edit-page-form .form {
     width: 100%;
+    border-spacing: 0;
 }
 
 #edit-page-form .form tr {
@@ -1056,15 +1061,11 @@ textarea {
 
 #edit-page-form .form td:nth-of-type(2) input.text,
 #new-post-div input.text {
-    width: calc(100% - 8px);
+    width: 100%;
+    max-width: 100%;
     margin: 0;
     padding-left: 8px;
-    margin-left: -2px;
-}
-
-#new-post-div input.text {
-    margin: 0;
-    width: calc(100% - 12px);
+    box-sizing: border-box;
 }
 
 #edit-page-form .wd-editor-toolbar-panel,
@@ -1075,7 +1076,8 @@ textarea {
     padding: 9px 6px;
     border: 1px solid var(--border-color);
     margin: 0.5em 0 1em;
-    width: calc(100% - 14px);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #edit-page-form .wd-editor-toolbar-panel div,
@@ -1088,6 +1090,7 @@ textarea {
 #new-post-div .wd-editor-toolbar-panel div ul {
     float: unset;
     display: flex;
+    flex-wrap: wrap;
 }
 
 #edit-page-form .wd-editor-toolbar-panel div ul li,
@@ -1116,9 +1119,10 @@ textarea {
 #edit-page-form #edit-page-textarea,
 #new-post-div #np-text {
     margin: 0.5em 0 1em;
-    width: calc(100% - 10px) !important;
+    width: 100% !important;
     border: 1px solid var(--border-color);
     padding: 8px 0 8px 8px;
+    box-sizing: border-box;
 }
 
 #edit-page-form .change-textarea-size,
@@ -1141,13 +1145,13 @@ textarea {
 
 #edit-page-form .change-textarea-size a:nth-of-type(1),
 #new-post-div .change-textarea-size a:nth-of-type(1) {
-    padding: 2px 7.93px;
+    padding: 2px 11.38px;
     border-width: 0 0 1px 1px;
 }
 
 #edit-page-form .change-textarea-size a:nth-of-type(2),
 #new-post-div .change-textarea-size a:nth-of-type(2) {
-    padding: 2px 6.78px;
+    padding: 2px 7.78px;
 }
 
 #edit-page-form .edit-help-34,
@@ -1200,6 +1204,8 @@ textarea {
 #new-post-div .buttons {
     display: flex;
     justify-content: right;
+    flex-wrap: wrap;
+    row-gap: 8px;
 }
 
 #edit-page-form .buttons .btn,
@@ -1405,6 +1411,7 @@ tt,
     height: 3rem;
     min-width: 3.5rem;
     width: 3.5rem;
+    line-height: 1.25;
     box-sizing: border-box;
     color: black;
     font-weight: bold;
@@ -1477,18 +1484,6 @@ tt,
     background-size: 100% 100%;
 }
 
-div.iconContainer div.iconLeft {
-    background-color: var(--bg-color-3);
-}
-
-div.iconContainer.极限负重 div.iconInter {
-    background-color: var(--text-color);
-}
-
-div.iconContent {
-    background-color: var(--bg-color-3);
-}
-
 /* Convert from SCSS */
 @mixin mask-content {
     content: "";
@@ -1520,8 +1515,12 @@ div.iconContent {
         display: flex;
         color: var(--bg-color);
         width: 100%;
-        height: 22rem;
+        height: 21.3rem;
         position: relative;
+
+        @media (max-width: 768px) {
+            height: 45vw;
+        }
     }
 
     .achi-border {
@@ -1530,7 +1529,7 @@ div.iconContent {
         left: 2%;
         top: 14.5%;
         position: absolute;
-        height: 100%;
+        height: 85.5%;
         color: var(--bg-color-2);
         box-sizing: border-box;
 
@@ -1567,10 +1566,10 @@ div.iconContent {
 
     .achi-text {
         position: relative;
-        left: 50%;
+        left: 49%;
         top: 0;
-        width: 40%;
-        max-width: 40%;
+        width: 42.5%;
+        max-width: 42.5%;
         margin: 5px 0 0 0;
         color: var(--text-color);
     }
