@@ -1,0 +1,98 @@
+:root {
+  --header-title: "";
+  --header-subtitle: "";
+  --sp_header-logo: none;
+  --sp_header-height: 15rem;
+  --sp_top-bar-gradient-top-color: #D9851A;
+  --sp_top-bar-gradient-bottom-color: #B1630C;
+  --top-bg-color: #72A1E5;
+}
+
+#header {
+  background-image: url("https://7bye.com/hoah/i/2023/05/03/x42klo.jpg");
+  background-position: center center;
+  grid-template-areas: ". login login search" ". . . ." ". h1 . ." ". h2 . ." ". . . ." "top-bar top-bar top-bar top-bar";
+}
+#header #search-top-box {
+  left: -2rem;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+          align-items: flex-end;
+}
+#header #search-top-box #search-top-box-input {
+  display: none;
+}
+#header #search-top-box .btn {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  font-size: 0;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cpath%20fill%3D%22%23ddd%22%20d%3D%22M505%20442.7L405.3%20343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3%2044-79.7%2044-128C416%2093.1%20322.9%200%20208%200S0%2093.1%200%20208s93.1%20208%20208%20208c48.3%200%2092.7-16.4%20128-44v16.3c0%206.4%202.5%2012.5%207%2017l99.7%2099.7c9.4%209.4%2024.6%209.4%2033.9%200l28.3-28.3c9.4-9.4%209.4-24.6.1-34zM208%20336c-70.7%200-128-57.2-128-128%200-70.7%2057.2-128%20128-128%2070.7%200%20128%2057.2%20128%20128%200%2070.7-57.2%20128-128%20128z%22%2F%3E%3C%2Fsvg%3E");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 0;
+  border: 2px solid var(--top-bg-color);
+  height: 1.75rem;
+  width: 1.75rem;
+}
+#header #login-status {
+  font-size: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  margin-right: 2.5rem;
+}
+#header #login-status .printuser a {
+  font-size: 0.9rem;
+}
+#header #login-status .printuser a img {
+  background-image: url("") !important;
+  padding: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: 2px solid var(--top-bg-color);
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+#header #login-status #account-topbutton {
+  font-size: 0.9rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  color: #DDD;
+  border: 2px solid var(--top-bg-color);
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  padding: 0;
+  margin-left: 0.5rem;
+}
+#header #login-status #account-options {
+  font-size: 0.8rem;
+  right: -2.5rem;
+  border: 2px solid var(--top-bg-color);
+  background-color: rgba(118, 52, 15, 0.6);
+  width: 10rem;
+}
+#header #login-status #account-options ul li:hover {
+  background-color: rgba(212, 152, 99, 0.6);
+}
+#header #login-status #account-options ul li a {
+  color: #DDD;
+}
+#header #login-status #account-options ul li a:hover {
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */

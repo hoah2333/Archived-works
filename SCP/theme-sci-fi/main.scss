@@ -223,7 +223,7 @@ h6 {
 
 #top-bar ul li a {
     margin: unset;
-    padding: 5px 12px;
+    padding: 3.5px 12px;
     line-height: 1;
     max-height: unset;
     border: 1px solid transparent;
@@ -234,7 +234,7 @@ h6 {
     color: var(--link-color-2);
 }
 
-@media (max-width: 375px) {
+@media screen and (max-width: 375px) {
     #top-bar [class*="top-bar"]>ul>li>a {
         padding: 3.5px 8px;
     }
@@ -242,7 +242,7 @@ h6 {
 
 #top-bar [class*="top-bar"] ul :is(li, li:hover, li.sfhover) ul li a {
     color: var(--link-color-2);
-    padding: 3.5px 12px;
+    padding: 5px 12px;
     background-color: transparent;
     border-color: transparent;
     width: 200px;
@@ -252,11 +252,6 @@ h6 {
     background-color: var(--topbar-bg-color-trans);
     box-shadow: 0 6px 12px var(--black-color);
     border: none;
-}
-
-#top-bar [class*="top-bar"] ul :is(li:nth-last-of-type(1), li:nth-last-of-type(2)) ul {
-    right: 0;
-    left: unset;
 }
 
 #top-bar [class*="top-bar"]>ul>:is(li:hover, li.sfhover)>a,
@@ -270,6 +265,11 @@ h6 {
 #top-bar [class*="top-bar"]>ul>li:not(:first-of-type)>ul {
     left: -60px;
     right: unset;
+}
+
+#top-bar [class*="top-bar"] ul :is(li:nth-last-of-type(1), li:nth-last-of-type(2)) ul {
+    right: 0;
+    left: unset;
 }
 
 #login-status {
@@ -377,7 +377,7 @@ h6 {
     background-color: var(--header-bg-color);
 }
 
-@media(max-width: 767px) {
+@media screen and (max-width: 767px) {
     :root {
         --header-height: 127px;
     }
@@ -1244,6 +1244,22 @@ textarea {
         background-color var(--transition);
 }
 
+.inline-diff del {
+    background-color: var(--red-color);
+}
+
+.inline-diff del::before {
+    color: var(--red-color);
+}
+
+.inline-diff ins {
+    background-color: var(--green-color);
+}
+
+.inline-diff ins::before {
+    color: var(--green-color);
+}
+
 #footer,
 #license-area,
 #print-opyions,
@@ -1518,7 +1534,7 @@ tt,
         height: 21.3rem;
         position: relative;
 
-        @media (max-width: 768px) {
+        @media screen and (max-width: 768px) {
             height: 45vw;
         }
     }
