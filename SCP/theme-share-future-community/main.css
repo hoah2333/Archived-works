@@ -1,4 +1,9 @@
-@import url(https://scp-wiki-cn.wdfiles.com/local--code/component%3Asigma-plus/1);
+/* 
+    Share Future Community Theme
+    [2023 Wikidot Theme]
+    Based on Sigma+
+        By hoah2333, Agent Phage
+*/
 :root {
   --header-title: "";
   --header-subtitle: "";
@@ -59,6 +64,7 @@
   --sfc_header-dropdown-link-color: var(--sp_top-bar-link-color);
   --sfc_header-dropdown-link-hover-background: var(--bg-color-2-trans-2);
   --sfc_side-bar-background: var(--bg-color-3-trans-2);
+  --sfc_side-bar-mobile-background: var(--bg-color-3-trans-1);
   --sfc_side-bar-link-color: var(--sfc_link-visited-color);
   --sfc_side-bar-link-visited-color: var(--sfc_link-visited-color);
   --sfc_side-bar-link-newpage-color: var(--sfc_link-color);
@@ -174,6 +180,13 @@
   -webkit-transition: background-color var(--sfc_transition);
   transition: background-color var(--sfc_transition);
 }
+#header #top-bar .open-menu a {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  border-color: var(--sfc_border-color);
+  background-color: var(--bg-color-1);
+  color: var(--white-color);
+}
 
 body {
   color: var(--sfc_text-color);
@@ -211,6 +224,30 @@ body {
 #interwiki .side-block div.menu-item > img,
 #side-bar .side-block div.menu-item > img {
   filter: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><defs><filter id="filter" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.4666 0 0 0 0 0.0823 0 0 0 0 0.0823 0 0 0 1 0"/></filter></defs></svg>#filter');
+}
+@media (max-width: 767px) {
+  #interwiki,
+  #side-bar {
+    background-color: var(--bg-color-4);
+  }
+  #interwiki .side-block,
+  #side-bar .side-block {
+    background-color: var(--sfc_side-bar-mobile-background);
+  }
+  #interwiki .side-block[style*=background-color],
+  #side-bar .side-block[style*=background-color] {
+    background-color: var(--sfc_side-bar-mobile-background) !important;
+  }
+  #interwiki:target,
+  #side-bar:target {
+    border-color: var(--sfc_border-color);
+  }
+  #interwiki:target .close-menu,
+  #side-bar:target .close-menu {
+    background-color: var(--black-color-trans-2);
+    -webkit-backdrop-filter: blur(1px);
+            backdrop-filter: blur(1px);
+  }
 }
 
 a {

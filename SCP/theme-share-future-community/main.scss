@@ -1,4 +1,9 @@
-@import url(https://scp-wiki-cn.wdfiles.com/local--code/component%3Asigma-plus/1);
+/* 
+    Share Future Community Theme
+    [2023 Wikidot Theme]
+    Based on Sigma+
+        By hoah2333, Agent Phage
+*/
 
 :root {
     --header-title: "";
@@ -55,7 +60,7 @@
     --sp_tab-selected-text-color: var(--white-color);
     --sp_tab-selected-background: var(--bg-color-1);
     --sp_tab-selected-border-color: var(--sp_tab-border-color);
-    
+
     --sp_hovertip-background: var(--bg-color-3-trans-4);
 
     --sfc_text-color: var(--black-color);
@@ -74,6 +79,7 @@
     --sfc_header-dropdown-link-hover-background: var(--bg-color-2-trans-2);
 
     --sfc_side-bar-background: var(--bg-color-3-trans-2);
+    --sfc_side-bar-mobile-background: var(--bg-color-3-trans-1);
     --sfc_side-bar-link-color: var(--sfc_link-visited-color);
     --sfc_side-bar-link-visited-color: var(--sfc_link-visited-color);
     --sfc_side-bar-link-newpage-color: var(--sfc_link-color);
@@ -182,17 +188,26 @@
         }
     }
 
-    #top-bar :is(.top-bar, .mobile-top-bar) {
-        ul li ul {
-            backdrop-filter: blur(2px);
+    #top-bar {
+        :is(.top-bar, .mobile-top-bar) {
+            ul li ul {
+                backdrop-filter: blur(2px);
+            }
+
+            >ul>li {
+
+                a:hover,
+                &:is(.sfhover, :hover, :focus-within)>a {
+                    transition: background-color var(--sfc_transition);
+                }
+            }
         }
 
-        >ul>li {
-
-            a:hover,
-            &:is(.sfhover, :hover, :focus-within)>a {
-                transition: background-color var(--sfc_transition);
-            }
+        .open-menu a {
+            border-radius: 0;
+            border-color: var(--sfc_border-color);
+            background-color: var(--bg-color-1);
+            color: var(--white-color);
         }
     }
 }
@@ -233,6 +248,29 @@ body {
         div.menu-item {
             >img {
                 filter: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><defs><filter id="filter" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.4666 0 0 0 0 0.0823 0 0 0 0 0.0823 0 0 0 1 0"/></filter></defs></svg>#filter');
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        & {
+            background-color: var(--bg-color-4);
+
+            .side-block {
+                background-color: var(--sfc_side-bar-mobile-background);
+
+                &[style*="background-color"] {
+                    background-color: var(--sfc_side-bar-mobile-background) !important;
+                }
+            }
+        }
+
+        &:target {
+            border-color: var(--sfc_border-color);
+
+            .close-menu {
+                background-color: var(--black-color-trans-2);
+                backdrop-filter: blur(1px);
             }
         }
     }
@@ -280,20 +318,21 @@ h6 {
 }
 
 #page-content {
-    @at-root{
-    .page-rate-widget-box {
-        border-radius: 0;
+    @at-root {
+        .page-rate-widget-box {
+            border-radius: 0;
 
-        :is(.rateup, .ratedown) a {
-            transition:
-                background-color var(--sfc_transition),
-                color var(--sfc_transition);
+            :is(.rateup, .ratedown) a {
+                transition:
+                    background-color var(--sfc_transition),
+                    color var(--sfc_transition);
+            }
+        }
+
+        .creditRate .rate-box-with-credit-button {
+            border-radius: 0;
         }
     }
-
-    .creditRate .rate-box-with-credit-button {
-        border-radius: 0;
-    }}
 
     #u-credit-view {
         .fader {
@@ -354,16 +393,20 @@ h6 {
             border-color: var(--sfc_border-color);
             background-color: var(--bg-color-1);
             color: var(--white-color);
+
             &:where(:not(:last-child)) {
                 border-right-color: var(--white-color);
             }
         }
+
         td {
             border-color: var(--sfc_border-color);
         }
+
         tr:nth-of-type(odd) {
             background-color: var(--bg-color-3-trans-2);
         }
+
         tr:nth-of-type(even) {
             background-color: var(--bg-color-3-trans-1);
         }
@@ -373,12 +416,12 @@ h6 {
         border: 1px solid var(--sfc_border-color);
         background-color: var(--bg-color-3-trans-1);
     }
-    
+
     div.wiki-note {
         border-color: var(--sfc_border-color);
         background-color: var(--bg-color-3-trans-1);
     }
-    
+
     .code {
         border: 1px solid var(--sfc_border-color);
         background-color: var(--bg-color-3-trans-1);
