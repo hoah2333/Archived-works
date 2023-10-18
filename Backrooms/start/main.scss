@@ -34,7 +34,8 @@
             margin: 0 0 4rem 0;
             transition: margin 150ms cubic-bezier(0.4, 0, 0.2, 1);
 
-            &:is(:hover, :active) {
+            &:hover,
+            &:active {
                 margin: 0 0 1rem 0;
             }
 
@@ -47,7 +48,8 @@
                 transition: padding 150ms cubic-bezier(0.4, 0, 0.2, 1);
                 font-weight: bold;
 
-                &:is(:hover, :active) {
+                &:hover,
+                &:active {
                     text-decoration: none;
                     text-decoration-color: transparent;
                     padding: 2rem 0;
@@ -68,7 +70,8 @@
                 a {
                     font-size: 1.1rem;
 
-                    &:is(:hover, :active) {
+                    &:hover,
+                    &:active {
                         padding: 1.5rem 0;
                     }
                 }
@@ -173,26 +176,11 @@
 
     // 最近新增
     .recentPages {
-        display: grid;
-        grid-template-areas:
-            "translation original"
-            "featureLevelO featureTaleO"
-            "featureLevelT featureTaleT"
-            "featurePrize featurePrize";
-        grid-template-rows: 1fr 1fr 1fr 0.65fr;
-        grid-template-columns: 1fr 1fr;
-        grid-row-gap: 1rem;
-
-        @media (max-width: 550px) {
-            grid-template-areas:
-                "translation""original"
-                "featureLevelO""featureTaleO"
-                "featureLevelT""featureTaleT"
-                "featurePrize";
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-            grid-row-gap: 1rem;
-        }
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 1rem;
 
         .pageContainer {
             display: grid;
@@ -201,6 +189,11 @@
                 "page"
                 "recently";
             grid-template-rows: 1.5rem minmax(auto, 11.81rem) 1.5rem;
+            flex-basis: 50%;
+
+            @media (max-width: 550px) {
+                flex-basis: 100%;
+            }
 
             p {
                 margin: 0;
@@ -253,20 +246,9 @@
             }
         }
 
-        @each $grid-area in translation,
-        original,
-        featureLevelO,
-        featureTaleO,
-        featureLevelT,
-        featureTaleT,
-        featurePrize {
-            .#{$grid-area} {
-                grid-area: #{$grid-area};
-            }
-        }
-
         .featurePrize {
             grid-template-rows: 1.5rem minmax(auto, 7.68rem) 1.5rem;
+            flex-basis: 100%;
 
             @media (max-width: 550px) {
                 grid-template-rows: 1.5rem minmax(auto, 11.81rem) 1.5rem;
@@ -300,7 +282,8 @@
 
         .tools {
             display: grid;
-            grid-template-areas: "image text"
+            grid-template-areas:
+                "image text"
                 "link text";
             grid-template-columns: 5rem auto;
             justify-items: center;
