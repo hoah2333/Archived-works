@@ -1,0 +1,188 @@
+/*
+    Hero's Adventure Theme
+    [2023 Wikidot Theme]
+    by hoah2333
+        Based on Sigma 10 theme, maintained by EN SCP Wiki Technical Team
+        Based on Sigma 9 theme, created by Aelenna, edited by Dr Devan
+        Using Sigma+ by EstrellaYoshte
+*/
+
+@import url("https://cdn.scpwiki.com/theme/en/sigma/css/sigma.min.css");
+@import url("https://scp-wiki.wdfiles.com/local--code/component%3Asigma-plus/1");
+@import url("./image.css");
+
+@each $weight,
+$name in (100, Light),
+(300, Medium),
+(500, Regular),
+(700, Bold),
+(900, Heavy) {
+    @font-face {
+        font-family: "PuHuiTi";
+        font-style: normal;
+        font-weight: #{$weight};
+        font-display: swap;
+        src: url("./fonts/Alibaba-PuHuiTi-#{$name}.ttf") format("truetype");
+    }
+}
+
+:root {
+    --header-title: "";
+    --sp_header-logo: var(--logo-image); // 版头图片
+    --sp_header-logo-size: 30rem;
+    --sp_header-height: 7.25rem;
+    --sp_top-bar-height: 3.125rem;
+
+    --ha_white-color: 240, 224, 188;
+    --ha_black-color: 0, 0, 0;
+    --ha_secondary-black-color: 91, 79, 62;
+    --ha_yellow-color: 227, 183, 12;
+    --ha_brown-color: 49, 39, 24;
+    --ha_text-color: 197, 177, 133;
+    --ha_secondary-brown-color: 74, 56, 17;
+
+    --ha_top-bar-text-color: var(--ha_black-color);
+    --ha_top-bar-text-hover-color: var(--ha_secondary-black-color);
+    --ha_top-bar-link-color: var(--ha_text-color);
+    --ha_top-bar-link-hover-color: var(--ha_black-color);
+    --ha_top-bar-border-color: var(--ha_secondary-brown-color);
+
+    --body-font: "PuHuiTi", sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    color: rgb(var(--ha_text-color));
+}
+
+div#container-wrap {
+    background-image: var(--bg-image);
+}
+
+#header {
+    background-image: none;
+    grid-template-areas:
+        ". login login ."
+        ". . . ."
+        ". h1 h1 ."
+        ". h2 h2 ."
+        ". . . ."
+        ". top-bar top-bar search";
+
+    &::before {
+        margin: 0 auto;
+    }
+}
+
+#search-top-box {
+    position: relative;
+    right: 6rem;
+    width: auto;
+    z-index: 1;
+
+    &-form {
+        height: 100%;
+
+        input[type=submit] {
+            font-size: 1rem;
+            border-radius: 0;
+            color: rgb(var(--ha_top-bar-text-color));
+            border: none;
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0.125rem 0.375rem 0.125rem 2rem;
+            background-image: var(--search-button-bg-image);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 95%;
+            margin: auto 0;
+
+            &:hover {
+                border: none;
+                color: rgba(var(--ha_top-bar-text-color), 0.7);
+                background-color: transparent;
+                box-shadow: none;
+                text-shadow: none;
+                background-image: var(--search-button-bg-image);
+                filter: brightness(0.92);
+            }
+        }
+    }
+}
+
+#top-bar {
+    background-image: url("");
+    font-size: 1rem;
+    border-image-source: var(--top-bar-bg-image);
+    border-image-slice: calc(14 / 51 * 100%) calc(13 / 950 * 100%) fill;
+    border-image-width: 0.875rem;
+
+    &>div[class*="top-bar"] {
+        margin-right: 5rem;
+
+        &>ul {
+            justify-content: start;
+        }
+    }
+
+    :is(.top-bar, .mobile-top-bar) {
+        &>ul {
+            &>li {
+                &>a {
+                    color: rgb(var(--ha_top-bar-text-color));
+                    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+                    &.dropdown-toggle::after {
+                        content: "";
+                        background-image: var(--top-bar-dropdown-image);
+                        width: 0.6875rem;
+                        height: 0.5rem;
+                        margin-left: 0.5rem;
+                    }
+                }
+
+                &>a:hover,
+                &:is(.sfhover, :hover, :focus-within)>a {
+                    color: rgba(var(--ha_top-bar-text-color), 0.5);
+                    background-color: transparent;
+                }
+            }
+        }
+
+        ul {
+            li {
+                ul {
+                    inset-inline-start: -50%;
+                    background-color: transparent;
+                    box-shadow: none;
+                    border-image-source: var(--top-bar-dropdown-bg-image);
+                    border-image-slice: calc(2 / 261 * 100%) calc(2 / 106 * 100%) fill;
+                    border-image-width: 0.125rem;
+                    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+                    li {
+                        a {
+                            color: rgb(var(--ha_top-bar-link-color));
+                            border: none;
+                            margin: 0.5rem 0;
+                            transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+                            &:is(:hover, :focus) {
+                                color: rgb(var(--ha_top-bar-link-hover-color));
+                                background-color: transparent;
+                                border-image-source: var(--top-bar-dropdown-hover-bg-image);
+                                border-image-slice: 0 calc(14 / 91 * 100%) fill;
+                                border-image-width: 0 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 没有侧边栏的需求 */
+#side-bar {
+    display: none;
+}
