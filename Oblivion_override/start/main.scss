@@ -74,7 +74,6 @@
     border-left: 0.25rem solid rgba(var(--basalt-dark-element-color), 0.9);
     box-sizing: border-box;
     clip-path: inset(0 -10rem 100% 0);
-    transition: -webkit-clip-path 0.15s ease 0.05s;
     transition: clip-path 0.15s ease 0.05s;
 }
 
@@ -94,7 +93,6 @@
     box-sizing: border-box;
     width: calc(var(--main-content-width) / 6 - 1.5rem);
     clip-path: inset(0 100% 0 0);
-    transition: -webkit-clip-path 0.15s ease 0.05s;
     transition: clip-path 0.15s ease 0.05s;
 }
 

@@ -108,8 +108,8 @@
           box-sizing: border-box;
   -webkit-clip-path: inset(0 -10rem 100% 0);
           clip-path: inset(0 -10rem 100% 0);
-  transition: -webkit-clip-path 0.15s ease 0.05s;
   -webkit-transition: -webkit-clip-path 0.15s ease 0.05s;
+  transition: -webkit-clip-path 0.15s ease 0.05s;
   transition: clip-path 0.15s ease 0.05s;
   transition: clip-path 0.15s ease 0.05s, -webkit-clip-path 0.15s ease 0.05s;
 }
@@ -138,8 +138,8 @@
   width: calc(var(--main-content-width) / 6 - 1.5rem);
   -webkit-clip-path: inset(0 100% 0 0);
           clip-path: inset(0 100% 0 0);
-  transition: -webkit-clip-path 0.15s ease 0.05s;
   -webkit-transition: -webkit-clip-path 0.15s ease 0.05s;
+  transition: -webkit-clip-path 0.15s ease 0.05s;
   transition: clip-path 0.15s ease 0.05s;
   transition: clip-path 0.15s ease 0.05s, -webkit-clip-path 0.15s ease 0.05s;
 }
