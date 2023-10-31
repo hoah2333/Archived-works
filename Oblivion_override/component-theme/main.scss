@@ -28,7 +28,7 @@
     --header-subtitle-color: var(--basalt-main-text-color);
     --title-size: 3.5rem;
     --subtitle-size: 1rem;
-    --base-header-height: calc((var(--title-size) * 2 + var(--subtitle-size)) *1.325 + 1rem + var(--search-button-width));
+    --base-header-height: calc((var(--title-size) * 2 + var(--subtitle-size)) * 1.325 + 1rem + var(--search-button-width));
     --header-border-width: 0px;
     --header-mobile-height: var(--header-desktop-height);
     --search-icon-color: var(--basalt-main-text-color);
@@ -145,7 +145,6 @@ div#account-options>ul>li>a::before,
 
 #side-bar::after {
     top: calc(50vh - 6.4rem);
-    -webkit-mask-image: none;
     mask-image: none;
     background-image: url("https://scp-wiki.wdfiles.com/local--files/component%3Acollapsible-sidebar/sidebar-tab.svg");
     background-size: contain;
@@ -170,7 +169,7 @@ div#account-options>ul>li>a::before,
 /* ------------------------------- */
 
 #footer {
-    border-top: .125rem solid var(--general-border-color);
+    border-top: 0.125rem solid var(--general-border-color);
 }
 
 
@@ -186,9 +185,11 @@ body {
     background-position: 0 0;
 }
 
-#main-content {
+#main-content,
+body.print-body #main-content {
     padding: 1rem 2rem 2rem 2rem;
     background-color: rgba(var(--basalt-primary-color), var(--basalt-UI-opacity));
+    max-width: calc(100% - var(--main-content-side-margin) * 2 - 2rem); // 为补足上面所新增的 padding 而多减一个 2rem。
 }
 
 :where(#action-area) a.action-area-close {
@@ -206,7 +207,7 @@ form#new-thread-form table.form {
     align-items: flex-end;
     width: 100%;
     margin: 0 !important;
-    font-size: calc(var(--true-font-size)*1.25);
+    font-size: calc(var(--true-font-size) * 1.25);
 }
 
 form#new-thread-form table.form tbody,
@@ -223,7 +224,7 @@ form#new-thread-form table.form td {
 }
 
 form#new-thread-form table.form td:nth-of-type(1) {
-    font-size: calc(var(--true-font-size)*0.875);
+    font-size: calc(var(--true-font-size) * 0.875);
     color: rgb(var(--basalt-main-text-color));
     transition: color 0.175s ease-out;
 }
@@ -272,8 +273,8 @@ form#new-thread-form table.form td input.text:focus-visible,
 
 #thread-description {
     width: 100% !important;
-    min-height: calc(var(--true-font-size)*6.5);
-    font-size: calc(var(--true-font-size)*0.875);
+    min-height: calc(var(--true-font-size) * 6.5);
+    font-size: calc(var(--true-font-size) * 0.875);
     padding: 1ch 0.875ch;
     box-sizing: border-box;
     font-weight: initial;
@@ -298,7 +299,7 @@ form#new-thread-form table.form tr td>div.sub {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: calc(var(--edit-area-toolbar-icon-size)/4);
+    gap: calc(var(--edit-area-toolbar-icon-size) / 4);
     background-color: rgb(var(--edit-area-toolbar-background-color));
     border: solid var(--edit-area-border-width) rgb(var(--edit-area-border-color));
     border-bottom: 0;
@@ -328,7 +329,7 @@ form#new-thread-form table.form tr td>div.sub {
 /* Edit area */
 #post-edit {
     min-width: inherit;
-    min-height: calc(var(--true-font-size)*8);
+    min-height: calc(var(--true-font-size) * 8);
     font-family: var(--body-font);
     padding: 1ch 0.5ch;
     color: rgb(var(--basalt-main-text-color));
@@ -363,15 +364,15 @@ form#new-thread-form table.form tr td>div.sub {
 
 #page-content .forum-new-thread-box .description {
     border: solid var(--blockquote-border-width) rgb(var(--blockquote-border-color));
-    margin: .5rem 0;
-    padding: .625rem .75rem;
+    margin: 0.5rem 0;
+    padding: 0.625rem 0.75rem;
     background-color: rgb(var(--blockquote-background-color));
 }
 
 #page-content .forum-new-thread-box .description .statistics {
     margin: 0;
-    padding: 0 .25rem;
-    font-size: .875em;
+    padding: 0 0.25rem;
+    font-size: 0.875em;
     color: rgb(var(--basalt-main-text-color));
 }
 
@@ -403,7 +404,7 @@ form:is(#edit-page-form, #edit-post-form, #new-post-form, #new-thread-form)>div:
 #edit-post-form,
 #new-thread-form {
     display: grid;
-    column-gap: .5rem;
+    column-gap: 0.5rem;
     grid-template-columns: max-content 1fr 1fr;
     align-items: center;
 }
@@ -433,9 +434,9 @@ form:is(#edit-page-form, #edit-post-form, #new-post-form, #new-thread-form)>div:
 :is(#new-post-form, #edit-post-form, #new-thread-form) div.buttons {
     display: flex;
     flex-wrap: wrap;
-    gap: .325rem;
+    gap: 0.325rem;
     padding: 0;
-    margin: .325rem 0;
+    margin: 0.325rem 0;
 }
 
 :is(#new-post-form, #edit-post-form, #new-thread-form) div.buttons>input {

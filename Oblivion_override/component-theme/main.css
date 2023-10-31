@@ -24,8 +24,8 @@
   --header-subtitle-color: var(--basalt-main-text-color);
   --title-size: 3.5rem;
   --subtitle-size: 1rem;
-  --base-header-height: -webkit-calc((var(--title-size) * 2 + var(--subtitle-size)) *1.325 + 1rem + var(--search-button-width));
-  --base-header-height: calc((var(--title-size) * 2 + var(--subtitle-size)) *1.325 + 1rem + var(--search-button-width));
+  --base-header-height: -webkit-calc((var(--title-size) * 2 + var(--subtitle-size)) * 1.325 + 1rem + var(--search-button-width));
+  --base-header-height: calc((var(--title-size) * 2 + var(--subtitle-size)) * 1.325 + 1rem + var(--search-button-width));
   --header-border-width: 0px;
   --header-mobile-height: var(--header-desktop-height);
   --search-icon-color: var(--basalt-main-text-color);
@@ -138,7 +138,7 @@ div#account-options > ul > li > a::before,
   top: -webkit-calc(50vh - 6.4rem);
   top: calc(50vh - 6.4rem);
   -webkit-mask-image: none;
-  mask-image: none;
+          mask-image: none;
   background-image: url("https://scp-wiki.wdfiles.com/local--files/component%3Acollapsible-sidebar/sidebar-tab.svg");
   background-size: contain;
   background-position: 50%;
@@ -176,9 +176,12 @@ body {
   background-position: 0 0;
 }
 
-#main-content {
+#main-content,
+body.print-body #main-content {
   padding: 1rem 2rem 2rem 2rem;
   background-color: rgba(var(--basalt-primary-color), var(--basalt-UI-opacity));
+  max-width: -webkit-calc(100% - var(--main-content-side-margin) * 2 - 2rem);
+  max-width: calc(100% - var(--main-content-side-margin) * 2 - 2rem);
 }
 
 :where(#action-area) a.action-area-close {
