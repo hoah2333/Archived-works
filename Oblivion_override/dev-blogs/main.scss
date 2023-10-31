@@ -14,12 +14,20 @@
         padding: 0.5rem;
         gap: 0.5rem;
 
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
         &:is(:hover, :focus, :focus-within) {
             background-color: rgba(var(--basalt-secondary-color), 0.7);
         }
 
         .blog-text {
             flex-basis: 65%;
+
+            @media only screen and (max-width: 768px) {
+                flex-basis: initial;
+            }
 
             .blog-title {
                 font-size: 1.5rem;
@@ -46,6 +54,10 @@
 
         .blog-image {
             flex-basis: 35%;
+
+            @media only screen and (max-width: 768px) {
+                flex-basis: initial;
+            }
         }
 
         .blog-link a {
