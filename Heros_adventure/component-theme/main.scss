@@ -113,17 +113,17 @@ a {
     text-decoration: underline;
     transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:is(:hover, :focus) {
-        color: rgb(var(--ha_text-color));
-        transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
     &:visited {
         color: rgb(var(--ha_visited-link-color));
     }
 
     &.newpage {
         text-decoration: underline;
+    }
+
+    &:is(:hover, :focus) {
+        color: rgb(var(--ha_text-color));
+        transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 
