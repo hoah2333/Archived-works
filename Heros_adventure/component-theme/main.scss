@@ -463,8 +463,8 @@ div#container-wrap {
     clear: both;
     border: none;
     border-image-source: var(--blockquote-bg-image);
-    border-image-slice: calc(14 / 256 * 100%) calc(14 / 344 * 100%) fill;
-    border-image-width: 0.875rem;
+    border-image-slice: calc(17 / 256 * 100%) calc(17 / 344 * 100%) fill;
+    border-image-width: 1rem;
 
     &:is(:first-child, :only-child) {
         margin-top: 0;

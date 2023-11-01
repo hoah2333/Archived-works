@@ -383,8 +383,8 @@ div#container-wrap {
   clear: both;
   border: none;
   border-image-source: var(--blockquote-bg-image);
-  border-image-slice: 5.46875% 4.0697674419% fill;
-  border-image-width: 0.875rem;
+  border-image-slice: 6.640625% 4.9418604651% fill;
+  border-image-width: 1rem;
 }
 :is(blockquote, .blockquote, div.blockquote, [class*=blockquote]):is(:first-child, :only-child) {
   margin-top: 0;
