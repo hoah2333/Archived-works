@@ -1,3 +1,7 @@
+/*
+    Hero's Adventure Main Page CSS
+    by hoah2333
+*/
 #page-title {
   display: none;
 }
@@ -7,12 +11,12 @@
 }
 #page-content .page-container {
   display: grid;
-  grid-template-areas: "join join join" "about news more" "nav nav nav";
+  grid-template-areas: "join join join" "about news info" "nav nav nav";
   grid-template-columns: 1.25fr 1fr 0.75fr;
 }
 @media screen and (max-width: 768px) {
   #page-content .page-container {
-    grid-template-areas: "join" "about" "news" "more" "nav";
+    grid-template-areas: "join" "about" "news" "info" "nav";
     grid-template-columns: 1fr;
   }
 }
@@ -73,7 +77,7 @@
             flex-basis: 33%;
   }
 }
-#page-content .page-container :is(.about, .news, .more) {
+#page-content .page-container :is(.about, .news, .info) {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -82,7 +86,7 @@
   -webkit-flex-direction: column;
           flex-direction: column;
 }
-#page-content .page-container :is(.about, .news, .more) .title {
+#page-content .page-container :is(.about, .news, .info) .title {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -98,21 +102,21 @@
      -moz-column-gap: 0.25rem;
           column-gap: 0.25rem;
 }
-#page-content .page-container :is(.about, .news, .more) .title img {
+#page-content .page-container :is(.about, .news, .info) .title img {
   max-height: 100%;
 }
-#page-content .page-container :is(.about, .news, .more) .text {
+#page-content .page-container :is(.about, .news, .info) .text {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
           flex-grow: 1;
 }
-#page-content .page-container :is(.about, .news, .more) .text p:is(:first-child, :only-child) {
+#page-content .page-container :is(.about, .news, .info) .text p:is(:first-child, :only-child) {
   margin-top: 0;
 }
-#page-content .page-container :is(.about, .news, .more) .text p:last-child:not(:only-child) {
+#page-content .page-container :is(.about, .news, .info) .text p:last-child:not(:only-child) {
   margin-bottom: 1em;
 }
-#page-content .page-container :is(.about, .news, .more) .link {
+#page-content .page-container :is(.about, .news, .info) .link {
   text-align: right;
 }
 #page-content .page-container .about {
@@ -121,8 +125,8 @@
 #page-content .page-container .news {
   grid-area: news;
 }
-#page-content .page-container .more {
-  grid-area: more;
+#page-content .page-container .info {
+  grid-area: info;
 }
 #page-content .page-container .nav {
   grid-area: nav;

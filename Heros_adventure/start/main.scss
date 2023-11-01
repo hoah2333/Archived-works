@@ -1,3 +1,8 @@
+/*
+    Hero's Adventure Main Page CSS
+    by hoah2333
+*/
+
 #page-title {
     display: none;
 }
@@ -11,13 +16,13 @@
         display: grid;
         grid-template-areas:
             "join join join"
-            "about news more"
+            "about news info"
             "nav nav nav";
         grid-template-columns: 1.25fr 1fr 0.75fr;
 
         @media screen and (max-width: 768px) {
             grid-template-areas:
-                "join""about""news""more""nav";
+                "join""about""news""info""nav";
             grid-template-columns: 1fr;
         }
 
@@ -64,7 +69,7 @@
             }
         }
 
-        :is(.about, .news, .more) {
+        :is(.about, .news, .info) {
             display: flex;
             flex-direction: column;
 
@@ -106,7 +111,7 @@
 
         @each $name in about,
         news,
-        more {
+        info {
             .#{$name} {
                 grid-area: #{$name};
             }
