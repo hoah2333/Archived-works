@@ -7,9 +7,16 @@
         Based on Sigma 9 theme, created by Aelenna, edited by Dr Devan
         Using Sigma+ by EstrellaYoshte
 */
+/* 引用版式 - Sigma-10 */
 @import url("https://cdn.scpwiki.com/theme/en/sigma/css/sigma.min.css");
+/* 引用组件 - Sigma+ */
 @import url("https://scp-wiki.wdfiles.com/local--code/component%3Asigma-plus/1");
+/* 引用经 base64 转义后的图片 */
 @import url("./image.css");
+/* 引用字体 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900;1000&display=swap");
 @font-face {
   font-family: "PuHuiTi";
   font-style: normal;
@@ -46,24 +53,28 @@
   src: url("./fonts/Alibaba-PuHuiTi-Heavy.ttf") format("truetype");
 }
 :root {
+  --header-font: "PuHuiTi", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
+  --body-font: var(--header-font);
+  --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
   --header-title: "";
   --sp_header-logo: var(--logo-image);
   --sp_header-logo-size: 30rem;
   --sp_header-height: 7.25rem;
   --sp_top-bar-height: 3.125rem;
-  --ha_white-color: 240, 224, 188;
+  --ha_white-color: 252, 252, 252;
   --ha_black-color: 0, 0, 0;
   --ha_secondary-black-color: 91, 79, 62;
-  --ha_yellow-color: 227, 183, 12;
-  --ha_brown-color: 49, 39, 24;
-  --ha_text-color: 197, 177, 133;
-  --ha_secondary-brown-color: 74, 56, 17;
+  --ha_yellow-color: 243, 196, 10;
+  --ha_link-color: 198, 178, 134;
+  --ha_visited-link-color: 176, 160, 124;
+  --ha_text-color: 240, 224, 188;
+  --ha_border-color: 85, 74, 59;
+  --ha_secondary-border-color: 74, 56, 17;
   --ha_top-bar-text-color: var(--ha_black-color);
   --ha_top-bar-text-hover-color: var(--ha_secondary-black-color);
-  --ha_top-bar-link-color: var(--ha_text-color);
+  --ha_top-bar-link-color: var(--ha_link-color);
   --ha_top-bar-link-hover-color: var(--ha_black-color);
-  --ha_top-bar-border-color: var(--ha_secondary-brown-color);
-  --body-font: "PuHuiTi", sans-serif;
+  --ha_top-bar-border-color: var(--ha_secondary-border-color);
 }
 
 body {
@@ -71,16 +82,83 @@ body {
   color: rgb(var(--ha_text-color));
 }
 
+a {
+  color: rgb(var(--ha_link-color));
+  text-decoration: underline;
+  -webkit-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+a:is(:hover, :focus) {
+  color: rgb(var(--ha_text-color));
+  -webkit-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+a:visited {
+  color: rgb(var(--ha_visited-link-color));
+}
+
+#page-title,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: rgb(var(--ha_link-color));
+  font-weight: bold;
+  font-family: var(--header-font);
+  margin: 0.325rem 0;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.325rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
 div#container-wrap {
-  background-image: var(--bg-image);
+  background-image: var(--bg-image), -webkit-gradient(linear, left top, right top, from(#24201C), color-stop(15.7291666667%, #24201C), color-stop(18.8541666667%, #25221C), color-stop(21.6666666667%, #26221D), color-stop(23.0729166667%, #26231D), color-stop(24.7916666667%, #27231D), color-stop(25.7291666667%, #29241E), color-stop(27.1875%, #2A241E), color-stop(27.9166666667%, #2B251E), color-stop(29.0104166667%, #2B261F), color-stop(29.6354166667%, #2C261F), color-stop(30.7291666667%, #2C271F), color-stop(31.3541666667%, #2E2720), color-stop(32.2916666667%, #2F2920), color-stop(32.7604166667%, #312920), color-stop(33.6979166667%, #342D25), color-stop(34.1666666667%, #352E25), color-stop(35.1041666667%, #362E25), color-stop(35.5729166667%, #372F25), color-stop(36.3541666667%, #392F26), color-stop(36.9791666667%, #393126), color-stop(37.7604166667%, #3A3126), color-stop(38.2291666667%, #3B3227), color-stop(39.0104166667%, #3C3327), color-stop(39.6354166667%, #3D3327), color-stop(40.4166666667%, #3D3429), color-stop(41.0416666667%, #3E3429), color-stop(41.8229166667%, #3F3529), color-stop(42.1354166667%, #40352A), color-stop(42.4479166667%, #3E3327), color-stop(43.2291666667%, #3F3427), color-stop(43.8541666667%, #3F3527), color-stop(44.7916666667%, #403529), color-stop(45.5729166667%, #423629), color-stop(46.6666666667%, #433629), color-stop(48.8541666667%, #44372A), color-stop(49.9479166667%, #45392A), color-stop(52.2916666667%, #463A2B), color-stop(57.4479166667%, #473A2B), color-stop(59.7916666667%, #463A2B), color-stop(60.8854166667%, #45392A), color-stop(63.0729166667%, #44372A), color-stop(64.1666666667%, #433629), color-stop(64.9479166667%, #423629), color-stop(65.8854166667%, #403529), color-stop(66.5104166667%, #3F3527), color-stop(67.2916666667%, #3F3427), color-stop(67.9166666667%, #3E3327), color-stop(68.6979166667%, #3D3326), color-stop(69.3229166667%, #3C3226), color-stop(70.1041666667%, #3B3226), color-stop(70.7291666667%, #3B3125), color-stop(71.5104166667%, #3A3125), color-stop(71.9791666667%, #392F25), color-stop(72.7604166667%, #372E24), color-stop(73.3854166667%, #362E24), color-stop(74.1666666667%, #362D24), color-stop(74.6354166667%, #352D23), color-stop(75.5729166667%, #342C23), color-stop(76.0416666667%, #332C23), color-stop(76.9791666667%, #322B23), color-stop(77.4479166667%, #322A22), color-stop(78.3854166667%, #312A22), color-stop(86.6666666667%, #2F2B24), color-stop(88.0729166667%, #2E2B24), color-stop(90.8854166667%, #2E2A24), color-stop(94.0104166667%, #2D2A23), to(#2C2923));
+  background-image: var(--bg-image), linear-gradient(90deg, #24201C 0%, #24201C 15.7291666667%, #25221C 18.8541666667%, #26221D 21.6666666667%, #26231D 23.0729166667%, #27231D 24.7916666667%, #29241E 25.7291666667%, #2A241E 27.1875%, #2B251E 27.9166666667%, #2B261F 29.0104166667%, #2C261F 29.6354166667%, #2C271F 30.7291666667%, #2E2720 31.3541666667%, #2F2920 32.2916666667%, #312920 32.7604166667%, #342D25 33.6979166667%, #352E25 34.1666666667%, #362E25 35.1041666667%, #372F25 35.5729166667%, #392F26 36.3541666667%, #393126 36.9791666667%, #3A3126 37.7604166667%, #3B3227 38.2291666667%, #3C3327 39.0104166667%, #3D3327 39.6354166667%, #3D3429 40.4166666667%, #3E3429 41.0416666667%, #3F3529 41.8229166667%, #40352A 42.1354166667%, #3E3327 42.4479166667%, #3F3427 43.2291666667%, #3F3527 43.8541666667%, #403529 44.7916666667%, #423629 45.5729166667%, #433629 46.6666666667%, #44372A 48.8541666667%, #45392A 49.9479166667%, #463A2B 52.2916666667%, #473A2B 57.4479166667%, #463A2B 59.7916666667%, #45392A 60.8854166667%, #44372A 63.0729166667%, #433629 64.1666666667%, #423629 64.9479166667%, #403529 65.8854166667%, #3F3527 66.5104166667%, #3F3427 67.2916666667%, #3E3327 67.9166666667%, #3D3326 68.6979166667%, #3C3226 69.3229166667%, #3B3226 70.1041666667%, #3B3125 70.7291666667%, #3A3125 71.5104166667%, #392F25 71.9791666667%, #372E24 72.7604166667%, #362E24 73.3854166667%, #362D24 74.1666666667%, #352D23 74.6354166667%, #342C23 75.5729166667%, #332C23 76.0416666667%, #322B23 76.9791666667%, #322A22 77.4479166667%, #312A22 78.3854166667%, #2F2B24 86.6666666667%, #2E2B24 88.0729166667%, #2E2A24 90.8854166667%, #2D2A23 94.0104166667%, #2C2923 100%);
+  background-position: top center;
 }
 
 #header {
   background-image: none;
   grid-template-areas: ". login login ." ". . . ." ". h1 h1 ." ". h2 h2 ." ". . . ." ". top-bar top-bar search";
+  grid-template-rows: auto auto 1fr auto auto auto;
 }
 #header::before {
   margin: 0 auto;
+}
+#header h1 {
+  width: 100%;
+  height: 100%;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+#header h1 a {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
 }
 
 #search-top-box {
@@ -107,6 +185,12 @@ div#container-wrap {
   background-repeat: no-repeat;
   background-size: 95%;
   margin: auto 0;
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+  -webkit-transition: -webkit-filter 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-filter 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: filter 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: filter 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-filter 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #search-top-box-form input[type=submit]:hover {
   border: none;
@@ -118,6 +202,10 @@ div#container-wrap {
   background-image: var(--search-button-bg-image);
   -webkit-filter: brightness(0.92);
           filter: brightness(0.92);
+  -webkit-transition: -webkit-filter 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-filter 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: filter 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: filter 0.25s cubic-bezier(0.4, 0, 0.2, 1), -webkit-filter 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #top-bar {
@@ -147,9 +235,11 @@ div#container-wrap {
   height: 0.5rem;
   margin-left: 0.5rem;
 }
-#top-bar :is(.top-bar, .mobile-top-bar) > ul > li > a:hover, #top-bar :is(.top-bar, .mobile-top-bar) > ul > li:is(.sfhover, :hover, :focus-within) > a {
+#top-bar :is(.top-bar, .mobile-top-bar) > ul > li > a:is(:hover, :focus), #top-bar :is(.top-bar, .mobile-top-bar) > ul > li:is(.sfhover, :hover, :focus-within) > a {
   color: rgba(var(--ha_top-bar-text-color), 0.5);
   background-color: transparent;
+  -webkit-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #top-bar :is(.top-bar, .mobile-top-bar) ul li ul {
   inset-inline-start: -50%;
@@ -163,21 +253,65 @@ div#container-wrap {
   transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 #top-bar :is(.top-bar, .mobile-top-bar) ul li ul li a {
+  position: relative;
   color: rgb(var(--ha_top-bar-link-color));
   border: none;
   margin: 0.5rem 0;
   -webkit-transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-#top-bar :is(.top-bar, .mobile-top-bar) ul li ul li a:is(:hover, :focus) {
-  color: rgb(var(--ha_top-bar-link-hover-color));
-  background-color: transparent;
+#top-bar :is(.top-bar, .mobile-top-bar) ul li ul li a::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -1;
   border-image-source: var(--top-bar-dropdown-hover-bg-image);
   border-image-slice: 0 15.3846153846% fill;
   border-image-width: 0 1rem;
+  -webkit-transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+#top-bar :is(.top-bar, .mobile-top-bar) ul li ul li a:is(:hover, :focus), #top-bar :is(.top-bar, .mobile-top-bar) ul li ul li:is(.sfhover, :hover, :focus-within) a {
+  color: rgb(var(--ha_top-bar-link-hover-color));
+  background-color: transparent;
+}
+#top-bar :is(.top-bar, .mobile-top-bar) ul li ul li a:is(:hover, :focus)::before, #top-bar :is(.top-bar, .mobile-top-bar) ul li ul li:is(.sfhover, :hover, :focus-within) a::before {
+  opacity: 1;
+  -webkit-transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* 没有侧边栏的需求 */
 #side-bar {
   display: none;
+}
+
+/* 主页面 */
+#main-content {
+  padding: 0.5rem 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-image-source: var(--main-content-bg-image);
+  border-image-slice: 37.5% 2.203567681% fill;
+  border-image-width: 1.25rem 1.25rem;
+}
+
+#page-title,
+.meta-title {
+  font-family: var(--header-font);
+  font-weight: bold;
+  font-size: 2.325rem;
+  line-height: normal;
+  border-bottom: solid 0.125rem rgb(var(--ha_border-color));
+  padding: 0.125rem 0;
+  margin: 0;
+}
+
+.meta-title > p {
+  margin: 0;
 }/*# sourceMappingURL=main.css.map */
