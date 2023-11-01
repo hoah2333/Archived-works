@@ -65,6 +65,8 @@
   --ha_black-color: 0, 0, 0;
   --ha_secondary-black-color: 91, 79, 62;
   --ha_yellow-color: 243, 196, 10;
+  --ha_brown-color: 41, 37, 35;
+  --ha_secondary-brown-color: 36, 32, 28;
   --ha_link-color: 198, 178, 134;
   --ha_visited-link-color: 176, 160, 124;
   --ha_text-color: 240, 224, 188;
@@ -80,6 +82,43 @@
 body {
   font-family: var(--body-font);
   color: rgb(var(--ha_text-color));
+  font-feature-settings: "salt", "ss01", "ss02";
+  font-size: 1rem;
+}
+
+body,
+li,
+p {
+  line-height: 1.5;
+}
+
+code,
+.code,
+.code pre,
+.code p,
+tt {
+  font-family: var(--mono-font);
+  font-size: inherit;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 0.775rem;
+}
+
+sup {
+  top: -0.625rem;
+}
+
+sub {
+  bottom: -0.625rem;
+}
+
+img,
+table,
+iframe {
+  max-width: 100%;
 }
 
 a {
@@ -95,6 +134,9 @@ a:is(:hover, :focus) {
 }
 a:visited {
   color: rgb(var(--ha_visited-link-color));
+}
+a.newpage {
+  text-decoration: underline;
 }
 
 #page-title,
@@ -133,6 +175,22 @@ h5 {
 
 h6 {
   font-size: 1rem;
+}
+
+hr {
+  margin: 0.5rem 0;
+  height: 0.125rem;
+  color: inherit;
+  background-color: transparent;
+  border-top: 0.125rem solid rgb(var(--ha_border-color));
+}
+.fancyhr hr {
+  margin: 0;
+  height: 1rem;
+  border: none;
+  border-image-source: var(--fancyhr-image);
+  border-image-slice: 46.1538461538% 8.0808080808% fill;
+  border-image-width: 0.5rem 1.3rem;
 }
 
 div#container-wrap {
@@ -293,12 +351,12 @@ div#container-wrap {
 
 /* 主页面 */
 #main-content {
-  padding: 0.5rem 1rem;
+  padding: 0.625rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-image-source: var(--main-content-bg-image);
   border-image-slice: 37.5% 2.203567681% fill;
-  border-image-width: 1.25rem 1.25rem;
+  border-image-width: 1.25rem;
 }
 
 #page-title,
@@ -314,4 +372,28 @@ div#container-wrap {
 
 .meta-title > p {
   margin: 0;
+}
+
+:is(blockquote, .blockquote, div.blockquote, [class*=blockquote]) {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  margin: 0.5rem 1rem 0;
+  padding: 0.75rem 1rem;
+  clear: both;
+  border: none;
+  border-image-source: var(--blockquote-bg-image);
+  border-image-slice: 5.46875% 4.0697674419% fill;
+  border-image-width: 0.875rem;
+}
+:is(blockquote, .blockquote, div.blockquote, [class*=blockquote]):is(:first-child, :only-child) {
+  margin-top: 0;
+}
+:is(blockquote, .blockquote, div.blockquote, [class*=blockquote]):last-child:not(:only-child) {
+  margin-bottom: 1em;
+}
+@supports (display: flow-root) {
+  :is(blockquote, .blockquote, div.blockquote, [class*=blockquote]) {
+    display: flow-root;
+  }
 }/*# sourceMappingURL=main.css.map */

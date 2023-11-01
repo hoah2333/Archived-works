@@ -20,6 +20,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900;1000&display=swap');
+
 @each $weight,
 $name in (100, Light),
 (300, Medium),
@@ -50,6 +51,8 @@ $name in (100, Light),
     --ha_black-color: 0, 0, 0;
     --ha_secondary-black-color: 91, 79, 62;
     --ha_yellow-color: 243, 196, 10;
+    --ha_brown-color: 41, 37, 35;
+    --ha_secondary-brown-color: 36, 32, 28;
     --ha_link-color: 198, 178, 134;
     --ha_visited-link-color: 176, 160, 124;
     --ha_text-color: 240, 224, 188;
@@ -62,10 +65,47 @@ $name in (100, Light),
     --ha_top-bar-link-hover-color: var(--ha_black-color);
     --ha_top-bar-border-color: var(--ha_secondary-border-color);
 }
-  
+
 body {
     font-family: var(--body-font);
     color: rgb(var(--ha_text-color));
+    font-feature-settings: "salt", "ss01", "ss02";
+    font-size: 1rem;
+}
+
+body,
+li,
+p {
+    line-height: 1.5;
+}
+
+code,
+.code,
+.code pre,
+.code p,
+tt {
+    font-family: var(--mono-font);
+    font-size: inherit;
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 0.775rem;
+}
+
+sup {
+    top: -0.625rem;
+}
+
+sub {
+    bottom: -0.625rem;
+}
+
+img,
+table,
+iframe {
+    max-width: 100%;
 }
 
 a {
@@ -80,6 +120,10 @@ a {
 
     &:visited {
         color: rgb(var(--ha_visited-link-color));
+    }
+
+    &.newpage {
+        text-decoration: underline;
     }
 }
 
@@ -119,6 +163,23 @@ h5 {
 
 h6 {
     font-size: 1rem;
+}
+
+hr {
+    margin: 0.5rem 0;
+    height: 0.125rem;
+    color: inherit;
+    background-color: transparent;
+    border-top: 0.125rem solid rgb(var(--ha_border-color));
+
+    .fancyhr & { 
+        margin: 0;
+        height: 1rem;
+        border: none;
+        border-image-source: var(--fancyhr-image);
+        border-image-slice: calc(6 / 13 * 100%) calc(16 / 198 * 100%) fill;
+        border-image-width: 0.5rem 1.3rem;
+    }
 }
 
 div#container-wrap {
@@ -371,11 +432,11 @@ div#container-wrap {
 
 /* 主页面 */
 #main-content {
-    padding: 0.5rem 1rem;
+    padding: 0.625rem;
     box-sizing: border-box;
     border-image-source: var(--main-content-bg-image);
     border-image-slice: calc(21 / 56 * 100%) calc(21 / 953 * 100%) fill;
-    border-image-width: 1.25rem 1.25rem;
+    border-image-width: 1.25rem;
 }
 
 #page-title,
@@ -391,4 +452,29 @@ div#container-wrap {
 
 .meta-title>p {
     margin: 0;
+}
+
+:is(blockquote, .blockquote, div.blockquote, [class*="blockquote"]) {
+    border: none;
+    background-color: transparent;
+    position: relative;
+    margin: 0.5rem 1rem 0;
+    padding: 0.75rem 1rem;
+    clear: both;
+    border: none;
+    border-image-source: var(--blockquote-bg-image);
+    border-image-slice: calc(14 / 256 * 100%) calc(14 / 344 * 100%) fill;
+    border-image-width: 0.875rem;
+
+    &:is(:first-child, :only-child) {
+        margin-top: 0;
+    }
+
+    &:last-child:not(:only-child) {
+        margin-bottom: 1em;
+    }
+
+    @supports (display: flow-root) {
+        display: flow-root;
+    }
 }
