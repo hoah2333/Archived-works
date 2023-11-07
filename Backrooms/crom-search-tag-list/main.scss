@@ -56,30 +56,35 @@ button {
 #addition-wrapper {
     grid-area: textarea;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "name . description";
     grid-template-columns: 1fr 10rem 1fr;
     grid-template-rows: 1fr;
 }
 
-#addition-wrapper > p.name {
+#addition-wrapper>p.name {
     grid-area: name;
 }
-#addition-wrapper > p.description {
+
+#addition-wrapper>p.description {
     grid-area: description;
 }
+
 #addition-wrapper .input-wrapper {
     grid-column: 1/4;
     display: grid;
     grid-template-columns: 1fr 10rem 1fr;
     grid-template-rows: 1fr;
 }
+
 #addition-wrapper .input-wrapper textarea {
     margin-bottom: 1rem;
 }
+
 #addition-wrapper .input-wrapper textarea.textarea1 {
     grid-column: 1/2;
 }
+
 #addition-wrapper .input-wrapper textarea.textarea2 {
     grid-column: 3/4;
 }
