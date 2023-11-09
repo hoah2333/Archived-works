@@ -123,7 +123,7 @@ $(document).ready(function () {
     function stringToUTF8(string) {
         var UTF8 = "";
         for (var i = 0; i < string.length; i++) {
-            if (/[\u4e00-\u9fa5]/.test(string[i])) {
+            if (/[\uFF00-\uFFFF]|[\u4e00-\u9fa5]|\u3002|\u201c|\u201d/.test(string[i])) {
                 UTF8 += "\\" + string.charCodeAt(i).toString(16);
             } else {
                 UTF8 += string[i];
