@@ -86,9 +86,11 @@
 .question-why {
     display: block;
     opacity: 0;
+    z-index: 100;
     position: absolute;
+    visibility: hidden;
     line-height: 1.5;
-    right: -20rem;
+    right: -999rem;
     width: fit-content;
     max-width: 25rem;
     text-align: left;
@@ -105,7 +107,6 @@
         transform: translate(0, 0);
     }
 
-
     &::before {
         content: "";
         position: absolute;
@@ -119,13 +120,18 @@
         background-color: transparent;
         box-shadow: 0 0 0 0 rgba(var(--swatch-alternate-color), 0.25), inset 0 0 0 0.0625rem rgb(var(--swatch-primary-darkest));
     }
-}
 
-.question-mark:hover+.question-why,
-.question-why:hover {
-    opacity: 1;
-    transition: opacity 0.15s cubic-bezier(0.08, 0.72, 0.5, 0.94);
-    right: 17rem;
+    .question-mark:is(:hover, :focus, :focus-within)+&,
+    &:is(:hover, :focus, :focus-within) {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.15s cubic-bezier(0.08, 0.72, 0.5, 0.94);
+        right: 17rem;
+
+        @media only screen and (max-width: 56.25rem) {
+            right: 0;
+        }
+    }
 }
 
 .citation-needed {
