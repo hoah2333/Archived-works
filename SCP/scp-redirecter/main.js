@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var href = window.location.href;
     var hrefRegExp = /\?_?[A-Za-z0-9\-=]+/g;
-    var link = "https://scp-wiki-cn.wikidot.com/";
+    var link = "https://redirect.crom.avn.sh/?url=https%3A%2F%2Fscp-wiki-cn.wikidot.com";
 
     if (hrefRegExp.test(href)) {
         var arguments = href.slice(href.search(hrefRegExp) + 1);
@@ -11,7 +11,7 @@ $(document).ready(function () {
         window.location.replace(link);
     } else {
         alert("输入有误！正在将您重定向至 SCP 中文分部首页……");
-        window.location.replace('https://scp-wiki-cn.wikidot.com/');
+        window.location.replace('https://redirect.crom.avn.sh/?url=https%3A%2F%2Fscp-wiki-cn.wikidot.com');
     }
 
     function replace(arguments) {
@@ -26,14 +26,15 @@ $(document).ready(function () {
                     site = args[i].slice(args[i].search(/=[A-Za-z0-9\-]+/g) + 1);
                 }
             }
-            console.log("name = "+ name);
-            console.log("site = "+ site);
+            if (name == undefined) {
+                name = "";
+            }
             if (site == undefined) {
                 site = "scp-wiki-cn";
             }
-            link = "https://" + site + ".wikidot.com/" + name;
+            link = "https://redirect.crom.avn.sh/?url=https%3A%2F%2F" + site + ".wikidot.com%2F" + name;
         } else {
-            link = "https://scp-wiki-cn.wikidot.com/" + arguments;
+            link = "https://redirect.crom.avn.sh/?url=https%3A%2F%2Fscp-wiki-cn.wikidot.com%2F" + arguments;
         }
         return link;
     }
