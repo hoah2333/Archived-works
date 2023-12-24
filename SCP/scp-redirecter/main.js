@@ -8,11 +8,10 @@ $(document).ready(function () {
 
         link = replace(arguments)
 
-        console.log(link);
-        // window.location.replace(link);
+        window.location.replace(link);
     } else {
         alert("输入有误！正在将您重定向至 SCP 中文分部首页……");
-        // window.location.replace('https://scp-wiki-cn.wikidot.com/');
+        window.location.replace('https://scp-wiki-cn.wikidot.com/');
     }
 
     function replace(arguments) {
