@@ -1,0 +1,64 @@
+name: SCSS 编译
+
+on:
+  push:
+    branches: ["test"]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    concurrency: ci-${{ github.ref }}
+
+    name: 部署
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检查
+        uses: actions/checkout@v3
+        with:
+          ref: test
+
+      - name: 编译 .scss 文件
+        uses: gha-utilities/sass-build@v0.5.1
+        with:
+          source: |
+            Backrooms/crom-search-tag-list/main.scss
+            Backrooms/entity-c-459/main.scss
+            Backrooms/pw-encoder/main.scss
+            Backrooms/start/main.scss
+            Backrooms/theme-fandom-theme/fandom-theme-level.scss
+            Heros_adventure/component-item-table/main.scss
+            Heros_adventure/component-theme/image.scss
+            Heros_adventure/component-theme/main.scss
+            Heros_adventure/start/main.scss
+            Oblivion_override/component-theme/main.scss
+            Oblivion_override/dev-blogs/main.scss
+            Oblivion_override/start/main.scss
+            SCP/theme-sci-fi/main.scss
+            SCP/theme-share-future-community/main.scss
+          destination: |
+            Backrooms/crom-search-tag-list/main.css
+            Backrooms/entity-c-459/main.css
+            Backrooms/pw-encoder/main.css
+            Backrooms/start/main.css
+            Backrooms/theme-fandom-theme/fandom-theme-level.css
+            Heros_adventure/component-item-table/main.css
+            Heros_adventure/component-theme/image.css
+            Heros_adventure/component-theme/main.css
+            Heros_adventure/start/main.css
+            Oblivion_override/component-theme/main.css
+            Oblivion_override/dev-blogs/main.css
+            Oblivion_override/start/main.css
+            SCP/theme-sci-fi/main.css
+            SCP/theme-share-future-community/main.css
+          outputStyle: expanded
+          indentWidth: 4
+
+      - name: 部署至 GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.5.0
+        with:
+          branch: "gh-pages"
+          folder: "."
+          token: ${{ secrets.ACCESS_TOKEN }}
