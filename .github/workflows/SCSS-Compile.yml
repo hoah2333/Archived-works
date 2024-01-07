@@ -2,7 +2,7 @@ name: SCSS 编译
 
 on:
   push:
-    branches: ["test"]
+    branches: ["main"]
 
 permissions:
   contents: write
