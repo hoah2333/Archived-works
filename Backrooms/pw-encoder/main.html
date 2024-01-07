@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//ZH" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
+
+<head>
+    <title>CSS 加密/解密生成器</title>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="https://fastly.jsdelivr.net/gh/jquery/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <style type="text/css">
+        @import url("./main.css");
+    </style>
+</head>
+
+<body>
+    <div id="main-wrapper">
+        <h1 class="title">CSS 加密/解密生成器</h1>
+        <div class="info">
+            <h3>用法如下：</h3>
+            <ul>
+                <li>在<b>输入</b>处填入需要加密/解密的文本。</li>
+                <li>点击下方的按钮进行加密/解密。</li>
+                <ul>
+                    <li>大部分情况下只需要点击「一步到位！」即可。</li>
+                </ul>
+            </ul>
+        </div>
+
+        <div id="component-wrapper">
+            <div class="input">
+                <p>输入：</p>
+                <textarea id="input" rows="5" placeholder="请输入需要加密/解密的字符串"></textarea>
+            </div>
+            <div class="info">
+                <p>信息：</p>
+                <textarea id="info" rows="5" readonly="true"></textarea>
+            </div>
+            <div class="buttons">
+                <div class="encoder">
+                    <button id="encode-1"> 加密 - 将 content 内中文转换为 UTF-8 </button>
+                    <button id="encode-2"> 加密 - 将 CSS 整体转换为 Base64 </button>
+                    <button id="encode-3"> 转换 - 为 Base64 字符串套壳 </button>
+                    <button id="encode-all"> 加密 - 一步到位！ </button>
+                </div>
+
+                <div class="decoder">
+                    <button id="decode-1"> 转换 - 为 @import 字符串脱壳</button>
+                    <button id="decode-2"> 解密 - 将 Base64 转换为 CSS </button>
+                    <button id="decode-3"> 解密 - 将 content 内 UTF-8 转换为中文 </button>
+                    <button id="decode-all"> 解密 - 一步到位！ </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

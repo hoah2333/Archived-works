@@ -1,0 +1,149 @@
+:root {
+    --body-width-on-desktop: 65rem;
+}
+
+#content-wrap {
+    grid-template-areas: "side-bar content content content";
+}
+@media only screen and (max-width: 56.25rem) {
+    #content-wrap {
+        grid-template-areas: "content content content";
+    }
+}
+
+#wd-editor-toolbar-panel {
+    --body-width-on-desktop: 45.5rem;
+}
+
+#page-title {
+    display: none;
+}
+
+/* from bhl image-block */
+.infobox-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    min-width: 30%;
+    gap: 0.0625rem;
+    margin: 0 0 1em 2em;
+    float: right;
+    clear: right;
+    width: 18.75rem;
+    padding: 0.0625rem;
+    background-color: rgb(var(--swatch-background));
+    border: 0.0625rem solid rgb(var(--swatch-border-color));
+}
+.infobox-container .infobox-image {
+    border: 0;
+    text-align: center;
+    font-size: calc(var(--base-font-size) * 0.85);
+    width: 100%;
+}
+.infobox-container .infobox-title {
+    --wght: 600;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5ex 0.5ch 1ex;
+    background-color: rgb(var(--swatch-primary));
+    color: rgb(var(--swatch-text-secondary-color));
+    font-size: 0.9em;
+    font-weight: var(--wght);
+    line-height: 1.25;
+    text-align: center;
+}
+.infobox-container .infobox-table {
+    width: 100%;
+}
+.infobox-container .infobox-table th {
+    background-color: rgba(var(--swatch-primary), 0.7);
+    color: rgb(var(--swatch-text-secondary-color));
+    text-align: center;
+    --wght: 600;
+    line-height: 2;
+}
+.infobox-container .infobox-table td {
+    width: max-content;
+    line-height: 1.6;
+}
+.infobox-container .infobox-table td:first-of-type {
+    padding-left: 1rem;
+}
+
+.question-mark {
+    position: relative;
+    font-size: 0.75rem;
+    top: -0.5rem;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.question-why {
+    display: block;
+    opacity: 0;
+    z-index: 100;
+    position: absolute;
+    visibility: hidden;
+    line-height: 1.5;
+    right: -999rem;
+    width: fit-content;
+    max-width: 25rem;
+    text-align: left;
+    color: rgb(var(--hoverblock-txt));
+    background-color: rgb(var(--hoverblock-bg));
+    cursor: initial;
+    font-family: var(--UI-font);
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+    transition: opacity 0.15s cubic-bezier(0.08, 0.72, 0.5, 0.94);
+    translate: 0 0;
+}
+@supports not (translate: 0 0) {
+    .question-why {
+        transform: translate(0, 0);
+    }
+}
+.question-why::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0 auto auto 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: 0 0 0 0 rgba(var(--swatch-alternate-color), 0.25), inset 0 0 0 0.0625rem rgb(var(--swatch-primary-darkest));
+}
+.question-mark:is(:hover, :focus, :focus-within) + .question-why, .question-why:is(:hover, :focus, :focus-within) {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.15s cubic-bezier(0.08, 0.72, 0.5, 0.94);
+    right: 17rem;
+}
+@media only screen and (max-width: 56.25rem) {
+    .question-mark:is(:hover, :focus, :focus-within) + .question-why, .question-why:is(:hover, :focus, :focus-within) {
+        right: 0;
+    }
+}
+
+.citation-needed {
+    background-color: rgba(var(--swatch-primary), 0.3);
+}
+
+#page-content h2 {
+    margin-top: 1.5rem;
+    border-bottom: 0.0625rem solid rgb(var(--swatch-tertiary-color));
+}
+
+@media only screen and (max-width: 30rem) {
+    .clear {
+        clear: both;
+    }
+    .infobox-container {
+        float: unset;
+        width: 100%;
+        margin: 0;
+    }
+}

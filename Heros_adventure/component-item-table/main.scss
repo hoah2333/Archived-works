@@ -1,0 +1,134 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#u-hand:target~table tr:nth-of-type(1)~tr:not([data-title="拳掌"]),
+#u-sword:target~table tr:nth-of-type(1)~tr:not([data-title="剑"]),
+#u-knife:target~table tr:nth-of-type(1)~tr:not([data-title="刀"]),
+#u-spear:target~table tr:nth-of-type(1)~tr:not([data-title="枪"]),
+#u-rod:target~table tr:nth-of-type(1)~tr:not([data-title="棍"]) {
+    display: none;
+}
+
+table.item-table {
+    width: 100%;
+    position: relative;
+
+    tr {
+        &:nth-of-type(1) {
+            position: sticky;
+            top: 0;
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+            // 隐藏模板
+            display: none;
+        }
+
+        &:nth-of-type(odd) {
+            background-color: initial;
+        }
+
+        &:nth-of-type(4n+2),
+        &:nth-of-type(4n+3) {
+            background-color: rgba(var(--ha_secondary-black-color), 0.2);
+        }
+
+        &:hover,
+        &:is(:nth-of-type(4n), :nth-of-type(4n+2)):hover+tr,
+        &:is(:nth-of-type(4n), :nth-of-type(4n+2)):has(+tr:hover) {
+            background-color: rgba(var(--ha_secondary-black-color), 0.4);
+        }
+
+        th {
+            white-space: nowrap;
+        }
+
+        td {
+            width: min-content;
+
+            &:nth-of-type(1),
+            &:nth-of-type(3),
+            &:nth-of-type(7) {
+                text-align: center;
+                white-space: nowrap;
+            }
+
+            &:nth-of-type(2) {
+                padding: 0;
+            }
+
+            .table {
+                display: grid;
+                grid-template-columns: auto minmax(7.5rem, 1fr);
+                grid-column-gap: 0.5rem;
+
+                span {
+                    width: 100%;
+
+                    &.name {
+                        white-space: nowrap;
+                        font-weight: bold;
+                    }
+                }
+
+                >br {
+                    display: none;
+                }
+
+                &[data-title*="name1"] .name:nth-of-type(1),
+                &[data-title*="name2"] .name:nth-of-type(3),
+                &[data-title*="name3"] .name:nth-of-type(5),
+                &[data-title*="name4"] .name:nth-of-type(7),
+                &[data-title*="description1"] .description:nth-of-type(2),
+                &[data-title*="description2"] .description:nth-of-type(4),
+                &[data-title*="description3"] .description:nth-of-type(6),
+                &[data-title*="description4"] .description:nth-of-type(8) {
+                    display: none;
+                }
+            }
+
+            &[class*="rarity"] {
+                text-align: center;
+
+                img {
+                    box-sizing: border-box;
+                    border: 4px solid var(--rarity-color);
+                    border-radius: 4px;
+                    min-width: 4.5rem;
+                    margin-top: 0.5rem;
+                }
+            }
+
+            @each $number,
+            $color in (0, #7DC447),
+            (1, #2CB9D8),
+            (2, #AF5FD2),
+            (3, #D67B28) {
+                &.rarity-#{$number} {
+                    --rarity-color: #{$color};
+                }
+            }
+
+            &[data-title*="$obtain"],
+            &[data-title*="$craft"] {
+                font-size: 0;
+            }
+        }
+
+        &.anchor {
+            td {
+                padding: 0;
+                position: relative;
+                top: -2rem;
+            }
+
+            +tr,
+            +tr+tr,
+            +tr+tr+tr {
+                display: none;
+            }
+        }
+    }
+}
