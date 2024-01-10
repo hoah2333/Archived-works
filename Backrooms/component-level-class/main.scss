@@ -156,7 +156,6 @@
 
     .diamond-image {
         position: absolute;
-        -webkit-mask: var(--header-diamond) center/95% no-repeat;
         mask: var(--header-diamond) center/95% no-repeat;
         height: 100%;
         width: 100%;
@@ -757,9 +756,7 @@ $color: "{$color}";
     --sd-font: Poppins, Inter, Noto Sans TC, Noto Sans SC, Arimo, Verdana, Geneva, sans-serif;
 }
 
-.sd-container[class*="{"] .lang-tr,
-.sd-container[class*="cn"] .lang-tr,
-.lang-cn .lang-tr,
+:is(.sd-container[class*="{"], .sd-container[class*="cn"], .lang-cn) .lang-tr,
 .lang-tr .lang-cn {
     display: none;
 }
