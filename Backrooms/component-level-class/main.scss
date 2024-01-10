@@ -424,7 +424,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
         background: rgb(var(--class-deadzone));
     }
 
-    &.top-box .bottom-box {
+    &.top-box .bottom-text {
         p {
             display: none;
         }
@@ -486,7 +486,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
         background: rgb(var(--class-pending));
     }
 
-    &.top-box .bottom-box {
+    &.top-box .bottom-text {
         p {
             display: none;
         }
@@ -546,7 +546,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
     }
 
     &.top-box {
-        .bottom-box {
+        .bottom-text {
             p {
                 display: none;
             }
@@ -621,7 +621,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
     }
 
     &.top-box {
-        .bottom-box {
+        .bottom-text {
             p {
                 display: none;
             }
@@ -681,7 +681,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
     }
 
     &.top-box {
-        .bottom-box {
+        .bottom-text {
             p {
                 display: none;
             }
