@@ -744,8 +744,8 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
 }
 
 .top-box .header-diamond .diamond-image:not([style*="}"]) {
-    background: url(var(--custom-image)) center/80% no-repeat !important;
-    mask: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='-7.01 0 260.5 250.8' style='enable-background:new 0 0 250.5 250.8;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFC90E;%7D .st1%7Bfill:%23581A19;%7D%0A%3C/style%3E%3Cpath class='st0' d='M247,133.9L133.7,247.2c-4.7,4.7-12.3,4.7-17,0L3.5,133.9c-4.7-4.7-4.7-12.3,0-17L116.8,3.6 c4.7-4.7,12.3-4.7,17,0l113.3,113.3C251.7,121.6,251.7,129.2,247,133.9z'/%3E%3C/svg%3E") !important;
+    background: var(--custom-image) center/80% no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='-7.01 0 260.5 250.8' style='enable-background:new 0 0 250.5 250.8;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23FFC90E;%7D .st1%7Bfill:%23581A19;%7D%0A%3C/style%3E%3Cpath class='st0' d='M247,133.9L133.7,247.2c-4.7,4.7-12.3,4.7-17,0L3.5,133.9c-4.7-4.7-4.7-12.3,0-17L116.8,3.6 c4.7-4.7,12.3-4.7,17,0l113.3,113.3C251.7,121.6,251.7,129.2,247,133.9z'/%3E%3C/svg%3E");
     top: 0;
     left: 0;
 }
