@@ -737,7 +737,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
 
 $color: "{$color}";
 
-[class="color-{$color}"] {
+[class*="color-{$color}"] {
 
     &,
     .header-diamond & {
