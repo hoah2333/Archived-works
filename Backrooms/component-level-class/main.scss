@@ -235,7 +235,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
 
     .top-box,
     .diamond-color {
-        .class-#{$class-number} {
+        &.class-#{$class-number} {
             background: rgb(var(--class-#{$class-number}));
         }
     }
