@@ -742,7 +742,7 @@ $color: "{$color}";
 
     &,
     .header-diamond & {
-        background-color: #{$color};
+        background-color: var(--custom-color);
     }
 
     &.top-box .header-diamond .diamond-image:not([class*="}"]) {
