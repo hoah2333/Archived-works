@@ -1550,7 +1550,6 @@ div.wiki-note {
 #page-options-container .page-watch-options {
     padding: 0.325em 0 0;
     margin: 0;
-    width: max-content;
     text-align: left;
     font-size: 75%;
 }
@@ -4910,5 +4909,21 @@ html {
     .fakeSide .fakeWikiBtn,
     .fakeSide .fakeCreateSite {
         display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .fakeHeader .fakeHomeIcon {
+        display: none;
+    }
+
+    #page-content div.fakeHeader {
+        grid-template-areas:
+            "Tool Tool"
+            ". ."
+            ". H1"
+            ". H2"
+            ". Topbar";
+        grid-template-columns: 1rem 1fr;
     }
 }
