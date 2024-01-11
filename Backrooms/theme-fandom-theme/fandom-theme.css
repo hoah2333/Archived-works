@@ -3666,10 +3666,39 @@ input#upload-userfile::file-selector-button {
     display: block;
 }
 
-.fakeHeader .fakeTopbar div[class*="top-bar"]>ul>li ul li:hover a,
-.fakeHeader .fakeTopbar div[class*="top-bar"]>ul>li ul li:hover a:hover {
+.fakeHeader .fakeTopbar div[class*="top-bar"]>ul>li ul li:hover>a,
+.fakeHeader .fakeTopbar div[class*="top-bar"]>ul>li ul li:hover>a:hover {
     background-color: var(--link-color-trans);
     color: var(--link-color);
+}
+
+.fakeHeader .fakeTopbar div[class*="top-bar"]>ul>li>ul>li>ul {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    padding: 9px 0;
+    min-width: 70%;
+    max-width: 181px;
+    width: max-content;
+    background-color: var(--bg-color-3);
+    border: 1px solid var(--border-color);
+    box-shadow: none;
+    position: absolute;
+    opacity: 0;
+    clip-path: inset(0 100% 0 0);
+    transition:
+        opacity var(--trans-time),
+        top var(--trans-time),
+        clip-path var(--trans-time);
+    top: -10px;
+    left: 100%;
+    margin: 0;
+}
+
+.fakeHeader .fakeTopbar div[class*="top-bar"]>ul>li>ul>li:hover>ul {
+    clip-path: inset(-10px);
+    opacity: 1;
 }
 
 .fakeHeader .fakeTopbar .mobile-top-bar .open-menu {
@@ -4674,6 +4703,12 @@ html {
         padding: 0 9px 0 0;
     }
 
+    #login-status #account-topbutton {
+        width: 74px;
+        height: 60px;
+        margin: 0;
+    }
+
     #login-status #account-options {
         left: unset;
         right: 0;
@@ -4773,6 +4808,10 @@ html {
 
     #page-content .toolBar .fakeCreateContainer {
         left: calc((100vw - 552px) / 2)
+    }
+
+    #odialog-container .owindow .content div[style*="margin-top"] {
+        grid-template: 1fr 1fr / 1fr 1fr;
     }
 }
 
