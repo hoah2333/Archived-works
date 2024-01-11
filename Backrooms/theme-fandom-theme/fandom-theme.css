@@ -3602,7 +3602,7 @@ input#upload-userfile::file-selector-button {
 }
 
 .fakeHeader .fakeTopbar div[class*="top-bar"]>ul>li:hover>ul {
-    clip-path: inset(-10px);
+    clip-path: inset(-10px -110% 0 0);
     opacity: 1;
     top: 40px;
 }
