@@ -648,13 +648,9 @@ div#container-wrap {
     position: relative;
     justify-content: center;
     mask-image: var(--social-logo-mask);
-    -webkit-mask-image: var(--social-logo-mask);
     mask-repeat: no-repeat;
-    -webkit-mask-repeat: no-repeat;
     mask-size: contain;
-    -webkit-mask-size: contain;
     mask-position: center center;
-    -webkit-mask-position: center center;
     background-color: var(--social-color);
     transition: background-color var(--trans-time);
 }
@@ -903,11 +899,8 @@ div.page-rate-widget-box .btn a::before,
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-mask-size: 40%;
     mask-size: 40%;
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-position: center;
     mask-position: center;
 }
 
@@ -918,25 +911,20 @@ div.page-rate-widget-box .btn a:focus {
 }
 
 div.page-rate-widget-box .rateup a::before {
-    -webkit-mask-image: var(--vote-plus-icon);
     mask-image: var(--vote-plus-icon);
 }
 
 div.page-rate-widget-box .ratedown a::before {
-    -webkit-mask-image: var(--vote-minus-icon);
     mask-image: var(--vote-minus-icon);
 }
 
 div.page-rate-widget-box .cancel a::before {
-    -webkit-mask-image: var(--vote-cancel-icon);
     mask-image: var(--vote-cancel-icon);
 }
 
 #page-content div.rate-box-with-credit-button .creditButton>p>a::before,
 #page-content div.creditButtonStandalone>p>a::before {
-    -webkit-mask-image: var(--vote-info-icon);
     mask-image: var(--vote-info-icon);
-    -webkit-mask-size: 27.5%;
     mask-size: 27.5%;
 }
 
@@ -1054,13 +1042,9 @@ div.creditRate .rateBox {
 
 #page-content [id*="u-credit"] .modalbox>.credit.first>p:first-of-type::after {
     background: var(--text-color);
-    -webkit-mask-image: var(--close-icon);
     mask-image: var(--close-icon);
-    -webkit-mask-position: 50%;
     mask-position: 50%;
-    -webkit-mask-size: contain;
     mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
 }
 
@@ -1689,6 +1673,7 @@ div.buttons input.btn:hover,
     justify-content: center;
     width: 100%;
     order: 2;
+    flex-wrap: warp;
 }
 
 #footer a {
@@ -1806,13 +1791,9 @@ div.buttons input.btn:hover,
 #odialog-container .owindow a[onclick*="cleanAll"]::before {
     content: "";
     display: block;
-    -webkit-mask-size: 100%;
     mask-size: 100%;
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-position: center;
     mask-position: center;
-    -webkit-mask-image: var(--close-icon);
     mask-image: var(--close-icon);
     width: 28px;
     height: 28px;
@@ -2301,11 +2282,8 @@ textarea {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-mask-size: 77%;
     mask-size: 77%;
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-position: center;
     mask-position: center;
 }
 
@@ -2316,253 +2294,211 @@ textarea {
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-h1::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-h1::before {
-    -webkit-mask-image: var(--h1-icon);
     mask-image: var(--h1-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-h2::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-h2::before {
-    -webkit-mask-image: var(--h2-icon);
     mask-image: var(--h2-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-h3::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-h3::before {
-    -webkit-mask-image: var(--h3-icon);
     mask-image: var(--h3-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-h4::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-h4::before {
-    -webkit-mask-image: var(--h4-icon);
     mask-image: var(--h4-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-h5::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-h5::before {
-    -webkit-mask-image: var(--h5-icon);
     mask-image: var(--h5-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-h6::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-h6::before {
-    -webkit-mask-image: var(--h6-icon);
     mask-image: var(--h6-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-bold::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-bold::before {
-    -webkit-mask-image: var(--bold-icon);
     mask-image: var(--bold-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-italic::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-italic::before {
-    -webkit-mask-image: var(--italic-icon);
     mask-image: var(--italic-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-underline::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-underline::before {
-    -webkit-mask-image: var(--underline-icon);
     mask-image: var(--underline-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-strikethrough::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-strikethrough::before {
-    -webkit-mask-image: var(--strikethrough-icon);
     mask-image: var(--strikethrough-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-teletype::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-teletype::before {
-    -webkit-mask-image: var(--teletype-icon);
     mask-image: var(--teletype-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-quote::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-quote::before {
-    -webkit-mask-image: var(--quote-icon);
     mask-image: var(--quote-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-superscript::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-superscript::before {
-    -webkit-mask-image: var(--superscript-icon);
     mask-image: var(--superscript-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-subscript::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-subscript::before {
-    -webkit-mask-image: var(--subscript-icon);
     mask-image: var(--subscript-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-raw::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-raw::before {
-    -webkit-mask-image: var(--rawtext-icon);
     mask-image: var(--rawtext-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-hr::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-hr::before {
-    -webkit-mask-image: var(--hr-icon);
     mask-image: var(--hr-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-div::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-div::before {
-    -webkit-mask-image: var(--divblock-icon);
     mask-image: var(--divblock-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-clearfloat::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-clearfloat::before {
-    -webkit-mask-image: var(--clearfloat-icon);
     mask-image: var(--clearfloat-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-clearfloatleft::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-clearfloatleft::before {
-    -webkit-mask-image: var(--clearfloatleft-icon);
     mask-image: var(--clearfloatleft-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-clearfloatright::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-clearfloatright::before {
-    -webkit-mask-image: var(--clearfloatright-icon);
     mask-image: var(--clearfloatright-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-table::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-table::before {
-    -webkit-mask-image: var(--table-icon);
     mask-image: var(--table-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-toc::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-toc::before {
-    -webkit-mask-image: var(--toc-icon);
     mask-image: var(--toc-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-code::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-code::before {
-    -webkit-mask-image: var(--codeblock-icon);
     mask-image: var(--codeblock-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-codewiz::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-codewiz::before {
-    -webkit-mask-image: var(--codewiz-icon);
     mask-image: var(--codewiz-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-uri::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-uri::before {
-    -webkit-mask-image: var(--url-icon);
     mask-image: var(--url-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-uriwiz::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-uriwiz::before {
-    -webkit-mask-image: var(--urlwiz-icon);
     mask-image: var(--urlwiz-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-pagelink::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-pagelink::before {
-    -webkit-mask-image: var(--pagelink-icon);
     mask-image: var(--pagelink-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-pagelinkwiz::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-pagelinkwiz::before {
-    -webkit-mask-image: var(--pagelinkwiz-icon);
     mask-image: var(--pagelinkwiz-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-image::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-image::before {
-    -webkit-mask-image: var(--imageblock-icon);
     mask-image: var(--imageblock-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-imagewiz::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-imagewiz::before {
-    -webkit-mask-image: var(--imagewiz-icon);
     mask-image: var(--imagewiz-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-html::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-html::before {
-    -webkit-mask-image: var(--htmlblock-icon);
     mask-image: var(--htmlblock-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-numlist::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-numlist::before {
-    -webkit-mask-image: var(--ordered-list-icon);
     mask-image: var(--ordered-list-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-bullist::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-bullist::before {
-    -webkit-mask-image: var(--unordered-list-icon);
     mask-image: var(--unordered-list-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-incindent::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-incindent::before {
-    -webkit-mask-image: var(--inc-list-icon);
     mask-image: var(--inc-list-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-decindent::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-decindent::before {
-    -webkit-mask-image: var(--dec-list-icon);
     mask-image: var(--dec-list-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-deflist::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-deflist::before {
-    -webkit-mask-image: var(--def-list-icon);
     mask-image: var(--def-list-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-footnote::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-footnote::before {
-    -webkit-mask-image: var(--footnote-icon);
     mask-image: var(--footnote-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-math::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-math::before {
-    -webkit-mask-image: var(--math-icon);
     mask-image: var(--math-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-mathinline::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-mathinline::before {
-    -webkit-mask-image: var(--inline-math-icon);
     mask-image: var(--inline-math-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-eqref::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-eqref::before {
-    -webkit-mask-image: var(--eq-def-icon);
     mask-image: var(--eq-def-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-bib::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-bib::before {
-    -webkit-mask-image: var(--bib-icon);
     mask-image: var(--bib-icon);
 }
 
 #edit-page-form .wd-editor-toolbar-panel a.weditor-bibcite::before,
 #new-post-div .wd-editor-toolbar-panel a.weditor-bibcite::before {
-    -webkit-mask-image: var(--bib-cite-icon);
     mask-image: var(--bib-cite-icon);
 }
 
@@ -3488,13 +3424,9 @@ input#upload-userfile::file-selector-button {
     grid-area: Icon;
     width: 160px;
     height: 100px;
-    -webkit-mask-size: 90%;
     mask-size: 90%;
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-position: center;
     mask-position: center;
-    -webkit-mask-image: var(--header-logo);
     mask-image: var(--header-logo);
     background-color: var(--header-text-color);
     transform: scale(1);
@@ -3897,13 +3829,9 @@ input#upload-userfile::file-selector-button {
 .toolBar .fakeSearch .fakeSearchClose::before {
     content: "";
     display: block;
-    -webkit-mask-size: 100%;
     mask-size: 100%;
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-position: center;
     mask-position: center;
-    -webkit-mask-image: var(--close-icon);
     mask-image: var(--close-icon);
     width: 44px;
     height: 44px;
@@ -4074,13 +4002,9 @@ input#upload-userfile::file-selector-button {
 .toolBar .fakeCreate .fakeCreateClose::before {
     content: "";
     display: block;
-    -webkit-mask-size: 100%;
     mask-size: 100%;
-    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-position: center;
     mask-position: center;
-    -webkit-mask-image: var(--close-icon);
     mask-image: var(--close-icon);
     width: 28px;
     height: 28px;
