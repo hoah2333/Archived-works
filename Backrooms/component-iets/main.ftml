@@ -1,0 +1,15 @@
+[[div_ class="extrabox lang-{$lang}"]]
+[[div_ class="box class-{$danger}"]]
+[[span class="iets-before"]][[span class="iets-link"]]IETS[[/span]]：{$danger}{$intelligence}[[/span]]
+[[div_ class="iets-after"]]
+[[span class="iets-link"]]IETS[[/span]]
+[[div_ class="iets-danger"]]
+威[[span class="lang-cn"]]胁[[/span]][[span class="lang-tr"]]脅[[/span]]：{$danger}
+[[/div]]
+[[div_ class="iets-intelligence"]]
+智能：{$intelligence}
+[[/div]]
+[[/div]]
+[[/div]]
+[[/div]]
+~~~~

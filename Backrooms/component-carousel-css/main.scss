@@ -1,0 +1,345 @@
+/*
+    Carousel Component CSS Version
+    Made by hoah2333
+    Inspired form Carousel Component by Croquembouche
+*/
+@use 'sass:math';
+
+:root {
+    --base-roll-time: 0.5s;
+    --base-wait-time: 5s;
+
+    @each $number in (2, 3, 4, 5, 6) {
+        --img-#{$number}-time: calc(#{$number} * (var(--base-roll-time) + var(--base-wait-time)));
+    }
+
+    --navigator-mask: url("data:image/svg+xml;base64,PHN2ZyBpZD0i5Zu+5bGCXzEiIGRhdGEtbmFtZT0i5Zu+5bGCIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDIwIDIwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzIzMTgxNTt9PC9zdHlsZT48L2RlZnM+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMjAiIGhlaWdodD0iNCIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeT0iOCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjQiLz48cmVjdCBjbGFzcz0iY2xzLTEiIHk9IjE2IiB3aWR0aD0iMjAiIGhlaWdodD0iNCIvPjwvc3ZnPg==");
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+
+    .rolling {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+
+        br {
+            display: none;
+        }
+
+        a {
+            &:nth-of-type(1) {
+                width: 100%;
+                position: relative;
+            }
+
+            &:is(:nth-of-type(2), :nth-of-type(3), :nth-of-type(4), :nth-of-type(5), :nth-of-type(6)) {
+                position: absolute;
+                left: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+/* ============== */
+/* 图片切换动画部分 */
+/* ============== */
+@for $endnumber from 2 through 6 {
+    @for $number from 1 through $endnumber {
+        .carousel-container .rolling.img-#{$endnumber} a:nth-of-type(#{$number}) {
+            animation: rolling#{$endnumber}-#{$number} var(--img-#{$endnumber}-time) var(--base-wait-time) cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+    }
+
+    @for $number from 1 through $endnumber {
+        @if $number==1 {
+            @keyframes rolling#{$endnumber}-#{$number} {
+                #{math.percentage(calc(0 / ($endnumber * 5.5)))} {
+                    left: 0;
+                }
+
+                #{math.percentage(calc(0.5 / ($endnumber * 5.5)))} {
+                    left: -100%;
+                }
+
+                #{math.percentage(calc(($endnumber - 1) / $endnumber)) - 0.01%} {
+                    left: -100%;
+                }
+
+                #{math.percentage(calc(($endnumber - 1) / $endnumber))} {
+                    left: 100%;
+                }
+
+                #{math.percentage(calc((($endnumber - 1) * 5.5 + 0.5) / ($endnumber * 5.5)))} {
+                    left: 0;
+                }
+
+                #{math.percentage(calc($endnumber / $endnumber))} {
+                    left: 0;
+                }
+            }
+        }
+
+        @else {
+            @keyframes rolling#{$endnumber}-#{$number} {
+                #{math.percentage(calc(0 / ($endnumber * 5.5)))} {
+                    left: 100%;
+                }
+
+                #{math.percentage(calc((($number - 2) * 5.5) / ($endnumber * 5.5)))} {
+                    left: 100%;
+                }
+
+                #{math.percentage(calc((($number - 2) * 5.5 + 0.5) / ($endnumber * 5.5)))} {
+                    left: 0;
+                }
+
+                #{math.percentage(calc((($number - 1) * 5.5) / ($endnumber * 5.5)))} {
+                    left: 0;
+                }
+
+                #{math.percentage(calc((($number - 1) * 5.5 + 0.5) / ($endnumber * 5.5)))} {
+                    left: -100%;
+                }
+
+                #{math.percentage(calc(($endnumber * 5.5) / ($endnumber * 5.5))) - 0.01%} {
+                    left: -100%
+                }
+
+                #{math.percentage(calc(($endnumber * 5.5) / ($endnumber * 5.5)))} {
+                    left: 100%;
+                }
+            }
+        }
+    }
+}
+
+/* ============ */
+/* 进度条动画部分 */
+/* ============ */
+@for $endnumber from 2 through 6 {
+    .carousel-container {
+        .progress.width-#{$endnumber} {
+            animation: progress-#{$endnumber} var(--img-#{$endnumber}-time) var(--base-wait-time) cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        .progress.fake-#{$endnumber} {
+            animation: fake-#{$endnumber} var(--img-#{$endnumber}-time) var(--base-wait-time) cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        .progress.width-#{$endnumber},
+        .progress.fake-#{$endnumber} {
+            width: calc(100% / #{$endnumber});
+        }
+    }
+
+    @keyframes progress-#{$endnumber} {
+        #{math.percentage(calc(0 / ($endnumber * 5.5)))} {
+            left: 0;
+        }
+
+        @for $number from 1 to $endnumber {
+            #{math.percentage(calc((($number - 1) * 5.5 + 0.5) / ($endnumber * 5.5)))} {
+                left: calc(100% / $endnumber * $number);
+            }
+
+            #{math.percentage(calc($number / $endnumber))} {
+                left: calc(100% / $endnumber * $number);
+            }
+        }
+
+        #{math.percentage(calc((($endnumber - 1) * 5.5 + 0.5) / ($endnumber * 5.5)))} {
+            left: calc(100% / $endnumber * $endnumber);
+        }
+
+        #{math.percentage(calc($endnumber / $endnumber)) - 0.01%} {
+            left: calc(100% / $endnumber * $endnumber);
+        }
+
+        #{math.percentage(calc($endnumber / $endnumber))} {
+            left: 0;
+        }
+
+    }
+
+    @keyframes fake-#{$endnumber} {
+        #{math.percentage(calc(0 / ($endnumber * 5.5)))} {
+            left: 0;
+        }
+
+        #{math.percentage(calc(0 / ($endnumber * 5.5))) + 0.01%} {
+            left: calc(100% / $endnumber * -1);
+        }
+
+        #{math.percentage(calc(($endnumber - 1) / $endnumber))} {
+            left: calc(100% / $endnumber * -1);
+        }
+
+        #{math.percentage(calc((($endnumber - 1) * 5.5 + 0.5) / ($endnumber * 5.5)))} {
+            left: 0;
+        }
+
+        #{math.percentage(calc($endnumber / $endnumber))} {
+            left: 0;
+        }
+    }
+}
+
+/* ========== */
+/* 导航菜单部分 */
+/* ========== */
+.carousel-container .navigator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    transition:
+        background-color 0.25s 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.25s 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        height 0.25s 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.none {
+        display: none;
+    }
+
+    &::before {
+        content: "";
+        background-color: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        mask-size: 40%;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-image: var(--navigator-mask);
+        left: 0;
+        transition: left 0.75s 0s linear;
+    }
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        height: 100%;
+        transition-delay: 0s;
+
+        &::before {
+            left: -999vw;
+        }
+    }
+
+    .navigator-links {
+        display: grid;
+        position: absolute;
+        left: -999vw;
+        width: 100%;
+        height: 100%;
+        transition: left 0s 0.25s linear;
+
+        @for $number from 2 through 6 {
+            &.links-#{$number} {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(#{$number}, 1fr);
+            }
+        }
+
+        @media (max-width: 526px) {
+            &.links-4 {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(2, 1fr);
+            }
+
+            &.links-5,
+            &.links-6 {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(3, 1fr);
+            }
+
+            &.links-5 a:nth-of-type(5) {
+                grid-column: 1 / 3;
+            }
+        }
+
+        a {
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: left;
+            box-sizing: border-box;
+            border-left: 5px solid rgba(0, 0, 0, 0.4);
+            padding-left: 10px;
+            color: #3A3A3A;
+            font-size: 1.15rem;
+            text-decoration: none;
+            clip-path: inset(0 0 100% 0);
+            transition: clip-path 0.25s 0s cubic-bezier(0.4, 0, 0.2, 1);
+
+            @media (max-width: 1024px) {
+                font-size: 1rem;
+            }
+
+            @media (max-width: 980px) {
+                font-size: 0.75rem;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: -100%;
+                top: 0;
+                background-color: rgba(0, 0, 0, 0.2);
+                transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            &:hover::after {
+                left: 0;
+            }
+        }
+    }
+
+    &:hover .navigator-links {
+        left: 0;
+        transition-delay: 0s;
+
+        a {
+            clip-path: inset(0);
+            transition-delay: 0.25s;
+        }
+    }
+
+    br {
+        display: none;
+    }
+}
+
+/* 一个 a:not(a:last-of-type) 就能解决的事 */
+.carousel-container .navigator .navigator-links {
+
+    a:nth-of-type(1),
+    &.links-3 :is(a:nth-of-type(2)),
+    &.links-4 :is(a:nth-of-type(2), a:nth-of-type(3)),
+    &.links-5 :is(a:nth-of-type(2), a:nth-of-type(3), a:nth-of-type(4)),
+    &.links-6 :is(a:nth-of-type(2), a:nth-of-type(3), a:nth-of-type(4), a:nth-of-type(5)) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+}
+
+.carousel-container :is(.progress, .fake-1+.navigator) {
+    display: none;
+}
+
+/* ======== */
+/* 防呆不防傻 */
+/* ======== */
+.carousel-container :is([class*="$number"], .rolling a[href*="$link"], .navigator .navigator-links a[style*="$link"]) {
+    display: none;
+}
