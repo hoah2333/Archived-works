@@ -90,7 +90,7 @@
         }
     }
 
-    @each $number in (0, 1, 2, 3, 4, 5) {
+    @for $number from 0 through 5 {
         &.class-#{$number} {
             --box-border: var(--box-color-#{$number});
             --box-shadow: var(--box-color-#{$number});
