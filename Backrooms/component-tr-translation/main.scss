@@ -13,16 +13,20 @@
         right: 1rem;
         padding: 0.5rem;
         line-height: 1;
-        font-size: 2rem;
         background-color: #002B36;
         box-sizing: border-box;
         border: 0.1rem solid #C0CDB0;
+        font-size: 0;
 
         a {
             color: #C0CDB0;
             --wght: bold;
             font-weight: bold;
             text-decoration: none;
+
+            &::after {
+                font-size: 2rem;
+            }
         }
 
         &.lang-cn a::after {
