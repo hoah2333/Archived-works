@@ -1,4 +1,4 @@
-name: SCSS 编译
+name: 编译
 
 on:
   push:
@@ -25,6 +25,7 @@ jobs:
             Backrooms/component-carousel-css/main.scss
             Backrooms/component-iets/main.scss
             Backrooms/component-level-class/main.scss
+            Backrooms/component-tr-translation/main.scss
             Backrooms/crom-search-tag-list/main.scss
             Backrooms/entity-c-459/main.scss
             Backrooms/pw-encoder/main.scss
@@ -43,6 +44,7 @@ jobs:
             Backrooms/component-carousel-css/main.css
             Backrooms/component-iets/main.css
             Backrooms/component-level-class/main.css
+            Backrooms/component-tr-translation/main.css
             Backrooms/crom-search-tag-list/main.css
             Backrooms/entity-c-459/main.css
             Backrooms/pw-encoder/main.css
