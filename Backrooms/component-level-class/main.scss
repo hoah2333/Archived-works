@@ -628,11 +628,11 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
 
             &::after {
                 :is(.sd-container[class*="{"], .lang-cn) & {
-                    content: "等级：运变";
+                    content: "等级：修正";
                 }
 
                 .lang-tr & {
-                    content: "等級：運變";
+                    content: "等級：修正";
                 }
             }
         }
