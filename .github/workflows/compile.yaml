@@ -31,7 +31,7 @@ jobs:
             Backrooms/pw-encoder/main.scss
             Backrooms/start/main.scss
             Backrooms/theme-fandom-theme/fandom-theme-level.scss
-            Backrooms/theme-defect-theme/main.scss
+            Backrooms/theme-defect/main.scss
             Heros_adventure/component-item-table/main.scss
             Heros_adventure/component-theme/image.scss
             Heros_adventure/component-theme/main.scss
@@ -51,7 +51,7 @@ jobs:
             Backrooms/pw-encoder/main.css
             Backrooms/start/main.css
             Backrooms/theme-fandom-theme/fandom-theme-level.css
-            Backrooms/theme-defect-theme/main.css
+            Backrooms/theme-defect/main.css
             Heros_adventure/component-item-table/main.css
             Heros_adventure/component-theme/image.css
             Heros_adventure/component-theme/main.css
