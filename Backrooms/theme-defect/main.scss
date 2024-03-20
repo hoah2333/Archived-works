@@ -1,0 +1,165 @@
+:root {
+    --header-title: "Backrooms";
+    --header-subtitle: "你曾经来过这里";
+    --header-logo: url("https://github.backroomswiki.cn/New_BHL/image/logo.svg");
+
+    --defect_purple-light: 200, 150, 210;
+    --defect_purple-light-2: 115, 80, 135;
+    --defect_purple-light-3: 220, 180, 230;
+    --defect_purple: 241, 23, 236;
+    --defect_purple-2: 70, 50, 110;
+    --defect_purple-dark: 50, 30, 80;
+    --defect_purple-dark-2: 30, 15, 50;
+
+    --general-border-color: var(--defect_purple-light);
+
+    --basalt-overtone: var(--defect_purple-2);
+    --basalt-undertone: var(--defect_purple-dark);
+    --basalt-background-color: var(--defect_purple-dark-2);
+    --basalt-secondary-color: var(--defect_purple-light-2);
+    --basalt-bright-element-color: var(--defect_purple-light);
+    --basalt-focus-color: var(--defect_purple-light-3);
+
+    --link-color: var(--defect_purple-light-3);
+    --link-visited-color: var(--defect_purple-light);
+
+    --header-title-color: var(--basalt-light-text-color);
+    --header-border-color: var(--defect_purple-light);
+    --header-subtitle-color: var(--basalt-light-text-color);
+    --side-bar-button-color: var(--basalt-light-text-color);
+    --top-bar-link-color: var(--basalt-light-text-color);
+    --top-bar-link-background-hover-alt: var(--defect_purple-light-2);
+    --top-bar-dropdown-link-color-hover: var(--basalt-main-text-color);
+    --top-bar-dropdown-background: var(--defect_purple-dark);
+    --top-bar-dropdown-background-hover: var(--defect_purple-light);
+
+    --side-bar-background-color: var(--defect_purple-dark);
+    --side-bar-heading-background-color: var(--defect_purple-light-2);
+    --side-bar-link-color: var(--basalt-light-text-color);
+    --side-bar-link-color-hover: var(--basalt-main-text-color);
+    --side-bar-link-background-hover: var(--defect_purple-light);
+
+    --scrollbar-track-color: var(--defect_purple-light-2);
+
+    --title-border-color: var(--defect_purple-light-2);
+    --rate-module-text-color: var(--basalt-light-text-color);
+    --rate-module-background-color: var(--defect_purple-light-2);
+    --blockquote-background-color: var(--basalt-secondary-color), 0.3;
+    --code-background-color: var(--basalt-secondary-color), 0.3;
+    --image-caption-background-color: var(--basalt-secondary-color);
+    --footnote-background-color: var(--basalt-secondary-color), 0.3;
+
+    --bottom-area-text-color: var(--basalt-light-text-color);
+    --bottom-area-background-color: var(--defect_purple-dark);
+
+    --selection-background-color: var(--defect_purple-light);
+
+    --button-text-color: var(--basalt-light-text-color);
+    --button-hover-background-color: var(--defect_purple-2);
+    --button-hover-border-color: var(--defect_purple-light-2);
+    --button-border-color: var(--general-border-color);
+
+
+}
+
+#header {
+    background-image: linear-gradient(to right,
+            rgb(var(--defect_purple-dark)) 0%,
+            rgb(var(--defect_purple-2)) 40%,
+            rgb(var(--defect_purple-light)) 100%);
+    --basalt-main-text-color: 235, 235, 235;
+}
+
+#side-bar .side-block.media a {
+    filter: invert(1);
+}
+
+body,
+#page-title,
+h1,
+h2,
+h3,
+h4,
+h5,
+form#edit-page-form table.form td:first-of-type,
+#edit-page-textarea,
+#np-text,
+select,
+input[type=text],
+textarea {
+    color: rgb(var(--basalt-light-text-color));
+}
+
+div.page-rate-widget-box {
+    --basalt-main-text-color: var(--basalt-light-text-color);
+}
+
+.yui-navset.yui-navset-top>ul.yui-nav li:not(.selected) a {
+    color: rgb(var(--basalt-light-text-color));
+
+    &:hover {
+        color: rgb(var(--basalt-main-text-color));
+    }
+}
+
+.yui-navset.yui-navset-top .yui-content {
+    background-color: rgba(var(--defect_purple-2), 0.3)
+}
+
+:is(:where(#page-content) table:not(.form), table.wiki-content-table) th {
+    background-color: rgb(var(--defect_purple-light-2));
+    border-color: rgb(var(--general-border-color));
+}
+
+:is(:where(#page-content) table:not(.form), table.wiki-content-table) tr {
+    &:nth-of-type(even) {
+        background-color: rgba(var(--defect_purple-2), 0.3);
+    }
+
+    &:nth-of-type(odd) {
+        background-color: rgba(var(--defect_purple-2), 0.6);
+    }
+}
+
+.bblock {
+    background-color: rgb(var(--basalt-light-text-color));
+
+    &:is(:hover, :focus-within) {
+        background-color: rgb(var(--basalt-light-text-color));
+        color: rgb(var(--basalt-main-text-color));
+    }
+}
+
+div[id*=page-options-bottom]>a:is(:hover, :focus) {
+    color: rgb(var(--defect_purple-light));
+}
+
+#delete-button {
+    background-color: rgba(var(--basalt-cancel-color), 0.3);
+    color: rgb(var(--basalt-light-text-color));
+}
+
+#action-area .page-source {
+    padding: 0.5em;
+    background-color: rgba(var(--defect_purple-2), 0.3);
+}
+
+.image-block,
+.scp-image-block {
+    border-bottom-color: rgb(var(--defect_purple-light));
+}
+
+.hovertip {
+    --_background-color: rgb(var(--defect_purple-light-2));
+}
+
+:where(#action-area) a.action-area-close,
+#action-area div.buttons>:is([name=cancel], [onclick*="page.listeners.closeActionArea(event)"]),
+#action-area div.buttons>:is([name=save], [onclick*="PageTagsModule.listeners.save(event)"]) {
+    --button-text-color: var(--basalt-light-text-color);
+    font-weight: inherit;
+}
+
+.wd-editor-toolbar-panel ul li a::after {
+    background-color: rgb(var(--basalt-light-text-color));
+}

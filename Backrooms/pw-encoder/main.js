@@ -1,5 +1,5 @@
-$(document).ready(function () {
-    $("#encode-1").click(function () {
+$(function () {
+    $("#encode-1").on("click", function () {
         var input = $("#input").val();
         if (input) {
             input = characterEncode(input);
@@ -10,8 +10,7 @@ $(document).ready(function () {
         }
         $("#input").val(input);
     });
-
-    $("#encode-2").click(function () {
+    $("#encode-2").on("click", function () {
         var input = $("#input").val();
         if (input) {
             input = base64Encode(input);
@@ -22,8 +21,7 @@ $(document).ready(function () {
         }
         $("#input").val(input);
     });
-
-    $("#encode-3").click(function () {
+    $("#encode-3").on("click", function () {
         var input = $("#input").val();
         if (input) {
             input = shell(input);
@@ -34,8 +32,7 @@ $(document).ready(function () {
         }
         $("#input").val(input);
     });
-
-    $("#decode-1").click(function () {
+    $("#decode-1").on("click", function () {
         var input = $("#input").val();
         if (input) {
             input = unshell(input);
@@ -46,8 +43,7 @@ $(document).ready(function () {
         }
         $("#input").val(input);
     });
-
-    $("#decode-2").click(function () {
+    $("#decode-2").on("click", function () {
         var input = $("#input").val();
         if (input) {
             input = base64Decode(input);
@@ -58,8 +54,7 @@ $(document).ready(function () {
         }
         $("#input").val(input);
     });
-
-    $("#decode-3").click(function () {
+    $("#decode-3").on("click", function () {
         var input = $("#input").val();
         if (input) {
             input = characterDecode(input);
@@ -70,8 +65,7 @@ $(document).ready(function () {
         }
         $("#input").val(input);
     });
-
-    $("#encode-all").click(function () {
+    $("#encode-all").on("click", function () {
         var input = $("#input").val();
         if (input) {
             input = characterEncode(input);
@@ -84,8 +78,7 @@ $(document).ready(function () {
         }
         $("#input").val(input);
     });
-
-    $("#decode-all").click(function () {
+    $("#decode-all").on("click", function () {
         var input = $("#input").val();
         if (input) {
             input = unshell(input);
@@ -101,8 +94,8 @@ $(document).ready(function () {
 
     function characterEncode(input) {
         var contentReg = new RegExp("content:(\\s?)(\"|\')[^\"|^\']+(\"|\')(;?)");
-        var content = [];
-        var convert = [];
+        var content = [""];
+        var convert = [""];
         if (!contentReg.test(input)) {
             console.log("Encode-1: 未找到 content 内容");
             $("#info").append("Encode-1: 未找到 content 内容\n");
@@ -134,8 +127,8 @@ $(document).ready(function () {
 
     function characterDecode(input) {
         var contentReg = new RegExp("content:(\\s?)(\"|\')[^\"|^\']+(\"|\')(;?)");
-        var content = [];
-        var convert = [];
+        var content = [""];
+        var convert = [""];
         if (!contentReg.test(input)) {
             console.log("Decode-3: 未找到 content 内容");
             $("#info").append("Decode-3: 未找到 content 内容\n");
@@ -154,8 +147,8 @@ $(document).ready(function () {
     }
 
     function UTF8ToString(UTF8) {
-        var codes = [];
-        var convert = [];
+        var codes = [""];
+        var convert = [""];
         var UTF8Reg = new RegExp("\\\\[\\w]{4}");
         var UTF8Amount = 0;
         if (!UTF8Reg.test(UTF8)) {
@@ -179,7 +172,7 @@ $(document).ready(function () {
         try {
             input = btoa(input);
         } catch (e) {
-            console.error("Encode-2: 输入中不可以有汉字，请先把汉字转换为 UTF-8 的形式")
+            console.error("Encode-2: 输入中不可以有汉字，请先把汉字转换为 UTF-8 的形式");
             $("#info").append("Encode-2: 输入中不可以有汉字，请先把汉字转换为 UTF-8 的形式\n");
             $("#info").scrollTop($("#info")[0].scrollHeight);
             return input;
@@ -196,7 +189,7 @@ $(document).ready(function () {
                 $("#info").append("Decode-2: 输入中不可以有汉字，请先把汉字转换为 UTF-8 的形式\n");
                 $("#info").scrollTop($("#info")[0].scrollHeight);
             } else if (/not correctly encoded/.test(e)) {
-                console.error("Decode-2: 该输入未被加密")
+                console.error("Decode-2: 该输入未被加密");
                 $("#info").append("Decode-2: 该输入未被加密\n");
                 $("#info").scrollTop($("#info")[0].scrollHeight);
             }
