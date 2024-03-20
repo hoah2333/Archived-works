@@ -29,6 +29,11 @@
                 &::after {
                     font-size: 2rem;
                 }
+                &.lang-tr + .trans-container {
+                    --body-font: Inter, "Noto Sans TC", "Noto Sans SC", Arimo, Verdana, Geneva, sans-serif;
+                    --header-font: Inter, "Noto Sans TC", "Noto Sans SC", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
+                    --mono-font: Recursive, "Noto Serif TC", "Noto Serif SC", Consolas, monaco, monospace
+                }
             }
 
             &.lang-cn a::after {
