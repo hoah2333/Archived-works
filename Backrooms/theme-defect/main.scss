@@ -48,6 +48,7 @@
     --code-background-color: var(--basalt-secondary-color), 0.3;
     --image-caption-background-color: var(--basalt-secondary-color);
     --footnote-background-color: var(--basalt-secondary-color), 0.3;
+    --hr-color: var(--defect_purple-light-3);
 
     --bottom-area-text-color: var(--basalt-light-text-color);
     --bottom-area-background-color: var(--defect_purple-dark);
@@ -58,15 +59,15 @@
     --button-hover-background-color: var(--defect_purple-2);
     --button-hover-border-color: var(--defect_purple-light-2);
     --button-border-color: var(--general-border-color);
-
-
 }
 
 #header {
-    background-image: linear-gradient(to right,
-            rgb(var(--defect_purple-dark)) 0%,
-            rgb(var(--defect_purple-2)) 40%,
-            rgb(var(--defect_purple-light)) 100%);
+    background-image: linear-gradient(
+        to right,
+        rgb(var(--defect_purple-dark)) 0%,
+        rgb(var(--defect_purple-2)) 40%,
+        rgb(var(--defect_purple-light)) 100%
+    );
     --basalt-main-text-color: 235, 235, 235;
 }
 
@@ -85,7 +86,7 @@ form#edit-page-form table.form td:first-of-type,
 #edit-page-textarea,
 #np-text,
 select,
-input[type=text],
+input[type="text"],
 textarea {
     color: rgb(var(--basalt-light-text-color));
 }
@@ -94,7 +95,7 @@ div.page-rate-widget-box {
     --basalt-main-text-color: var(--basalt-light-text-color);
 }
 
-.yui-navset.yui-navset-top>ul.yui-nav li:not(.selected) a {
+.yui-navset.yui-navset-top > ul.yui-nav li:not(.selected) a {
     color: rgb(var(--basalt-light-text-color));
 
     &:hover {
@@ -103,7 +104,7 @@ div.page-rate-widget-box {
 }
 
 .yui-navset.yui-navset-top .yui-content {
-    background-color: rgba(var(--defect_purple-2), 0.3)
+    background-color: rgba(var(--defect_purple-2), 0.3);
 }
 
 :is(:where(#page-content) table:not(.form), table.wiki-content-table) th {
@@ -130,7 +131,7 @@ div.page-rate-widget-box {
     }
 }
 
-div[id*=page-options-bottom]>a:is(:hover, :focus) {
+div[id*="page-options-bottom"] > a:is(:hover, :focus) {
     color: rgb(var(--defect_purple-light));
 }
 
@@ -154,8 +155,8 @@ div[id*=page-options-bottom]>a:is(:hover, :focus) {
 }
 
 :where(#action-area) a.action-area-close,
-#action-area div.buttons>:is([name=cancel], [onclick*="page.listeners.closeActionArea(event)"]),
-#action-area div.buttons>:is([name=save], [onclick*="PageTagsModule.listeners.save(event)"]) {
+#action-area div.buttons > :is([name="cancel"], [onclick*="page.listeners.closeActionArea(event)"]),
+#action-area div.buttons > :is([name="save"], [onclick*="PageTagsModule.listeners.save(event)"]) {
     --button-text-color: var(--basalt-light-text-color);
     font-weight: inherit;
 }
