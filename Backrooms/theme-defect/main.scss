@@ -164,3 +164,7 @@ div[id*="page-options-bottom"] > a:is(:hover, :focus) {
 .wd-editor-toolbar-panel ul li a::after {
     background-color: rgb(var(--basalt-light-text-color));
 }
+
+#who-rated-page-area > div span[style*="color"] {
+    color: rgb(var(--basalt-light-text-color)) !important;
+}
