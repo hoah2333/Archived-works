@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/*
+    Enter the Gungeon Theme
+    [2024 Wikidot Theme]
+    by hoah2333
+        Based on Sigma 10 theme, maintained by EN SCP Wiki Technical Team
+        Based on Sigma 9 theme, created by Aelenna, edited by Dr Devan
+        Using Sigma+ by EstrellaYoshte
+*/
+/* 引用版式 - Sigma-10 */
+@import url("https://cdn.scpwiki.com/theme/en/sigma/css/sigma.min.css");
+/* 引用组件 - Sigma+ */
+@import url("https://scp-wiki.wdfiles.com/local--code/component%3Asigma-plus/1");
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdCQUFnQjtBQUNoQjs7Ozs7OztDQU9DO0FBQ0Qsb0JBQW9CO0FBQ3BCLHVFQUF1RTtBQUN2RSxrQkFBa0I7QUFDbEIsZ0ZBQWdGIiwiZmlsZSI6Im1haW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGNoYXJzZXQgXCJVVEYtOFwiO1xuLypcbiAgICBFbnRlciB0aGUgR3VuZ2VvbiBUaGVtZVxuICAgIFsyMDI0IFdpa2lkb3QgVGhlbWVdXG4gICAgYnkgaG9haDIzMzNcbiAgICAgICAgQmFzZWQgb24gU2lnbWEgMTAgdGhlbWUsIG1haW50YWluZWQgYnkgRU4gU0NQIFdpa2kgVGVjaG5pY2FsIFRlYW1cbiAgICAgICAgQmFzZWQgb24gU2lnbWEgOSB0aGVtZSwgY3JlYXRlZCBieSBBZWxlbm5hLCBlZGl0ZWQgYnkgRHIgRGV2YW5cbiAgICAgICAgVXNpbmcgU2lnbWErIGJ5IEVzdHJlbGxhWW9zaHRlXG4qL1xuLyog5byV55So54mI5byPIC0gU2lnbWEtMTAgKi9cbkBpbXBvcnQgdXJsKFwiaHR0cHM6Ly9jZG4uc2Nwd2lraS5jb20vdGhlbWUvZW4vc2lnbWEvY3NzL3NpZ21hLm1pbi5jc3NcIik7XG4vKiDlvJXnlKjnu4Tku7YgLSBTaWdtYSsgKi9cbkBpbXBvcnQgdXJsKFwiaHR0cHM6Ly9zY3Atd2lraS53ZGZpbGVzLmNvbS9sb2NhbC0tY29kZS9jb21wb25lbnQlM0FzaWdtYS1wbHVzLzFcIik7Il19 */
