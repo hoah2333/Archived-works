@@ -41,6 +41,7 @@ jobs:
             Oblivion_override/start/main.scss
             SCP/theme-sci-fi/main.scss
             SCP/theme-share-future-community/main.scss
+            etg-xd/component-theme/main.scss
           destination: |
             Backrooms/component-carousel-css/main.css
             Backrooms/component-iets/main.css
@@ -61,6 +62,7 @@ jobs:
             Oblivion_override/start/main.css
             SCP/theme-sci-fi/main.css
             SCP/theme-share-future-community/main.css
+            etg-xd/component-theme/main.css
           outputStyle: expanded
           indentWidth: 4
 
@@ -71,6 +73,7 @@ jobs:
           npx postcss Heros_adventure/**/*.css -u autoprefixer -r
           npx postcss Oblivion_override/**/*.css -u autoprefixer -r
           npx postcss SCP/**/*.css -u autoprefixer -r
+          npm postcss etg-xd/**/*.css -u autoprefixer -r
           rm -r node_modules/ .gitignore package-lock.json package.json
 
       - name: 部署至 GitHub Pages
