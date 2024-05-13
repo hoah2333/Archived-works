@@ -10,5 +10,101 @@
 /* 引用版式 - Sigma-10 */
 @import url("https://cdn.scpwiki.com/theme/en/sigma/css/sigma.min.css");
 
+/* 引用组件 - 切换侧边栏 */
+@import url("https://scp-wiki-cn.wdfiles.com/local--code/component%3Atoggle-sidebar/1");
+
 /* 引用组件 - Sigma+ */
 @import url("https://scp-wiki.wdfiles.com/local--code/component%3Asigma-plus/1");
+
+:root {
+    --header-title: "挺近地牢";
+
+    --sp_header-logo: url("none");
+    --sp_area-max-width: 85.5rem;
+
+    --etg_text-color: 20, 20, 30;
+    --etg_link-color: 70, 150, 155;
+    --etg_link-visited-color: 50, 130, 130;
+    --etg_link-hover-color: 0, 40, 40;
+    --etg_link-new-color: 100, 170, 180;
+    --etg_main-background-color: 30, 30, 30;
+    --etg_border-color: 250, 240, 210;
+    --etg_bg-color: 240, 235, 230;
+    --etg_accent-color: 255, 70, 92;
+}
+
+#content-wrap {
+    column-gap: 0.75rem;
+}
+
+body {
+    color: rgb(var(--etg_text-color));
+    background-color: rgb(var(--etg_main-background-color));
+}
+
+#header {
+    background-image: none;
+
+    &::before {
+        display: none;
+    }
+
+    h1 {
+        padding-inline-start: 0;
+        margin: auto;
+    }
+}
+
+#top-bar {
+    background-image: none;
+    background-color: rgb(var(--etg_accent-color));
+}
+
+#footer {
+    background-color: rgb(var(--etg_accent-color));
+}
+
+a,
+#side-bar a {
+    color: rgb(var(--etg_link-color));
+
+    &:visited {
+        color: rgb(var(--etg_link-visited-color));
+    }
+
+    &:hover {
+        color: rgb(var(--etg_link-hover-color));
+    }
+}
+
+#side-bar {
+    background-color: rgba(var(--etg_bg-color), 0.1);
+
+    .side-block {
+        border-radius: 4px;
+        box-shadow: none;
+        border: 2px solid rgb(var(--etg_border-color));
+        background-color: rgb(var(--etg_bg-color));
+
+        .heading {
+            color: rgb(var(--etg_text-color));
+            border: none;
+            padding: 0;
+            font-size: 0.85rem;
+        }
+
+        .menu-item {
+            font-size: 0rem;
+            color: rgb(var(--etg_link-color));
+        }
+    }
+}
+
+#main-content {
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: none;
+    border: 2px solid rgb(var(--etg_border-color));
+    background-color: rgb(var(--etg_bg-color));
+    padding: 1rem;
+}
