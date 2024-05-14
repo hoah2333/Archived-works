@@ -10,11 +10,11 @@
 /* 引用版式 - Sigma-10 */
 @import url("https://cdn.scpwiki.com/theme/en/sigma/css/sigma.min.css");
 
-/* 引用组件 - 切换侧边栏 */
-@import url("https://scp-wiki-cn.wdfiles.com/local--code/component%3Atoggle-sidebar/1");
-
 /* 引用组件 - Sigma+ */
 @import url("https://scp-wiki.wdfiles.com/local--code/component%3Asigma-plus/1");
+
+/* 引用组件 - 切换侧边栏 */
+@import url("https://scp-wiki-cn.wdfiles.com/local--code/component%3Atoggle-sidebar/1");
 
 :root {
     --header-title: "挺近地牢";
