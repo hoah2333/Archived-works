@@ -58,6 +58,17 @@
                 left: -11.5rem;
                 opacity: 0;
                 transition: left 0.2s, opacity 0.15s, top 0s 1s;
+                vertical-align: middle;
+
+                img {
+                    min-width: 18px;
+                    image-rendering: pixelated;
+                }
+
+                .sell .unsell,
+                .unsell .sell {
+                    display: none;
+                }
             }
 
             &:hover .note {
