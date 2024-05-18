@@ -111,7 +111,7 @@ a,
 .pickup {
     @each $name, $pic in (shell, Money), (shellx5, Money_5), (shellx50, Golden_Shell), (half-heart, Half_Heart),
         (heart, Heart), (armor, Armor), (blank, Blank), (key, Key), (cell-key, Cell_Key), (rat-key, Rat Key),
-        (ammo, Ammo), (spread-ammo, Spread Ammo), (hegemony-credit, Hegemony_Credit)
+        (ammo, Ammo), (spread-ammo, Spread_Ammo), (hegemony-credit, Hegemony_Credit)
     {
         &.#{$name}::before {
             content: url("https://7bye.com/hoah/i/etg/pickup/#{$pic}.png");
