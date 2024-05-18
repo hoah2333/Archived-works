@@ -92,6 +92,15 @@
             .infloop {
                 text-decoration: overline;
             }
+
+            .ds,
+            &[data-title="DS"] > img {
+                display: none;
+            }
+
+            &[data-title="DS"] .ds {
+                display: block;
+            }
         }
 
         div[data-title*="{$"] {
