@@ -109,7 +109,7 @@ a,
 }
 
 @each $name, $pic in (shell, Money), (shellx5, Money_5), (shellx50, Golden_Shell), (half-heart, Half_Heart),
-    (heart, Heart), (armor, Armor), (blank, Blank), (key, Key), (cell-key, Cell_Key), (rat-key, Rat Key), (ammo, Ammo),
+    (heart, Heart), (armor, Armor), (blank, Blank), (key, Key), (cell-key, Cell_Key), (rat-key, Ratkey), (ammo, Ammo),
     (spread-ammo, Spread_Ammo), (hegemony-credit, Hegemony_Credit)
 {
     a[href="/pickups##{$name}"]::before {
