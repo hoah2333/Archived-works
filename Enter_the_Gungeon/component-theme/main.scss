@@ -16,12 +16,24 @@
 /* 引用组件 - 切换侧边栏 */
 @import url("https://scp-wiki-cn.wdfiles.com/local--code/component%3Atoggle-sidebar/1");
 
+/* 引用字体 */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900;1000&display=swap");
+
 :root {
     --header-title: "挺近地牢";
 
     --sp_header-logo: url("none");
     --sp_area-max-width: 85.5rem;
 
+    --etg_body-font: Inter, "Noto Sans SC", "Noto Sans TC", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC",
+        "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
+    --etg_header-font: var(--etg_body-font);
+    --etg_mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑",
+        "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
     --etg_text-color: 20, 20, 30;
     --etg_link-color: 70, 150, 155;
     --etg_link-visited-color: 50, 130, 130;
@@ -37,9 +49,82 @@
     column-gap: 0.75rem;
 }
 
+:root {
+    --wght: 400;
+    --ui-wght: 500;
+    --ui-hvr-wght: 500;
+    --ital: 0;
+
+    --mono-wght: 350;
+    --slnt: 0;
+    --CASL: 0;
+    --CRSV: 0;
+    --MONO: 1;
+
+    --lnum: 1;
+    --pnum: 1;
+    --kern: 1;
+    --cpsp: 1;
+    --liga: 1;
+    --case: 1;
+    --clig: 1;
+    --dlig: 0;
+    --calt: 1;
+    --aalt: 0;
+
+    --ss01: 1;
+    --ss02: 0;
+    --ss03: 1;
+    --ss04: 1;
+    --zero: 1;
+    --cv11: 0;
+}
+
+*,
+*::before,
+*::after {
+    font-kerning: auto;
+    font-variant-ligatures: common-ligatures contextual;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-weight: var(--wght, revert);
+
+    @supports (font-variation-settings: inherit) {
+        font-variation-settings: "ital" var(--ital, 0), "slnt" var(--slnt, 0), "CASL" var(--CASL, 0),
+            "CRSV" var(--CRSV, 0), "MONO" var(--MONO, 0), "FLAR" var(--FLAR, 0);
+    }
+
+    @supports (font-feature-settings: inherit) {
+        font-feature-settings: "lnum" var(--lnum, 1), "pnum" var(--pnum, 1), "kern" var(--kern, 1),
+            "cpsp" var(--cpsp, 1), "liga" var(--liga, 1), "case" var(--case, 1), "clig" var(--clig, 1),
+            "dlig" var(--dlig, 0), "calt" var(--calt, 1), "aalt" var(--aalt, 0), "ss01" var(--ss01, 1),
+            "ss02" var(--ss02, 0), "ss03" var(--ss03, 1), "ss04" var(--ss04, 1), "zero" var(--zero, 1),
+            "cv11" var(--cv11, 0);
+    }
+}
+
 body {
     color: rgb(var(--etg_text-color));
     background-color: rgb(var(--etg_main-background-color));
+    font-family: var(--etg_body-font);
+
+    .bold,
+    b,
+    strong {
+        &,
+        & * {
+            --wght: 700;
+        }
+    }
+
+    .italic,
+    em,
+    i {
+        &,
+        & * {
+            --ital: 1;
+            --slnt: -15;
+        }
+    }
 }
 
 #header {
@@ -52,6 +137,10 @@ body {
     h1 {
         padding-inline-start: 0;
         margin: auto;
+
+        a {
+            font-family: rgb(var(--etg_header-font));
+        }
     }
 }
 
@@ -74,6 +163,17 @@ a,
 
     &:hover {
         color: rgb(var(--etg_link-hover-color));
+    }
+}
+
+tt {
+    --calt: 0;
+
+    &,
+    & * {
+        font-family: var(--etg_mono-font);
+        font-variation-settings: "wght" var(--mono-wght), "slnt" var(--slnt), "CASL" var(--CASL), "CRSV" var(--CRSV),
+            "MONO" var(--MONO);
     }
 }
 

@@ -1,0 +1,69 @@
+.infotable {
+    table {
+        width: 100%;
+        max-width: 100%;
+        border-collapse: collapse;
+
+        th {
+            background-color: rgb(var(--etg_accent-color));
+            color: #fff;
+            border: 2px groove rgb(var(--etg_text-color));
+            position: relative;
+            white-space: nowrap;
+
+            .help {
+                cursor: help;
+                border-bottom: 1px dotted;
+            }
+
+            .note {
+                position: absolute;
+                font-weight: initial;
+                background-color: #fff;
+                color: rgb(var(--etg_text-color));
+                border: 1px solid rgb(var(--etg_accent-color));
+                padding: 0.5rem;
+                width: 10rem;
+                height: fit-content;
+                top: -9999rem;
+                left: -8rem;
+                opacity: 0;
+                transition: left 0.2s, opacity 0.15s, top 0s 1s;
+                vertical-align: middle;
+                white-space: wrap;
+                z-index: 1;
+            }
+
+            &:hover .note {
+                left: -7rem;
+                top: 1.75rem;
+                opacity: 1;
+                transition: left 0.2s, opacity 0.5s;
+            }
+            &:nth-of-type(10) .note {
+                left: 0rem;
+            }
+            &:nth-of-type(10):hover .note {
+                left: 1rem;
+            }
+        }
+
+        td {
+            text-align: center;
+            border: 2px groove rgb(var(--etg_text-color));
+            position: relative;
+            width: min-width;
+
+            &:first-of-type img {
+                min-width: 32px;
+                image-rendering: pixelated;
+            }
+            &:nth-of-type(2),
+            &:nth-of-type(5) {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    overflow-x: scroll;
+}
