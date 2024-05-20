@@ -113,6 +113,7 @@ body {
         &,
         & * {
             --wght: 700;
+            --mono-wght: calc(var(--wght) - 50);
         }
     }
 
@@ -124,6 +125,27 @@ body {
             --ital: 1;
             --slnt: -15;
         }
+    }
+}
+
+@each $weight in 1000, 900, 800, 700, 600, 500, 400, 300, 200, 100 {
+    [style*="weight: #{$weight}"],
+    [style*="weight:#{$weight}"] {
+        &,
+        & * {
+            --wght: #{$weight};
+            font-weight: var(--wght);
+            --mono-wght: calc(var(--wght) - 50);
+        }
+    }
+}
+
+[style*="italic"],
+[style*="oblique"] {
+    &,
+    & * {
+        --ital: 1;
+        --slnt: -15;
     }
 }
 
@@ -168,6 +190,9 @@ a,
 
 tt {
     --calt: 0;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
 
     &,
     & * {
