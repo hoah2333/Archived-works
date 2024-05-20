@@ -11,6 +11,7 @@
     flex-direction: column;
 
     .title {
+        --wght: 800;
         background-color: rgb(var(--etg_accent-color));
         color: #eee;
         padding: 1rem;
@@ -39,7 +40,7 @@
         line-height: 1.75;
 
         .name {
-            font-weight: bold;
+            --wght: 700;
             position: relative;
 
             .help {
@@ -48,8 +49,8 @@
             }
 
             .note {
+                --wght: 400;
                 position: absolute;
-                font-weight: initial;
                 background-color: #fff;
                 border: 1px solid rgb(var(--etg_accent-color));
                 padding: 0.5rem;
