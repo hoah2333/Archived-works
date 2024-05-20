@@ -1,5 +1,14 @@
 {
-    "dependencies": {
+    "name": "archived-works",
+    "description": "Some works made by hoah2333",
+    "version": "1.0.0",
+    "authors": "hoah2333",
+    "license": "CC-BY-SA-3.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hoah2333/Archived-works"
+    },
+    "devDependencies": {
         "@types/jquery": "^3.5.29",
         "autoprefixer": "^10.4.16",
         "postcss": "^8.4.33",
