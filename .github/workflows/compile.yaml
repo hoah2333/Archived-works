@@ -42,6 +42,7 @@ jobs:
             SCP/theme-sci-fi/main.scss
             SCP/theme-share-future-community/main.scss
             Enter_the_Gungeon/component-infobox/main.scss
+            Enter_the_Gungeon/component-infotable/main.scss
             Enter_the_Gungeon/component-theme/main.scss
           destination: |
             Backrooms/component-carousel-css/main.css
@@ -64,6 +65,7 @@ jobs:
             SCP/theme-sci-fi/main.css
             SCP/theme-share-future-community/main.css
             Enter_the_Gungeon/component-infobox/main.css
+            Enter_the_Gungeon/component-infotable/main.css
             Enter_the_Gungeon/component-theme/main.css
           outputStyle: expanded
           indentWidth: 4
