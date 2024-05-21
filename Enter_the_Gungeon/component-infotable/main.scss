@@ -57,6 +57,7 @@
             border: 2px groove rgb(var(--etg_text-color));
             position: relative;
             width: min-content;
+            min-width: 4rem;
 
             &[data-title*="{$"],
             & div[data-title*="{$"] {
@@ -90,9 +91,18 @@
                 }
             }
 
-            &:nth-of-type(2),
-            &:nth-of-type(5) {
+            &:nth-of-type(3),
+            &:nth-of-type(4) {
                 white-space: nowrap;
+            }
+
+            .ds,
+            &[data-title="DS"] > img {
+                display: none;
+            }
+
+            &[data-title="DS"] .ds {
+                display: block;
             }
         }
     }
