@@ -58,7 +58,7 @@
             position: relative;
             width: min-content;
 
-            &[data-title*="{$"] {
+            &[style*="{$"] {
                 font-size: 0;
 
                 &::before {
