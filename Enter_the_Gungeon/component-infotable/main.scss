@@ -58,7 +58,8 @@
             position: relative;
             width: min-content;
 
-            &[data-title*="{$"] {
+            &[data-title*="{$"],
+            & div[data-title*="{$"] {
                 font-size: 0;
 
                 &::before {
