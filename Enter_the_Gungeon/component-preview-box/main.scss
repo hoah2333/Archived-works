@@ -1,3 +1,11 @@
+.trigger {
+    display: none;
+
+    &:target + .preview-container {
+        display: block;
+    }
+}
+
 .preview-container {
     display: none;
     position: fixed;
@@ -6,13 +14,6 @@
     top: 0;
     left: 0;
     background-color: #00000055;
-
-    .trigger {
-        display: none;
-        &:target + .preview-container {
-            display: block;
-        }
-    }
 
     > a {
         position: absolute;
