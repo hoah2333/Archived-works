@@ -7,7 +7,7 @@
     left: 0;
     background-color: #00000055;
 
-    div[id*="u-{$"]:target + & {
+    .trigger:target + & {
         display: block;
     }
 
