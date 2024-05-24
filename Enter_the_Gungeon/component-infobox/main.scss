@@ -15,6 +15,9 @@
         padding: 1rem;
         text-align: center;
         font-size: 1.25rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
 
         .en {
             --wght: 400;
@@ -22,6 +25,7 @@
             font-size: 0.8rem;
         }
 
+        br,
         [data-title*="{$"] {
             display: none;
         }
