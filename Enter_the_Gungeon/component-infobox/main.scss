@@ -9,6 +9,10 @@
     display: grid;
     grid-template-areas: "img title" "properties properties";
 
+    &:has(.img[data-title*="{$"]) {
+        grid-template-areas: "title title" "properties properties";
+    }
+
     .title {
         --wght: 800;
         grid-area: title;

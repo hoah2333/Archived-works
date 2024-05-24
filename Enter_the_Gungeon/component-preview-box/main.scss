@@ -7,8 +7,14 @@
     left: 0;
     background-color: #00000055;
 
-    .trigger:target + & {
+    div[id*="u-{$"]:target + & {
         display: block;
+    }
+
+    > a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
     }
 
     .infoblock {
@@ -19,13 +25,24 @@
         height: max-content;
         background-color: #f1f1f1;
         display: grid;
-        grid-template: auto 1fr 1fr / 1fr;
+        justify-items: center;
+        grid-template: auto auto auto / auto;
+        translate: 0 -50%;
 
         .infobox-container {
             float: initial;
+            width: 100%;
+            margin: 0;
         }
 
-        .tips[data-title*="{$"],
+        .tips {
+            padding: 1rem;
+
+            &[data-title*="{$"] {
+                display: none;
+            }
+        }
+
         > a[href="/unix"] {
             display: none;
         }
