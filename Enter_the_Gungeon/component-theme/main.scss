@@ -24,10 +24,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900;1000&display=swap");
 
 :root {
-    --header-title: "挺近地牢";
+    --header-title: "挺近地牢图鉴";
 
     --sp_header-logo: url("none");
     --sp_area-max-width: 85.5rem;
+    --sp_header-height: 5rem;
 
     --etg_body-font: Inter, "Noto Sans SC", "Noto Sans TC", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC",
         "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
@@ -41,12 +42,9 @@
     --etg_link-new-color: 100, 170, 180;
     --etg_main-background-color: 30, 30, 30;
     --etg_border-color: 250, 240, 210;
+    --etg_border-color-dark: 114, 40, 51;
     --etg_bg-color: 240, 235, 230;
-    --etg_accent-color: 255, 70, 92;
-}
-
-#content-wrap {
-    column-gap: 0.75rem;
+    --etg_accent-color: 62, 25, 36;
 }
 
 :root {
@@ -149,7 +147,38 @@ body {
     }
 }
 
+#container {
+    display: grid;
+    grid-template-areas: "header header" "content content" "footer license";
+}
+
+#content-wrap {
+    grid-area: content;
+    column-gap: 0.75rem;
+    border-radius: 4px;
+    height: calc(100vh - var(--sp_final-header-height) - 0.5rem - 34px);
+    background-color: rgb(var(--etg_bg-color));
+    overflow-y: scroll;
+    margin: 0.5rem auto 0;
+}
+
+#extrac-div-1 {
+    position: absolute;
+    width: calc(100% - var(--sp_area-min-margin) * 2 + 1rem);
+    max-width: calc(var(--sp_area-max-width) + 1rem);
+    margin: auto;
+    left: max(calc((100vw - var(--sp_area-max-width)) / 2 - 0.625rem), var(--sp_area-min-margin) - 0.5rem);
+    height: calc(100vh - var(--sp_final-header-height) - 0.5rem - 34px + 1rem);
+    top: calc(var(--sp_final-header-height));
+    background-color: rgb(var(--etg_accent-color));
+    border: 5px groove rgb(var(--etg_border-color-dark));
+    box-sizing: border-box;
+    border-radius: 10px;
+    z-index: -1;
+}
+
 #header {
+    grid-area: header;
     background-image: none;
 
     &::before {
@@ -162,17 +191,44 @@ body {
 
         a {
             font-family: rgb(var(--etg_header-font));
+            color: #fff;
+
+            &:visited {
+                color: #fff;
+            }
         }
+    }
+
+    h2 {
+        display: none;
     }
 }
 
 #top-bar {
     background-image: none;
-    background-color: rgb(var(--etg_accent-color));
+    background-color: transparent;
+    position: absolute;
+    top: calc(100vh - 76px - 10rem);
 }
 
 #footer {
+    grid-area: footer;
     background-color: rgb(var(--etg_accent-color));
+    width: 100%;
+    padding: 0;
+    justify-content: flex-end;
+}
+
+#license-area {
+    grid-area: license;
+    background-color: rgb(var(--etg_accent-color));
+    width: 100%;
+    padding: 0 1rem;
+    margin-top: 15px;
+    font-size: 0.8rem;
+    text-align: left;
+    border-left: 2px solid rgb(var(--etg_border-color));
+    box-sizing: border-box;
 }
 
 a,
@@ -226,11 +282,10 @@ tt {
 
 #main-content {
     max-width: 100%;
-    border-radius: 4px;
     box-shadow: none;
     border: 2px solid rgb(var(--etg_border-color));
-    background-color: rgb(var(--etg_bg-color));
     padding: 1rem;
+    height: auto;
 }
 
 @each $name, $pic in (shell, Money), (shellx5, Money_5), (shellx50, Golden_Shell), (half-heart, Half_Heart),
