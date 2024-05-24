@@ -7,8 +7,11 @@
     left: 0;
     background-color: #00000055;
 
-    div[id*="u-{$"]:target + & {
-        display: block;
+    .trigger {
+        display: none;
+        &:target + .preview-container {
+            display: block;
+        }
     }
 
     > a {
