@@ -1,0 +1,33 @@
+.preview-container {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00000055;
+
+    div[id*="u-{$"]:target + & {
+        display: block;
+    }
+
+    .infoblock {
+        position: relative;
+        margin: 0 auto;
+        top: 50%;
+        width: fit-content;
+        height: max-content;
+        background-color: #f1f1f1;
+        display: grid;
+        grid-template: auto 1fr 1fr / 1fr;
+
+        .infobox-container {
+            float: initial;
+        }
+
+        .tips[data-title*="{$"],
+        > a[href="/unix"] {
+            display: none;
+        }
+    }
+}
