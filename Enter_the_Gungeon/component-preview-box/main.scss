@@ -24,7 +24,7 @@
     .infoblock {
         position: relative;
         margin: 0 auto;
-        padding: 0 1rem 1rem;
+        padding: 1rem;
         top: 50%;
         width: fit-content;
         height: max-content;
@@ -38,6 +38,23 @@
             float: initial;
             width: 100%;
             margin: 0;
+
+            .title {
+                padding: 0;
+            }
+
+            .img {
+                padding: 0;
+
+                img {
+                    max-height: 44px;
+                    object-fit: contain;
+                }
+            }
+
+            .properties {
+                justify-content: center;
+            }
         }
 
         .tips[data-title*="{$"],
