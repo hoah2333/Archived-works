@@ -24,6 +24,7 @@
     .infoblock {
         position: relative;
         margin: 0 auto;
+        padding: 0 1rem 1rem;
         top: 50%;
         width: fit-content;
         height: max-content;
@@ -39,16 +40,19 @@
             margin: 0;
         }
 
-        .tips {
-            padding: 1rem;
-
-            &[data-title*="{$"] {
-                display: none;
-            }
-        }
-
+        .tips[data-title*="{$"],
         > a[href="/unix"] {
             display: none;
+        }
+
+        .detail {
+            border: 1px solid #e0e0e0;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+
+            a {
+                color: rgb(var(--etg_text-color));
+            }
         }
     }
 }
