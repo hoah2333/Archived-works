@@ -81,6 +81,7 @@
                 opacity: 0;
                 transition: left 0.2s, opacity 0.15s, top 0s 1s;
                 vertical-align: middle;
+                z-index: 1;
             }
 
             &:hover .note {
