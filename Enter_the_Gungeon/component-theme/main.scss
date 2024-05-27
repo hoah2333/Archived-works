@@ -288,6 +288,39 @@ tt {
     height: auto;
 }
 
+.unlock,
+.trivia {
+    position: relative;
+    margin: 3rem 0 1rem;
+    background-color: #bebab9;
+    padding: 0.5rem;
+    border-radius: 0 0 8px 8px;
+
+    &::before {
+        --wght: 700;
+        content: "解锁方法";
+        position: absolute;
+        top: -2.4rem;
+        left: 0;
+        width: 100%;
+        padding: 0.5rem;
+        box-sizing: border-box;
+        color: #fff;
+        background-color: #343146;
+        border-radius: 8px 8px 0 0;
+    }
+}
+
+.trivia {
+    img {
+        max-height: 2rem;
+    }
+
+    &::before {
+        background-color: #92918f;
+    }
+}
+
 @each $name, $pic in (shell, Money), (shellx5, Money_5), (shellx50, Golden_Shell), (half-heart, Half_Heart),
     (heart, Heart), (armor, Armor), (blank, Blank), (key, Key), (cell-key, Cell_Key), (rat-key, Ratkey), (ammo, Ammo),
     (spread-ammo, Spread_Ammo), (hegemony-credit, Hegemony_Credit)
