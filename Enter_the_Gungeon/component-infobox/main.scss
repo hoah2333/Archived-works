@@ -1,12 +1,12 @@
 .infobox-container {
     float: right;
-
     min-width: 12rem;
     width: fit-content;
     max-width: 20rem;
     box-sizing: border-box;
     margin-left: 1.5rem;
     display: grid;
+    align-items: center;
     grid-template-areas: "img title" "properties properties";
 
     &:has(.img[data-title*="{$"]) {
@@ -127,6 +127,30 @@
 
         div[data-title*="{$"] {
             display: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        float: initial;
+        width: 100%;
+        margin: 0 auto;
+        border-bottom: 2px groove rgb(var(--etg_border-color));
+
+        .title {
+            padding: 0;
+        }
+
+        .img {
+            padding: 0;
+
+            img {
+                max-height: 44px;
+                object-fit: contain;
+            }
+        }
+
+        .properties {
+            justify-content: center;
         }
     }
 }
