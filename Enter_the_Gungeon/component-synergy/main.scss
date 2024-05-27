@@ -1,0 +1,61 @@
+.synergy-container {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+        display: flex;
+        background-color: #343146;
+        padding: 0.5rem;
+        gap: 0.25rem;
+        align-items: flex-end;
+        border-radius: 8px 8px 0 0;
+
+        .cn {
+            --wght: 700;
+            color: #fff;
+        }
+
+        .en {
+            color: #aaa;
+            font-size: 0.8rem;
+        }
+
+        [data-title*="{$"] {
+            display: none;
+        }
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        background-color: #bebab9;
+        padding: 0.5rem;
+        border-radius: 0 0 8px 8px;
+        gap: 0.5rem;
+
+        .recipe {
+            display: grid;
+            grid-template-columns: 1fr 1rem 1fr 1rem 1fr;
+            text-align: center;
+            align-items: center;
+
+            &:has(.result[data-title*="{$"]) {
+                grid-template-columns: 1fr 1rem 1fr;
+            }
+
+            br {
+                display: none;
+            }
+
+            .crafts {
+                background-color: #ababab;
+                border-radius: 8px;
+                padding: 0.5rem;
+            }
+        }
+
+        [data-title*="{$"] {
+            display: none;
+        }
+    }
+}

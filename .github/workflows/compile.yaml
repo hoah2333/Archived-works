@@ -44,6 +44,7 @@ jobs:
             Enter_the_Gungeon/component-infobox/main.scss
             Enter_the_Gungeon/component-infotable/main.scss
             Enter_the_Gungeon/component-preview-box/main.scss
+            Enter_the_Gungeon/component-synergy/main.scss
             Enter_the_Gungeon/component-theme/main.scss
           destination: |
             Backrooms/component-carousel-css/main.css
@@ -68,6 +69,7 @@ jobs:
             Enter_the_Gungeon/component-infobox/main.css
             Enter_the_Gungeon/component-infotable/main.css
             Enter_the_Gungeon/component-preview-box/main.css
+            Enter_the_Gungeon/component-synergy/main.css
             Enter_the_Gungeon/component-theme/main.css
           outputStyle: expanded
           indentWidth: 4
