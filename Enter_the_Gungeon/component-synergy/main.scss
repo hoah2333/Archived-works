@@ -35,12 +35,13 @@
 
         .recipe {
             display: grid;
-            grid-template-columns: 1fr 1rem 1fr 1rem 1fr;
+            grid-template-columns: min-content 1rem min-content 1rem auto;
             text-align: center;
             align-items: center;
+            margin: 0 auto;
 
             &:has(.result[data-title*="{$"]) {
-                grid-template-columns: 1fr 1rem 1fr;
+                grid-template-columns: min-content 1rem min-content;
             }
 
             br {
@@ -51,15 +52,17 @@
                 background-color: #ababab;
                 border-radius: 8px;
                 position: relative;
+                white-space: nowarp;
+                padding: 0.5rem;
 
                 &:has(a:nth-of-type(2)) {
-                    padding: 0.5rem 0.5rem 1.25rem 0.5rem;
+                    padding: 0.5rem 0.5rem 1.75rem 0.5rem;
 
                     &::after {
                         content: "任意一个";
                         position: absolute;
                         font-size: 0.7rem;
-                        bottom: 0;
+                        bottom: 0.5rem;
                         left: 50%;
                         translate: -50% 0;
                     }
