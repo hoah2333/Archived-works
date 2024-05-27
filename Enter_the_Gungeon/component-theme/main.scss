@@ -291,10 +291,12 @@ tt {
 .unlock,
 .trivia {
     position: relative;
+    display: flow-root;
     margin: 3rem 0 1rem;
     background-color: #bebab9;
     padding: 0.5rem;
     border-radius: 0 0 8px 8px;
+
 
     &::before {
         --wght: 700;
@@ -329,3 +331,4 @@ tt {
         content: url("https://7bye.com/hoah/i/etg/pickup/#{$pic}.png");
     }
 }
+
