@@ -312,17 +312,27 @@ tt {
         box-sizing: border-box;
         color: #fff;
         border-radius: 8px 8px 0 0;
+
+        @at-root {
+            .unlock::before {
+                content: "解锁方法";
+                background-color: #343146;
+            }
+
+            .trivia::before {
+                content: "玩梗地牢";
+                background-color: #92918f;
+            }
+        }
     }
 }
 
-.unlock::before {
-    content: "解锁方法";
-    background-color: #343146;
-}
-
-.trivia::before {
-    content: "玩梗地牢";
-    background-color: #92918f;
+.group {
+    display: inline-block;
+    background-color: #bebab9;
+    margin: 0.25rem;
+    padding: 0.25rem;
+    width: max-content;
 }
 
 @each $name, $pic in (shell, Money), (shellx5, Money_5), (shellx50, Golden_Shell), (half-heart, Half_Heart),
