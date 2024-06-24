@@ -347,6 +347,35 @@ table.wiki-content-table {
     }
 }
 
+.start-items {
+    display: table;
+
+    .start-items-line {
+        display: table-row;
+
+        .start-items-key,
+        .start-items-value {
+            display: table-cell;
+            border: solid #a8a5a0;
+            border-width: 1px 0;
+        }
+
+        .start-items-key {
+            text-align: right;
+            background-color: #343146;
+            color: #fff;
+            font-weight: bold;
+            padding: 0.5rem;
+            min-width: 5rem;
+        }
+
+        .start-items-value {
+            background-color: #bebab9;
+            padding: 0.5rem;
+        }
+    }
+}
+
 @each $name, $pic in (shell, Money), (shellx5, Money_5), (shellx50, Golden_Shell), (half-heart, Half_Heart),
     (heart, Heart), (armor, Armor), (blank, Blank), (key, Key), (cell-key, Cell_Key), (rat-key, Ratkey), (ammo, Ammo),
     (spread-ammo, Spread_Ammo), (hegemony-credit, Hegemony_Credit)
