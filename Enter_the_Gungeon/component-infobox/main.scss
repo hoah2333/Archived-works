@@ -117,11 +117,14 @@
             }
 
             .ds,
-            &[data-title="DS"] > img {
+            .cba,
+            &[data-title="DS"] > img,
+            &[data-title="CBA"] > img {
                 display: none;
             }
 
-            &[data-title="DS"] .ds {
+            &[data-title="DS"] .ds,
+            &[data-title="CBA"] .cba {
                 display: block;
             }
         }
