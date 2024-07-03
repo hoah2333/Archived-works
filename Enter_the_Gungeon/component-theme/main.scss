@@ -395,12 +395,278 @@ table.wiki-content-table {
     }
 }
 
+@each $name, $pic in (rusty-sidearm, 32px-Rusty_Sidearm), (marine-sidearm, Marine_Sidearm),
+    (rogue-special, Rogue_Special), (budget-revolver, Budget_Revolver), (dart-gun, Dart_Gun),
+    (robot-s-right-hand, Robot-s_Right_Hand), (blasphemy, Blasphemy), (casey, Casey), (pea-shooter, Pea_Shooter),
+    (38-special, 38_Special), (derringer, Derringer), (slinger, Slinger), (unfinished-gun, Unfinished_Gun),
+    (finished-gun, Finished_Gun), (elimentaler, Elimentaler), (bullet, Bullet_-Gun), (shell, Shell),
+    (hyper-light-blaster, Hyper_Light_Blaster), (boxing-glove, Boxing_Glove), (makarov, Makarov), (trank-gun, Trank_Gun),
+    (m1911, M1911), (magnum, Magnum), (colt-1851, Colt_1851), (saa, SAA), (cold-45, Cold_45), (polaris, Polaris),
+    (jolter, Jolter), (dungeon-eagle, Dungeon_Eagle), (grey-mauser, Grey_Mauser_-Gun), (vorpal-gun, Vorpal_Gun),
+    (shellegun, Shellegun), (dueling-pistol, Dueling_Pistol), (au-gun, AU_Gun), (big-iron, Big_Iron),
+    (composite-gun, Composite_Gun), (flare-gun, Flare_Gun), (smiley-s-revolver, Smiley-s_Revolver),
+    (shades-s-revolver, Shades-s_Revolver), (knight-s-gun, 32px-Knight-s_Gun), (gunner, GuNNER),
+    (regular-shotgun, Regular_Shotgun), (big-shotgun, 32px-Big_Shotgun), (old-goldie, Old_Goldie),
+    (sawed-off, Sawed-Off), (winchester, Winchester), (rattler, Rattler), (bubble-blaster, Bubble_Blaster),
+    (elephant-gun, Elephant_Gun), (tangler, Tangler), (void-shotgun, Void_Shotgun), (mass-shotgun, Mass_Shotgun),
+    (shotgun-full-of-hate, Shotgun_Full_of_Hate), (shotgun-full-of-love, Shotgun_Full_of_Love), (shotgrub, Shotgrub),
+    (gilded-hydra, Gilded_Hydra), (blunderbuss, Blunderbuss), (pulse-cannon, Pulse_Cannon), (siren, 32px-Siren),
+    (zilla-shotgun, Zilla_Shotgun), (ice-breaker, Ice_Breaker), (the-membrane, The_Membrane), (huntsman, Huntsman),
+    (blooper, Blooper), (jk-47, JK-47), (bow, Bow), (charmed-bow, Charmed_Bow), (crossbow, Crossbow),
+    (sticky-crossbow, Sticky_Crossbow), (shotbow, Shotbow), (triple-crossbow, Triple_Crossbow),
+    (crescent-crossbow, Crescent_Crossbow), (gunbow, Gunbow), (klobbe, Klobbe), (machine-pistol, Machine_Pistol),
+    (thompson-sub-machinegun, Thompson_Sub-Machinegun), (ak-47, AK-47), (strafe-gun, 32px-Strafe_Gun),
+    (akey-47, AKEY-47), (stone-dome, Stone_Dome), (crown-of-guns, Crown_of_Guns), (m16, 32px-M16),
+    (combined-rifle, Combined_Rifle), (zorgun, Zorgun), (the-fat-line, 32px-The_Fat_Line),
+    (mr-accretion-jr, Mr_Accretion_Jr), (vertebraek-47, VertebraeK-47), (balloon-gun, Balloon_Gun), (mac10, MAC10),
+    (triple-gun, Triple_Gun), (heck-blaster, Heck_Blaster), (patriot, Patriot), (ac-15, AC-15),
+    (vulcan-cannon, Vulcan_Cannon), (plague-pistol, Plague_Pistol), (gungine, Gungine), (the-predator, The_Predator),
+    (dragunfire, Dragunfire), (sniper-rifle, Sniper_Rifle), (a-w-p, AWP), (m1, M1),
+    (winchester-rifle, 32px-Winchester_Rifle), (corsair, Corsair), (railgun, 32px-Railgun),
+    (prototype-railgun, 32px-Prototype_Railgun), (void-marshal, Void_Marshal), (deck4rd, Deck4rd),
+    (the-judge, The_Judge), (mourning-star, Mourning_Star), (alien-sidearm, Alien_Sidearm),
+    (rube-adyne-prototype, RUBE-ADYNE_Prototype), (rube-adyne-mk-ii, RUBE-ADYNE_MKII),
+    (rubenstein-s-monster, 32px-Rubenstein-s_Monster), (chamber-gun, Chamber_Gun), (gunderfury, Gunderfury),
+    (mine-cutter, Mine_Cutter), (void-core-assault-rifle, Void_Core_Assault_Rifle), (flash-ray, Flash_Ray),
+    (wind-up-gun, Wind_Up_Gun), (h4mmer, H4mmer), (snakemaker, Snakemaker), (turbo-gun, Turbo-Gun),
+    (hegemony-carbine, Hegemony_Carbine), (screecher, Screecher), (laser-lotus, Laser_Lotus),
+    (hegemony-rifle, Hegemony_Rifle), (fightsabre, 32px-Fightsabre), (helix, Helix), (laser-rifle, Laser_Rifle),
+    (crestfaller, Crestfaller), (rad-gun, Rad_Gun), (thunderclap, Thunderclap), (charge-shot, Charge_Shot),
+    (dark-marker, Dark_Marker), (particulator, Particulator), (the-emperor, The_Emperor), (rpg, RPG),
+    (grenade-launcher, Grenade_Launcher), (stinger, Stinger), (the-exotic, 32px-The_Exotic), (com4nd0, Com4nd0),
+    (rc-rocket, 32px-RC_Rocket), (yari-launcher, Yari_Launcher), (lil-bomber, Lil-_Bomber), (grasschopper, Grasschopper),
+    (void-core-cannon, 32px-Void_Core_Cannon), (bundle-of-wands, Bundle_of_Wands),
+    (staff-of-firepower, Staff_of_Firepower), (witch-pistol, Witch_Pistol), (hexagun, 32px-Hexagun), (phoenix, Phoenix),
+    (magic-lamp, Magic_Lamp), (teapot, Teapot), (gunslinger-s-ashes, Gunslinger-s_Ashes), (luxin-cannon, Luxin_Cannon),
+    (gunther, Gunther), (unicorn-horn, Unicorn_Horn), (cobalt-hammer, Cobalt_Hammer), (frost-giant, Frost_Giant),
+    (bullet-bore, Bullet_Bore), (cat-claw, Cat_Claw), (megahand, Megahand), (demon-head, Demon_Head), (heroine, Heroine),
+    (mutation, Mutation), (flame-hand, Flame_Hand), (sunlight-javelin, Sunlight_Javelin), (machine-fist, Machine_Fist),
+    (robot-s-left-hand, Robot-s_Left_Hand), (snowballer, Snowballer), (super-meat-gun, Super_Meat_Gun),
+    (anvillain, Anvillain), (fossilized-gun, Fossilized_Gun), (gamma-ray, Gamma_Ray), (freeze-ray, Freeze_Ray),
+    (science-cannon, Science_Cannon), (disintegrator, Disintegrator), (proton-backpack, Proton_Backpack),
+    (mega-douser, Mega_Douser), (plunger, Plunger), (raiden-coil, Raiden_Coil), (moonscraper, Moonscraper),
+    (barrel, Barrel), (trick-gun, Trick_Gun), (mailbox, Mailbox), (nail-gun, Nail_Gun), (light-gun, Light_Gun),
+    (dueling-laser, Dueling_Laser), (wood-beam, Wood_Beam), (mahoguny, Mahoguny), (the-scrambler, The_Scrambler),
+    (trashcannon, Trashcannon), (glacier, Glacier), (origuni, Origuni), (the-kiln, The_Kiln),
+    (skull-spitter, Skull_Spitter), (buzzkill, Buzzkill), (tear-jerker, Tear_Jerker), (starpew, Starpew),
+    (eye-of-the-beholster, Eye_of_the_Beholster), (molotov-launcher, 32px-Molotov_Launcher),
+    (glass-cannon, Glass_Cannon), (shock-rifle, Shock_Rifle), (bait-launcher, Bait_Launcher),
+    (brick-breaker, Brick_Breaker), (betrayer-s-shield, Betrayer-s_Shield), (lower-case-r, Lower_Case_r),
+    (excaliber, Excaliber), (face-melter, Face_Melter), (really-special-lute, Really_Special_Lute),
+    (trident, 32px-Trident), (kruller-glaive, Kruller_Glaive), (abyssal-tentacle, Abyssal_Tentacle),
+    (quad-laser, Quad_Laser), (tetrominator, Tetrominator), (pitchfork, Pitchfork), (evolver, Evolver),
+    (gungeon-ant, Gungeon_Ant), (life-orb, Life_Orb), (alien-engine, Alien_Engine),
+    (microtransaction-gun, Microtransaction_Gun), (poxcannon, Poxcannon), (t-shirt-cannon, T-Shirt_Cannon),
+    (banana, Banana), (bee-hive, Bee_Hive), (silencer, Silencer), (camera, Camera), (directional-pad, Directional_Pad),
+    (3rd-party-controller, 3rd_Party_Controller), (gunzheng, Gunzheng), (sling, Sling), (cactus, Cactus),
+    (black-hole-gun, 32px-Black_Hole_Gun), (bsg, BSG), (compressed-air-tank, Compressed_Air_Tank),
+    (serious-cannon, Serious_Cannon), (makeshift-cannon, Makeshift_Cannon), (devolver, Devolver),
+    (high-dragunfire, High_Dragunfire), (mimic-gun, Mimic_Gun),
+    (the-gun-that-can-kill-the-past, Gun_That_Can_Kill_The_Past), (high-kaliber, High_Kaliber), (windgunner, Windgunner),
+    (prize-pistol, Prize_Pistol)
+{
+    a[href="#u-#{$name}"] {
+        &::before {
+            content: url("https://7bye.com/hoah/i/etg/gun/#{$pic}.png");
+        }
+    }
+}
+
+@each $name, $pic in (master-round-i, Master_Round_I), (master-round-ii, Master_Round_II),
+    (master-round-iii, Master_Round_III), (master-round-iv, Master_Round_IV), (master-round-v, Master_Round_V),
+    (prime-primer, Prime_Primer), (arcane-gunpowder, Arcane_Gunpowder), (planar-lead, Planar_Lead),
+    (obsidian-shell-casing, Obsidian_Shell_Casing), (meatbun, Meatbun), (medkit, Medkit), (ration, Ration),
+    (orange, Orange), (friendship-cookie, Friendship_Cookie), (bottle, Bottle), (bomb, Bomb), (ice-bomb, Ice_Bomb),
+    (chaff-grenade, Chaff_Grenade), (proximity-mine, Proximity_Mine), (cluster-mine, Cluster_Mine), (c4, C4_-Item),
+    (weird-egg, Weird_Egg), (molotov, Molotov), (air-strike, Air_Strike), (napalm-strike, Napalm_Strike),
+    (big-boy, Big_Boy), (roll-bomb, Roll_Bomb), (ibomb-companion-app, IBomb_Companion_App), (supply-drop, Supply_Drop),
+    (ammo-synthesizer, Ammo_Synthesizer), (armor-synthesizer, Armor_Synthesizer), (heart-synthesizer, Heart_Synthesizer),
+    (master-of-unlocking, Master_of_Unlocking), (utility-belt, Utility_Belt), (macho-brace, Macho_Brace),
+    (hidden-compartment, Hidden_Compartment), (backpack, Backpack), (loot-bag, Loot_Bag), (drill, Drill),
+    (clown-mask, Clown_Mask), (scope, Scope), (scouter, Scouter), (laser-sight, Laser_Sight), (ammo-belt, Ammo_Belt),
+    (bullet-time, Bullet_Time), (aged-bell, Aged_Bell), (singularity, Singularity), (decoy, Decoy),
+    (shadow-clone, Shadow_Clone), (explosive-decoy, Explosive_Decoy), (melted-rock, Melted_Rock),
+    (trusty-lockpicks, Trusty_Lockpicks), (smoke-bomb, Smoke_Bomb), (box, Box), (fortune-s-favor, Fortune-s_Favor),
+    (jar-of-bees, Jar_of_Bees), (potion-of-lead-skin, Potion_of_Lead_Skin), (double-vision, Double_Vision),
+    (chest-teleporter, Chest_Teleporter), (relodestone, Relodestone), (poison-vial, Poison_Vial),
+    (potion-of-gun-friendship, Potion_of_Gun_Friendship), (portable-turret, Portable_Turret),
+    (knife-shield, Knife_Shield), (grappling-hook, Grappling_Hook), (stuffed-star, Stuffed_Star), (boomerang, Boomerang),
+    (shield-of-the-maiden, Shield_of_the_Maiden), (crisis-stone, Crisis_Stone),
+    (portable-table-device, Portable_Table_Device), (daruma, Daruma), (partially-eaten-cheese, Partially-Eaten_Cheese),
+    (1-bullets, -1_Bullets), (rocket-powered-bullets, Rocket-Powered_Bullets), (shock-rounds, Shock_Rounds),
+    (devolver-rounds, Devolver_Rounds), (vorpal-bullets, Vorpal_Bullets), (katana-bullets, Katana_Bullets),
+    (hungry-bullets, Hungry_Bullets), (heavy-bullets, Heavy_Bullets), (bouncy-bullets, Bouncy_Bullets),
+    (explosive-rounds, Explosive_Rounds), (ghost-bullets, Ghost_Bullets), (alpha-bullet, Alpha_Bullet),
+    (omega-bullets, Omega_Bullets), (scattershot, Scattershot), (irradiated-lead, Irradiated_Lead), (hot-lead, Hot_Lead),
+    (battery-bullets, Battery_Bullets), (frost-bullets, Frost_Bullets), (charming-rounds, Charming_Rounds),
+    (magic-bullets, Magic_Bullets), (fat-bullets, Fat_Bullets), (angry-bullets, Angry_Bullets),
+    (blank-bullets, Blank_Bullets), (orbital-bullets, Orbital_Bullets), (homing-bullets, Homing_Bullets),
+    (shadow-bullets, Shadow_Bullets), (easy-reload-bullets, Easy_Reload_Bullets), (stout-bullets, Stout_Bullets),
+    (snowballets, Snowballets), (remote-bullets, Remote_Bullets), (zombie-bullets, Zombie_Bullets),
+    (flak-bullets, Flak_Bullets), (silver-bullets, Silver_Bullets), (gilded-bullets, Gilded_Bullets),
+    (platinum-bullets, Platinum_Bullets), (chaos-bullets, Chaos_Bullets), (cursed-bullets, Cursed_Bullets),
+    (chance-bullets, Chance_Bullets), (helix-bullets, Helix_Bullets), (bumbullets, Bumbullets), (bloody-9mm, Bloody_9mm),
+    (bionic-leg, Bionic_Leg), (shotgun-coffee, Shotgun_Coffee), (shotga-cola, Shotga_Cola),
+    (ballistic-boots, Ballistic_Boots), (magic-sweet, Magic_Sweet), (disarming-personality, Disarming_Personality),
+    (mustache, Mustache), (lichy-trigger-finger, Lichy_Trigger_Finger), (lich-s-eye-bullets, Lich-s_Eye_Bullets),
+    (enraging-photo, Enraging_Photo), (ballot, Ballot), (live-ammo, Live_Ammo), (eyepatch, Eyepatch),
+    (military-training, Military_Training), (ring-of-the-resourceful-rat, Ring_of_the_Resourceful_Rat),
+    (cartographer-s-ring, Cartographer-s_Ring), (amulet-of-the-pit-lord, Amulet_of_the_Pit_Lord),
+    (ring-of-fire-resistance, Ring_of_Fire_Resistance), (ring-of-miserly-protection, Ring_of_Miserly_Protection),
+    (unity, Unity), (ring-of-chest-vampirism, Ring_of_Chest_Vampirism), (cloranthy-ring, Cloranthy_Ring),
+    (ring-of-chest-friendship, Ring_of_Chest_Friendship), (ring-of-mimic-friendship, Ring_of_Mimic_Friendship),
+    (ring-of-triggers, Ring_of_Triggers), (ring-of-ethereal-form, Ring_of_Ethereal_Form),
+    (gundromeda-strain, Gundromeda_Strain), (broccoli, Broccoli), (crutch, Crutch), (spice, Spice),
+    (liquid-valkyrie, Liquid_Valkyrie), (bloody-eye, Bloody_Eye), (gunknight-helmet, Gunknight_Helmet),
+    (gunknight-greaves, Gunknight_Greaves), (gunknight-armor, Gunknight_Armor), (gunknight-gauntlet, Gunknight_Gauntlet),
+    (old-knight-s-shield, Old_Knight-s_Shield), (old-knight-s-helm, Old_Knight-s_Helm),
+    (old-knight-s-flask, Old_Knight-s_Flask), (old-crest, Old_Crest), (armor-of-thorns, Armor_of_Thorns),
+    (full-metal-jacket, Full_Metal_Jacket), (ticket, Ticket), (heavy-boots, Heavy_Boots), (bug-boots, Bug_Boots),
+    (gunboots, Gunboots), (springheel-boots, Springheel_Boots), (rat-boots, Rat_Boots), (coin-crown, Coin_Crown),
+    (oiled-cylinder, Oiled_Cylinder), (ice-cube, Ice_Cube), (rolling-eye, Rolling_Eye), (cigarettes, Cigarettes),
+    (magazine-rack, Magazine_Rack), (charm-horn, Charm_Horn), (cog-of-battle, Cog_of_Battle), (metronome, Metronome),
+    (honeycomb, Honeycomb), (map, Map), (gungeon-blueprint, Gungeon_Blueprint), (sense-of-direction, Sense_of_Direction),
+    (duct-tape, Duct_Tape), (gungeon-pepper, Gungeon_Pepper), (antibody, Antibody), (resourceful-sack, Resourceful_Sack),
+    (pink-guon-stone, Pink_Guon_Stone), (white-guon-stone, White_Guon_Stone), (orange-guon-stone, Orange_Guon_Stone),
+    (clear-guon-stone, Clear_Guon_Stone), (green-guon-stone, Green_Guon_Stone), (red-guon-stone, Red_Guon_Stone),
+    (blue-guon-stone, Blue_Guon_Stone), (glass-guon-stone, Glass_Guon_Stone), (iron-coin, Iron_Coin),
+    (super-hot-watch, Super_Hot_Watch), (drum-clip, Drum_Clip), (holey-grail, Holey_Grail), (blood-brooch, Blood_Brooch),
+    (backup-gun, Backup_Gun), (sunglasses, Sunglasses), (mimic-tooth-necklace, Mimic_Tooth_Necklace),
+    (escape-rope, Escape_Rope), (jetpack, Jetpack), (wax-wings, Wax_Wings),
+    (cat-bullet-king-throne, Cat_Bullet_King_Throne), (blast-helmet, Blast_Helmet),
+    (lament-configurum, Lament_Configurum), (monster-blood, Monster_Blood), (nanomachines, Nanomachines),
+    (seven-leaf-clover, Seven-Leaf_Clover), (number-2, Number_2), (gold-ammolet, Gold_Ammolet),
+    (chaos-ammolet, Chaos_Ammolet), (lodestone-ammolet, Lodestone_Ammolet), (uranium-ammolet, Uranium_Ammolet),
+    (copper-ammolet, Copper_Ammolet), (frost-ammolet, Frost_Ammolet), (table-tech-sight, Table_Tech_Sight),
+    (table-tech-money, Table_Tech_Money), (table-tech-rocket, Table_Tech_Rocket),
+    (table-tech-shotgun, Table_Tech_Shotgun), (table-tech-heat, Table_Tech_Heat), (table-tech-rage, Table_Tech_Rage),
+    (table-tech-blanks, Table_Tech_Blanks), (table-tech-stun, Table_Tech_Stun), (heart-holster, Heart_Holster),
+    (heart-lunchbox, Heart_Lunchbox), (heart-locket, Heart_Locket), (heart-bottle, Heart_Bottle),
+    (heart-purse, Heart_Purse), (ruby-bracelet, Ruby_Bracelet), (sixth-chamber, Sixth_Chamber),
+    (busted-television, Busted_Television), (coolant-leak, Coolant_Leak), (heart-of-ice, Heart_of_Ice),
+    (ancient-hero-s-bandana, Ancient_Hero-s_Bandana), (bloodied-scarf, Bloodied_Scarf),
+    (muscle-relaxant, Muscle_Relaxant), (hip-holster, Hip_Holster), (clone, Clone), (sponge, Sponge),
+    (gas-mask, Gas_Mask), (hazmat-suit, Hazmat_Suit), (book-of-chest-anatomy, Book_of_Chest_Anatomy),
+    (gun-soul, Gun_Soul), (shelleton-key, Shelleton_Key), (brick-of-cash, Brick_of_Cash),
+    (battle-standard, Battle_Standard), (wingman, Wingman), (wolf, Wolf), (dog, Dog), (owl, Owl),
+    (super-space-turtle, Super_Space_Turtle), (junk, Junk), (gold-junk, Gold_Junk), (lies, Junk),
+    (ser-junkan, Ser_Junkan_1), (r2g2, R2G2), (baby-good-shelleton, Baby_Good_Shelleton), (badge, Badge),
+    (chicken-flute, Chicken_Flute), (space-friend, Space_Friend), (pig, Pig), (turkey, Turkey),
+    (turtle-problem, Turtle_Problem), (sprun, Sprun), (baby-good-mimic, Baby_Good_Mimic),
+    (blank-companion-s-ring, Blank_Companion-s_Ring), (briefcase-of-cash, Briefcase_of_Cash),
+    (galactic-medal-of-valor, Galactic_Medal_of_Valor), (bullet-idol, Bullet_Idol), (riddle-of-lead, Riddle_of_Lead),
+    (bracket-key, Bracket_Key), (elder-blank, Elder_Blank), (teleporter-prototype, Teleporter_Prototype),
+    (yellow-chamber, Yellow_Chamber), (infuriating-note, Infuriating_Note),
+    (the-bullet-that-can-kill-the-past, Bullet_That_Can_Kill_The_Past), (gnawed-key, Gnawed_Key)
+{
+    a[href="#u-#{$name}"] {
+        &::before {
+            content: url("https://7bye.com/hoah/i/etg/item/#{$pic}.png");
+        }
+    }
+}
+
+@each $name, $pic in (brown-chest, Brown_Chest), (blue-chest, Blue_Chest), (green-chest, Green_Chest),
+    (red-chest, Red_Chest), (black-chest, Black_Chest), (rainbow-chest, Rainbow_Chest), (glitch-chest, litch_Chest),
+    (synergy-chest, Synergy_Chest), (rat-chest, Rat_Chest), (truth-chest, Truth_Chest), (revival-chest, Revival_Chest)
+{
+    a[href="#u-#{$name}"] {
+        &::before {
+            content: url("https://7bye.com/hoah/i/etg/chest/#{$pic}.png");
+        }
+    }
+}
+
+@each $name, $pic in (bello, Shopkeeper), (ox-and-cadence, Ox_and_Cadence), (ox, Ox), (cadence, Cadence),
+    (drunkard, Drunkard), (tinker, Sherpa), (frifle-and-the-grey-mauser, Frifle_and_the_Grey_Mauser), (frifle, Frifle),
+    (grey-mauser, Grey_Mauser), (winchester, NPC_Winchester),
+    (gunsling-king-and-manservantes, Gunsling_King_and_Manservantes), (gunsling-king, Gunsling_King),
+    (manservantes, Manservantes), (ser-manuel, Ser_Manuel), (monster-manuel, Monster_Manuel), (blockner, NPC_Blockner),
+    (sell-creep, TheSellCreep), (the-lost-adventurer, The_Lost_Adventurer), (ledge-goblin, Ledge_Goblin),
+    (blacksmith, Blacksmith), (resourceful-rat, Resourceful_Rat), (professor-goopton, Professor_Goopton),
+    (trorc, Truck_Shopkeeper), (old-red, Blank_Shopkeeper), (cursula, Curse_Shopkeeper), (flynt, Key_Shopkeeper),
+    (doug, Doug), (sorceress, Sorceress), (tonic, Tonic), (daisuke, Daisuke), (patches-and-mendy, Doctors),
+    (synergrace, Synergrace), (vampire, Vampire), (witches, Witches), (old-man, Old_Man),
+    (brother-albern, Brother_Albern), (save-button, Save_Button), (bowler, Bowler)
+{
+    a[href="#u-#{$name}"] {
+        &::before {
+            content: url("https://7bye.com/hoah/i/etg/npc/#{$pic}.png");
+        }
+    }
+}
+
+@each $name, $pic in (bullet-kin, Bullet_Kin), (bandana-bullet-kin, Bandana_Bullet_Kin),
+    (veteran-bullet-kin, Veteran_Bullet_Kin), (tanker, Tanker), (minelet, Minelet), (cardinal, Cardinal),
+    (shroomer, Shroomer), (ashen-bullet-kin, Ashen_Bullet_Kin), (mutant-bullet-kin, Mutant_Bullet_Kin),
+    (fallen-bullet-kin, Fallen_Bullet_Kin), (chance-kin, Chance_Kin), (keybullet-kin, Keybullet_Kin),
+    (confirmed, Confirmed), (red-shotgun-kin, Red_Shotgun_Kin), (blue-shotgun-kin, Blue_Shotgun_Kin),
+    (veteran-shotgun-kin, Veteran_Shotgun_Kin), (mutant-shotgun-kin, Mutant_Shotgun_Kin), (executioner, Executioner),
+    (ashen-shotgun-kin, Ashen_Shotgun_Kin), (shotgrub, Shotgrub_-Enemy), (sniper-shell, Sniper_Shell),
+    (professional, Professional), (gummy, Gummy), (skullet, Skullet), (skullmet, Skullmet), (spent, Spent),
+    (creech, Creech), (hollowpoint, Hollowpoint), (bombshee, Bombshee), (rubber-kin, Rubber_Kin), (tazie, Tazie),
+    (king-bullat, King_Bullat), (pinhead, Pinhead), (nitra, Nitra), (arrowkin, Arrowkin), (blobulon, Blobulon),
+    (blobuloid, Blobuloid), (blobulin, Blobulin), (poisbulon, Poisbulon), (poisbuloid, Poisbuloid),
+    (poisbulin, Poisbulin), (blizzbulon, Blizzbulon), (leadbulon, Leadbulon), (poopulon, Poopulon),
+    (bloodbulon, Bloodbulon), (skusket, Skusket), (bookllet, Bookllet), (blue-bookllet, Blue_Bookllet),
+    (green-bookllet, Green_Bookllet), (gigi, Gigi), (muzzle-wisp, Muzzle_Wisp), (muzzle-flare, Muzzle_Flare),
+    (cubulon, Cubulon), (chancebulon, Chancebulon), (cubulead, Cubulead), (apprentice-gunjurer, Apprentice_Gunjurer),
+    (gunjurer, Gunjurer), (high-gunjurer, High_Gunjurer), (lore-gunjurer, Lore_Gunjurer), (gunsinger, Gunsinger),
+    (aged-gunsinger, Aged_Gunsinger), (ammomancer, Ammomancer), (jammomancer, Jammomancer), (jamerlengo, Jamerlengo),
+    (wizbang, Wizbang), (mimic, Mimic), (gun-fairy, Gun_Fairy), (bullat, Bullat), (shotgat, Shotgat), (grenat, Grenat),
+    (spirat, Spirat), (coaler, Coaler), (gat, Gat), (det, Det), (gunzookie, Gunzookie), (gunzockie, Gunzockie),
+    (bullet-shark, Bullet_Shark), (great-bullet-shark, Great_Bullet_Shark), (tombstoner, Tombstoner),
+    (gun-cultist, Gun_Cultist), (beadie, Beadie), (gun-nut, Gun_Nut), (spectral-gun-nut, Spectral_Gun_Nut),
+    (chain-gunner, Chain_Gunner), (fungun, Fungun), (spogre, Spogre), (mountain-cube, Mountain_Cube),
+    (lead-cube, Lead_Cube), (flesh-cube, Flesh_Cube), (dead-blow, Dead_Blow), (lead-maiden, Lead_Maiden),
+    (misfire-beast, Misfire_Beast), (phaser-spider, Phaser_Spider), (killithid, Killithid), (gripmaster, Gripmaster),
+    (tarnisher, Tarnisher), (shambling-round, Shambling_Round), (shelleton, Shelleton), (agonizer, Agonizer),
+    (revolvenant, Revolvenant), (gunreaper, Gunreaper), (lord-of-the-jammed, Lord_of_the_Jammed), (fuselier, Fuselier),
+    (blockner-s-ghost, Blockner-s_Ghost), (shadow-magician, Shadow_Magician), (brown-chest-mimic, Mimic),
+    (blue-chest-mimic, Blue_Mimic), (green-chest-mimic, Green_Mimic), (red-chest-mimic, Red_Mimic),
+    (black-chest-mimic, Black_Mimic), (rat-chest-mimic, Rat_Chest_Mimic), (pedestal-mimic, Pedestal_Mimic),
+    (wall-mimic, Wall_Mimic), (googly-eyed-mimic, Googly-eyed_Mimic), (red-caped-bullet-kin, Red-Caped_Bullet_Kin)
+{
+    a[href="#u-#{$name}"] {
+        &::before {
+            content: url("https://7bye.com/hoah/i/etg/enemy/#{$pic}.png");
+        }
+    }
+}
+
+@each $name, $pic in (the-convict, Convict_In-Game), (the-hunter, Hunter_In-Game), (the-marine, Marine_In-Game),
+    (the-pilot, Pilot_In-Game), (the-cultist, Cultist_In-Game), (the-bullet, Bullet_In-Game), (the-robot, Robot_In-Game),
+    (the-paradox, Paradox_In-Game), (the-gunslinger, Gunslinger_In-Game)
+{
+    a[href="#u-#{$name}"] {
+        &::before {
+            content: url("https://7bye.com/hoah/i/etg/gungeoneer/#{$pic}.png");
+        }
+    }
+}
+
+@each $name, $pic in (bullet-king, Bullet_King), (gatling-gull, Gatling_Gull), (trigger-twins, Trigger_Twins),
+    (ammoconda, Ammoconda), (beholster, Beholster), (the-gorgun, The_Gorgun), (cannonbalrog, Cannonbalrog),
+    (mine-flayer, Mine_Flayer), (treadnaught, Treadnaught), (high-priest, High_Priest), (kill-pillars, Kill_Pillars),
+    (wallmonger, Wallmonger), (high-dragun, High_Dragun), (blockner, Blockner), (door-lord, Door_Lord),
+    (blobulord, Blobulord), (old-king, Old_King), (resourceful-rat, Boss_Resourceful_Rat), (black-stache, Black_Stache),
+    (dr-wolf-s-monster, Dr_Wolf-s_Monster), (hs-absolution, HS_Absolution),
+    (interdimensional-horror, Interdimensional_Horror), (agunim, Agunim), (cannon, Cannon),
+    (the-last-human, The_Last_Human), (lich, Lich)
+{
+    a[href="#u-#{$name}"] {
+        &::before {
+            content: url("https://7bye.com/hoah/i/etg/boss/#{$pic}.png");
+        }
+    }
+}
+
 @each $name, $pic in (shell, Money), (shellx5, Money_5), (shellx50, Golden_Shell), (half-heart, Half_Heart),
     (heart, Heart), (armor, Armor), (blank, Blank), (key, Key), (cell-key, Cell_Key), (rat-key, Ratkey), (ammo, Ammo),
     (spread-ammo, Spread_Ammo), (hegemony-credit, Hegemony_Credit)
 {
     a[href="/pickups##{$name}"],
-    a[href="#u-##{$name}"] {
+    a[href="#u-#{$name}"] {
         &::before {
             content: url("https://7bye.com/hoah/i/etg/pickup/#{$pic}.png");
         }
