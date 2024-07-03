@@ -202,6 +202,10 @@ body {
     h2 {
         display: none;
     }
+
+    #search-top-box {
+        display: none;
+    }
 }
 
 #top-bar {
@@ -249,6 +253,8 @@ tt {
     hyphens: auto;
     overflow-wrap: break-word;
     white-space: pre-wrap;
+    color: #cc3344;
+    padding: 0 0.5rem;
 
     &,
     & * {
@@ -285,6 +291,19 @@ tt {
     box-shadow: none;
     padding: 1rem;
     height: auto;
+}
+
+.page-tags,
+#page-options-container,
+#login-status {
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+        opacity: 1;
+    }
 }
 
 .unlock,
@@ -380,7 +399,10 @@ table.wiki-content-table {
     (heart, Heart), (armor, Armor), (blank, Blank), (key, Key), (cell-key, Cell_Key), (rat-key, Ratkey), (ammo, Ammo),
     (spread-ammo, Spread_Ammo), (hegemony-credit, Hegemony_Credit)
 {
-    a[href="/pickups##{$name}"]::before {
-        content: url("https://7bye.com/hoah/i/etg/pickup/#{$pic}.png");
+    a[href="/pickups##{$name}"],
+    a[href="#u-##{$name}"] {
+        &::before {
+            content: url("https://7bye.com/hoah/i/etg/pickup/#{$pic}.png");
+        }
     }
 }

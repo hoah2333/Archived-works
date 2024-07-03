@@ -42,6 +42,7 @@
 
         img {
             min-width: 78px;
+            max-width: 120px;
             image-rendering: pixelated;
         }
 
@@ -157,4 +158,8 @@
             justify-content: center;
         }
     }
+}
+
+#page-title {
+    display: none;
 }
