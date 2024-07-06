@@ -248,6 +248,42 @@ a,
     }
 }
 
+a.link,
+a.synergy {
+    display: inline-flex;
+    align-items: baseline;
+    background-color: #bebab9;
+    border: 2px groove #a8a5a4;
+    padding: 0rem 0.25rem;
+    border-radius: 0.25rem;
+    color: #343146;
+    margin: 0 0.25rem;
+    transition: background-color 0.25s;
+
+    &:hover {
+        text-decoration: none;
+        background-color: #aa9f9c;
+    }
+}
+
+a.synergy::before {
+    content: "组合：";
+    font-size: 0.7rem;
+    color: #998f81;
+}
+
+a img,
+img.icon {
+    max-height: 2rem;
+    min-height: 0.75rem;
+    margin: 0.5rem 0.5rem 0;
+    image-rendering: pixelated;
+}
+
+img.media {
+    width: 30rem;
+}
+
 tt {
     --calt: 0;
     hyphens: auto;
@@ -316,7 +352,7 @@ tt {
     border-radius: 0 0 8px 8px;
 
     img {
-        max-height: 2rem;
+        max-height: 15rem;
         min-height: 1rem;
         image-rendering: pixelated;
     }
@@ -391,18 +427,6 @@ table.wiki-content-table {
         .start-items-value {
             background-color: #bebab9;
             padding: 0.5rem;
-        }
-    }
-}
-
-@each $name, $pic in (shell, Money), (shellx5, Money_5), (shellx50, Golden_Shell), (half-heart, Half_Heart),
-    (heart, Heart), (armor, Armor), (blank, Blank), (key, Key), (cell-key, Cell_Key), (rat-key, Ratkey), (ammo, Ammo),
-    (spread-ammo, Spread_Ammo), (hegemony-credit, Hegemony_Credit)
-{
-    a[href="/pickups##{$name}"],
-    a[href="#u-##{$name}"] {
-        &::before {
-            content: url("https://7bye.com/hoah/i/etg/pickup/#{$pic}.png");
         }
     }
 }
