@@ -67,6 +67,8 @@
 
                 img {
                     max-height: 2rem;
+                    min-height: 1.25rem;
+                    image-rendering: pixelated;
                 }
             }
         }
