@@ -51,7 +51,9 @@
             font-size: 0.8rem;
         }
 
-        [data-title*="{$"] {
+        [data-title*="{$"],
+        br,
+        &[data-title*="{$"] a {
             display: none;
         }
 
@@ -76,12 +78,6 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-            }
-        }
-
-        &[data-title*="{$"] {
-            a {
-                display: none;
             }
         }
     }
