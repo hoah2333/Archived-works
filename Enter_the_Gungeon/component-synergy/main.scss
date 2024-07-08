@@ -130,6 +130,10 @@
             }
         }
 
+        .trivias {
+            color: #777;
+        }
+
         [data-title*="{$"] {
             display: none;
         }
