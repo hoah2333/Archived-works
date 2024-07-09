@@ -448,4 +448,8 @@ table.wiki-content-table {
         background-image: url("https://7bye.com/hoah/i/etg/data/phone.png");
         image-rendering: pixelated;
     }
+
+    @media (max-width: 578px) {
+        display: block;
+    }
 }
