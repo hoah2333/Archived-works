@@ -431,3 +431,21 @@ table.wiki-content-table {
         }
     }
 }
+
+.phone-only-content {
+    padding: 0.5rem;
+    border: 1px solid #aaa;
+    background-color: #bdb9b7;
+    border-left: 0.25rem solid #000;
+
+    &::before {
+        content: "";
+        position: relative;
+        display: inline-flex;
+        width: 18px;
+        height: 18px;
+        top: 3px;
+        background-image: url("https://7bye.com/hoah/i/etg/data/phone.png");
+        image-rendering: pixelated;
+    }
+}
