@@ -59,7 +59,7 @@
         }
 
         .tips[data-title*="{$"],
-        .tips[data-no-detail*="{$"],
+        .tips[data-nodetail*="true"],
         > a[href="/unix"] {
             display: none;
         }
