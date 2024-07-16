@@ -277,13 +277,15 @@ a.synergy::before {
 }
 
 a img,
-img.icon,
-.trivia a img,
-.unlock a img {
-    max-height: 2rem;
-    min-height: 1.25rem;
-    margin: 0.5rem 0.5rem 0;
-    image-rendering: pixelated;
+img.icon {
+    &,
+    .trivia &,
+    .unlock & {
+        max-height: 2rem;
+        min-height: 1.25rem;
+        margin: 0.5rem 0.5rem 0;
+        image-rendering: pixelated;
+    }
 }
 
 img.media {
@@ -394,9 +396,16 @@ tt {
     margin: 0.25rem;
     padding: 0.25rem;
     width: max-content;
+    max-width: calc(100% - 20rem);
+
+    @media screen and (max-width: 768px) {
+        max-width: 98%;
+    }
 }
 
 table.wiki-content-table {
+    margin: 0.5rem;
+
     th {
         background-color: #de3d70;
         color: #fff;
@@ -454,7 +463,7 @@ table.wiki-content-table {
         image-rendering: pixelated;
     }
 
-    @media (max-width: 578px) {
+    @media screen and (max-width: 578px) {
         display: block;
     }
 }
