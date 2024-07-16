@@ -225,6 +225,16 @@ body {
     width: 100%;
     padding: 0;
     justify-content: flex-end;
+
+    @media screen and (max-width: 808px) {
+        .options {
+            display: none !important;
+        }
+
+        a {
+            margin-right: 1rem;
+        }
+    }
 }
 
 #license-area {
@@ -237,6 +247,21 @@ body {
     text-align: left;
     border-left: 2px solid rgb(var(--etg_border-color));
     box-sizing: border-box;
+
+    @media screen and (max-width: 1040px) {
+        font-size: 0;
+
+        a::before {
+            content: "本页内容遵守 CC BY-SA 3.0 协议";
+            font-size: 0.8rem;
+        }
+    }
+
+    @media screen and (max-width: 405px) {
+        a::before {
+            content: "遵守 CC BY-SA 3.0 协议";
+        }
+    }
 }
 
 a,
@@ -289,7 +314,8 @@ img.icon {
 }
 
 img.media {
-    width: 30rem;
+    max-width: min(100%, 30rem);
+    max-height: calc(100vh - var(--sp_final-header-height) - 0.5rem - 34px);
 }
 
 tt {
