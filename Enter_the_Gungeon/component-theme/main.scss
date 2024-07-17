@@ -20,13 +20,6 @@
 /* 引用组件 - 切换侧边栏 */
 @import url("https://scp-wiki-cn.wdfiles.com/local--code/component%3Atoggle-sidebar/1");
 
-/* 引用字体 */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900;1000&display=swap");
-
 :root {
     --header-title: "挺进地牢图鉴";
 
@@ -34,11 +27,11 @@
     --sp_area-max-width: 85.5rem;
     --sp_header-height: 5rem;
 
-    --etg_body-font: Inter, "Noto Sans SC", "Noto Sans TC", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC",
-        "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
+    --etg_body-font: Inter, "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC", "Microsoft JhengHei UI",
+        "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
     --etg_header-font: var(--etg_body-font);
-    --etg_mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑",
-        "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
+    --etg_mono-font: "Andale Mono", "幼圆", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI",
+        "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
     --etg_text-color: 20, 20, 30;
     --etg_link-color: 70, 150, 155;
     --etg_link-visited-color: 50, 130, 130;
