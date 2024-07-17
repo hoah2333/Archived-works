@@ -28,6 +28,7 @@
         padding: 1rem;
         top: 50%;
         width: fit-content;
+        max-width: 80vw;
         height: max-content;
         background-color: #f1f1f1;
         display: grid;
@@ -72,6 +73,15 @@
             a {
                 color: rgb(var(--etg_text-color));
             }
+        }
+    }
+
+    @media screen and (max-height: 555px) {
+        overflow-y: scroll;
+
+        .infoblock {
+            top: 50vh;
+            translate: 0 -50vh;
         }
     }
 }
