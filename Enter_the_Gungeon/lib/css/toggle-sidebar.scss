@@ -1,0 +1,85 @@
+/* source: http://ah-sandbox.wikidot.com/component:collapsible-sidebar-x1 */
+
+#top-bar .open-menu a {
+    position: fixed;
+    top: 0.5em;
+    left: 0.5em;
+    z-index: 5;
+    font-family: "Nanum Gothic", san-serif;
+    font-size: 30px;
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    line-height: 0.9em;
+    text-align: center;
+    border: 0.2em solid #888;
+    background-color: #fff;
+    border-radius: 3em;
+    color: #888;
+    pointer-events: auto;
+}
+
+@media not all and (max-width: 767px) {
+    #top-bar .mobile-top-bar {
+        display: block;
+        pointer-events: none;
+    }
+
+    #top-bar .mobile-top-bar li {
+        display: none;
+    }
+
+    #main-content {
+        max-width: 44.5rem;
+        margin: 0 auto;
+        padding: 0;
+        transition: max-width 0.2s ease-in-out;
+    }
+
+    #side-bar {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -18rem;
+        width: 15.25rem;
+        height: 100%;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 10;
+        padding: 1em 1em 0 1em;
+        background-color: rgba(0, 0, 0, 0.1);
+        transition: left 0.4s ease-in-out;
+
+        scrollbar-width: thin;
+    }
+
+    #side-bar:target {
+        left: 0;
+    }
+
+    #side-bar:focus-within {
+        left: 0;
+    }
+
+    #side-bar:target .close-menu {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        margin-left: 17rem;
+        opacity: 0;
+        z-index: -1;
+        visibility: visible;
+    }
+
+    #side-bar:not(:target) .close-menu {
+        display: none;
+    }
+
+    #top-bar .open-menu a:hover {
+        text-decoration: none;
+    }
+}
