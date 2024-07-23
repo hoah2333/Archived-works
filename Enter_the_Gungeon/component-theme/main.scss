@@ -12,13 +12,13 @@
     A modified version of Sigma 10 theme
     modified the import url of Awesome Font only
 */
-@import url("./sigma-10.css");
+@import url("../lib/css/sigma-10.css");
 
 /* 引用组件 - Sigma+ */
-@import url("https://scp-wiki.wdfiles.com/local--code/component%3Asigma-plus/1");
+@import url("../lib/css/sigma-10.css");
 
 /* 引用组件 - 切换侧边栏 */
-@import url("https://scp-wiki-cn.wdfiles.com/local--code/component%3Atoggle-sidebar/1");
+@import url("../lib/css/toggle-sidebar.css");
 
 :root {
     --header-title: "挺进地牢图鉴";

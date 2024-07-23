@@ -46,7 +46,9 @@ jobs:
             Enter_the_Gungeon/component-preview-box/main.scss
             Enter_the_Gungeon/component-synergy/main.scss
             Enter_the_Gungeon/component-theme/main.scss
-            Enter_the_Gungeon/component-theme/sigma-10.scss
+            Enter_the_Gungeon/lib/css/sigma-10.scss
+            Enter_the_Gungeon/lib/css/sigma-plus.scss
+            Enter_the_Gungeon/lib/css/toggle-sidebar.scss
           destination: |
             Backrooms/component-carousel-css/main.css
             Backrooms/component-iets/main.css
@@ -72,7 +74,10 @@ jobs:
             Enter_the_Gungeon/component-preview-box/main.css
             Enter_the_Gungeon/component-synergy/main.css
             Enter_the_Gungeon/component-theme/main.css
-            Enter_the_Gungeon/component-theme/sigma-10.css
+            Enter_the_Gungeon/lib/css/sigma-10.css
+            Enter_the_Gungeon/lib/css/sigma-plus.css
+            Enter_the_Gungeon/lib/css/toggle-sidebar.css
+
           outputStyle: expanded
           indentWidth: 4
 
