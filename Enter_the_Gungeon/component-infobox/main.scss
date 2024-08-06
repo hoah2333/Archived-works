@@ -4,7 +4,7 @@
     width: fit-content;
     max-width: 20rem;
     box-sizing: border-box;
-    margin-left: 1.5rem;
+    margin: 0 3rem 0 1.5rem;
     display: grid;
     align-items: center;
     grid-template-areas: "img title" "properties properties";
@@ -43,7 +43,9 @@
         img {
             min-width: 78px;
             max-width: 120px;
+            max-height: 78px;
             image-rendering: pixelated;
+            object-fit: contain;
         }
 
         &[data-title*="{$"] {

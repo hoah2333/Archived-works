@@ -17,16 +17,11 @@
 @import url("./image.css");
 
 /* 引用字体 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900;1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900;1000&display=swap");
 
-@each $weight,
-$name in (100, Light),
-(300, Medium),
-(500, Regular),
-(700, Bold),
-(900, Heavy) {
+@each $weight, $name in (100, Light), (300, Medium), (500, Regular), (700, Bold), (900, Heavy) {
     @font-face {
         font-family: "PuHuiTi";
         font-style: normal;
@@ -37,9 +32,11 @@ $name in (100, Light),
 }
 
 :root {
-    --header-font: "PuHuiTi", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC", "Microsoft JhengHei UI", "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
+    --header-font: "PuHuiTi", "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC", "Microsoft JhengHei UI",
+        "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
     --body-font: var(--header-font);
-    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑", "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
+    --mono-font: Recursive, "Noto Serif SC", "Noto Serif TC", "宋体", "SimSun", "Microsoft YaHei UI", "微软雅黑",
+        "Microsoft JhengHei UI", "Microsoft JhengHei", "Courier New", Courier, monospace, STXihei, "华文细黑";
 
     --header-title: "";
     --sp_header-logo: var(--logo-image); // 版头图片
@@ -183,72 +180,72 @@ hr {
 }
 
 div#container-wrap {
-    background-image:
-        var(--bg-image),
-        linear-gradient(90deg,
-            #24201C 0%,
-            #24201C calc(302 / 1920 * 100%),
-            #25221C calc(362 / 1920 * 100%),
-            #26221D calc(416 / 1920 * 100%),
-            #26231D calc(443 / 1920 * 100%),
-            #27231D calc(476 / 1920 * 100%),
-            #29241E calc(494 / 1920 * 100%),
-            #2A241E calc(522 / 1920 * 100%),
-            #2B251E calc(536 / 1920 * 100%),
-            #2B261F calc(557 / 1920 * 100%),
-            #2C261F calc(569 / 1920 * 100%),
-            #2C271F calc(590 / 1920 * 100%),
-            #2E2720 calc(602 / 1920 * 100%),
-            #2F2920 calc(620 / 1920 * 100%),
+    background-image: var(--bg-image),
+        linear-gradient(
+            90deg,
+            #24201c 0%,
+            #24201c calc(302 / 1920 * 100%),
+            #25221c calc(362 / 1920 * 100%),
+            #26221d calc(416 / 1920 * 100%),
+            #26231d calc(443 / 1920 * 100%),
+            #27231d calc(476 / 1920 * 100%),
+            #29241e calc(494 / 1920 * 100%),
+            #2a241e calc(522 / 1920 * 100%),
+            #2b251e calc(536 / 1920 * 100%),
+            #2b261f calc(557 / 1920 * 100%),
+            #2c261f calc(569 / 1920 * 100%),
+            #2c271f calc(590 / 1920 * 100%),
+            #2e2720 calc(602 / 1920 * 100%),
+            #2f2920 calc(620 / 1920 * 100%),
             #312920 calc(629 / 1920 * 100%),
-            #342D25 calc(647 / 1920 * 100%),
-            #352E25 calc(656 / 1920 * 100%),
-            #362E25 calc(674 / 1920 * 100%),
-            #372F25 calc(683 / 1920 * 100%),
-            #392F26 calc(698 / 1920 * 100%),
+            #342d25 calc(647 / 1920 * 100%),
+            #352e25 calc(656 / 1920 * 100%),
+            #362e25 calc(674 / 1920 * 100%),
+            #372f25 calc(683 / 1920 * 100%),
+            #392f26 calc(698 / 1920 * 100%),
             #393126 calc(710 / 1920 * 100%),
-            #3A3126 calc(725 / 1920 * 100%),
-            #3B3227 calc(734 / 1920 * 100%),
-            #3C3327 calc(749 / 1920 * 100%),
-            #3D3327 calc(761 / 1920 * 100%),
-            #3D3429 calc(776 / 1920 * 100%),
-            #3E3429 calc(788 / 1920 * 100%),
-            #3F3529 calc(803 / 1920 * 100%),
-            #40352A calc(809 / 1920 * 100%),
-            #3E3327 calc(815 / 1920 * 100%),
-            #3F3427 calc(830 / 1920 * 100%),
-            #3F3527 calc(842 / 1920 * 100%),
+            #3a3126 calc(725 / 1920 * 100%),
+            #3b3227 calc(734 / 1920 * 100%),
+            #3c3327 calc(749 / 1920 * 100%),
+            #3d3327 calc(761 / 1920 * 100%),
+            #3d3429 calc(776 / 1920 * 100%),
+            #3e3429 calc(788 / 1920 * 100%),
+            #3f3529 calc(803 / 1920 * 100%),
+            #40352a calc(809 / 1920 * 100%),
+            #3e3327 calc(815 / 1920 * 100%),
+            #3f3427 calc(830 / 1920 * 100%),
+            #3f3527 calc(842 / 1920 * 100%),
             #403529 calc(860 / 1920 * 100%),
             #423629 calc(875 / 1920 * 100%),
             #433629 calc(896 / 1920 * 100%),
-            #44372A calc(938 / 1920 * 100%),
-            #45392A calc(959 / 1920 * 100%),
-            #463A2B calc(1004 / 1920 * 100%),
-            #473A2B calc(1103 / 1920 * 100%),
-            #463A2B calc(1148 / 1920 * 100%),
-            #45392A calc(1169 / 1920 * 100%),
-            #44372A calc(1211 / 1920 * 100%),
+            #44372a calc(938 / 1920 * 100%),
+            #45392a calc(959 / 1920 * 100%),
+            #463a2b calc(1004 / 1920 * 100%),
+            #473a2b calc(1103 / 1920 * 100%),
+            #463a2b calc(1148 / 1920 * 100%),
+            #45392a calc(1169 / 1920 * 100%),
+            #44372a calc(1211 / 1920 * 100%),
             #433629 calc(1232 / 1920 * 100%),
             #423629 calc(1247 / 1920 * 100%),
             #403529 calc(1265 / 1920 * 100%),
-            #3F3527 calc(1277 / 1920 * 100%),
-            #3F3427 calc(1292 / 1920 * 100%),
-            #3E3327 calc(1304 / 1920 * 100%),
-            #3D3326 calc(1319 / 1920 * 100%),
-            #3C3226 calc(1331 / 1920 * 100%),
-            #3B3226 calc(1346 / 1920 * 100%),
-            #3B3125 calc(1358 / 1920 * 100%),
-            #3A3125 calc(1373 / 1920 * 100%),
-            #392F25 calc(1382 / 1920 * 100%),
-            #372E24 calc(1397 / 1920 * 100%),
-            #362E24 calc(1409 / 1920 * 100%),
-            #362D24 calc(1424 / 1920 * 100%),
-            #352D23 calc(1433 / 1920 * 100%),
-            #342C23 calc(1451 / 1920 * 100%),
-            #332C23 calc(1460 / 1920 * 100%),
-            #322B23 calc(1478 / 1920 * 100%),
-            #322A22 calc(1487 / 1920 * 100%),
-            #312A22 calc(1505 / 1920 * 100%),
+            #3f3527 calc(1277 / 1920 * 100%),
+            #3f3427 calc(1292 / 1920 * 100%),
+            #3e3327 calc(1304 / 1920 * 100%),
+            #3d3326 calc(1319 / 1920 * 100%),
+            #3c3226 calc(1331 / 1920 * 100%),
+            #3b3226 calc(1346 / 1920 * 100%),
+            #3b3125 calc(1358 / 1920 * 100%),
+            #3a3125 calc(1373 / 1920 * 100%),
+            #392f25 calc(1382 / 1920 * 100%),
+            #372e24 calc(1397 / 1920 * 100%),
+            #362e24 calc(1409 / 1920 * 100%),
+            #362d24 calc(1424 / 1920 * 100%),
+            #352d23 calc(1433 / 1920 * 100%),
+            #342c23 calc(1451 / 1920 * 100%),
+            #332c23 calc(1460 / 1920 * 100%),
+            #322b23 calc(1478 / 1920 * 100%),
+            #322a22 calc(1487 / 1920 * 100%),
+            #312a22 calc(1505 / 1920 * 100%),
             /*  #2F2922 calc(1517 / 1920 * 100%),
             #2E2920 calc(1538 / 1920 * 100%),
             #2D2720 calc(1550 / 1920 * 100%),
@@ -257,11 +254,12 @@ div#container-wrap {
             #332D25 calc(1586 / 1920 * 100%),
             #322C25 calc(1613 / 1920 * 100%),
             #312C25 calc(1631 / 1920 * 100%),   */
-            #2F2B24 calc(1664 / 1920 * 100%),
-            #2E2B24 calc(1691 / 1920 * 100%),
-            #2E2A24 calc(1745 / 1920 * 100%),
-            #2D2A23 calc(1805 / 1920 * 100%),
-            #2C2923 100%);
+                #2f2b24 calc(1664 / 1920 * 100%),
+            #2e2b24 calc(1691 / 1920 * 100%),
+            #2e2a24 calc(1745 / 1920 * 100%),
+            #2d2a23 calc(1805 / 1920 * 100%),
+            #2c2923 100%
+        );
     background-position: top center;
     background-size: 100%;
 }
@@ -303,7 +301,7 @@ div#container-wrap {
     &-form {
         height: 100%;
 
-        input[type=submit] {
+        input[type="submit"] {
             font-size: 1rem;
             border-radius: 0;
             color: rgb(var(--ha_top-bar-text-color));
@@ -340,18 +338,18 @@ div#container-wrap {
     border-image-slice: calc(14 / 51 * 100%) calc(13 / 950 * 100%) fill;
     border-image-width: 0.875rem;
 
-    &>div[class*="top-bar"] {
+    & > div[class*="top-bar"] {
         margin-right: 5rem;
 
-        &>ul {
+        & > ul {
             justify-content: start;
         }
     }
 
     :is(.top-bar, .mobile-top-bar) {
-        &>ul {
-            &>li {
-                &>a {
+        & > ul {
+            & > li {
+                & > a {
                     color: rgb(var(--ha_top-bar-text-color));
                     transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -364,8 +362,8 @@ div#container-wrap {
                     }
                 }
 
-                &>a:is(:hover, :focus),
-                &:is(.sfhover, :hover, :focus-within)>a {
+                & > a:is(:hover, :focus),
+                &:is(.sfhover, :hover, :focus-within) > a {
                     color: rgba(var(--ha_top-bar-text-color), 0.5);
                     background-color: transparent;
                     transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -451,7 +449,7 @@ div#container-wrap {
     margin: 0;
 }
 
-.meta-title>p {
+.meta-title > p {
     margin: 0;
 }
 
