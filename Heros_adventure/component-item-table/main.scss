@@ -21,14 +21,14 @@ table.item-table {
             background-color: initial;
         }
 
-        &:nth-of-type(4n+2),
-        &:nth-of-type(4n+3) {
+        &:nth-of-type(4n + 2),
+        &:nth-of-type(4n + 3) {
             background-color: rgba(var(--ha_secondary-black-color), 0.2);
         }
 
         &:hover,
-        &:is(:nth-of-type(4n), :nth-of-type(4n+2)):hover+tr,
-        &:is(:nth-of-type(4n), :nth-of-type(4n+2)):has(+tr:hover) {
+        &:is(:nth-of-type(4n), :nth-of-type(4n + 2)):hover + tr,
+        &:is(:nth-of-type(4n), :nth-of-type(4n + 2)):has(+ tr:hover) {
             background-color: rgba(var(--ha_secondary-black-color), 0.4);
         }
 
@@ -68,7 +68,7 @@ table.item-table {
                     }
                 }
 
-                >br {
+                > br {
                     display: none;
                 }
 
@@ -96,11 +96,7 @@ table.item-table {
                 }
             }
 
-            @each $number,
-            $color in (0, #7DC447),
-            (1, #2CB9D8),
-            (2, #AF5FD2),
-            (3, #D67B28) {
+            @each $number, $color in (0, #7dc447), (1, #2cb9d8), (2, #af5fd2), (3, #d67b28) {
                 &.rarity-#{$number} {
                     --rarity-color: #{$color};
                 }
@@ -119,9 +115,9 @@ table.item-table {
                 top: -2rem;
             }
 
-            +tr,
-            +tr+tr,
-            +tr+tr+tr {
+            + tr,
+            + tr + tr,
+            + tr + tr + tr {
                 display: none;
             }
         }
