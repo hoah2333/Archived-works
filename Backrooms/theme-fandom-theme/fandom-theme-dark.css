@@ -2,38 +2,38 @@
 :root {
     --bg-image: url("http://backrooms-wiki.wdfiles.com/local--files/level-1/artistlivesinme.jpg");
 
-    --bg-color: #23241D;
-    --bg-color-2: #23241D;
-    --bg-color-3: #4C4C4C;
-    --bg-color-3-trans: #4C4C4C19;
-    --bg-color-3-trans-2: #4C4C4C99;
-    --bg-color-5: #FBE7B5;
-    --link-color: #AA9956;
-    --link-color-trans: #AA995619;
-    --link-color-trans-2: #AA995699;
-    --link-hover-color: #CCC199;
-    --link-newpage-color: #F2001D;
-    --black-color: #FFFFFF;
-    --black-color-trans: #FFFFFF19;
+    --bg-color: #23241d;
+    --bg-color-2: #23241d;
+    --bg-color-3: #4c4c4c;
+    --bg-color-3-trans: #4c4c4c19;
+    --bg-color-3-trans-2: #4c4c4c99;
+    --bg-color-5: #fbe7b5;
+    --link-color: #aa9956;
+    --link-color-trans: #aa995619;
+    --link-color-trans-2: #aa995699;
+    --link-hover-color: #ccc199;
+    --link-newpage-color: #f2001d;
+    --black-color: #ffffff;
+    --black-color-trans: #ffffff19;
     --white-color: #000000;
-    --text-color: #E6E6E6;
-    --text-color-trans: #E6E6E699;
-    --border-color: #5B5B5B;
+    --text-color: #e6e6e6;
+    --text-color-trans: #e6e6e699;
+    --border-color: #5b5b5b;
 
-    --header-text-color: #A4AF8F;
-    --header-text-hover-color: #717D59;
+    --header-text-color: #a4af8f;
+    --header-text-hover-color: #717d59;
 
-    --fd-sidebar-bg-color: #1E0C1B;
+    --fd-sidebar-bg-color: #1e0c1b;
     --fd-sidebar-bg-color-2: #291927;
     --fd-sidebar-bg-color-3: #595358;
     --fd-sidebar-bg-color-3-trans: #59535880;
-    --fd-sidebar-link-color: #FFC500;
-    --fd-sidebar-link-color-trans: #FFC5007F;
+    --fd-sidebar-link-color: #ffc500;
+    --fd-sidebar-link-color-trans: #ffc5007f;
     --fd-sidebar-link-hover-color: #997600;
     --fd-sidebar-link-color-2: var(--fd-sidebar-link-color);
-    --fd-sidebar-link-color-2-trans: #FFC50019;
-    --fd-sidebar-text-color: #F5F3F5;
-    --fd-sidebar-text-color-trans: #F5F3F57F;
+    --fd-sidebar-link-color-2-trans: #ffc50019;
+    --fd-sidebar-text-color: #f5f3f5;
+    --fd-sidebar-text-color-trans: #f5f3f57f;
     --fd-sidebar-text-hover-color: var(--fd-sidebar-link-hover-color);
 
     --fd-footer-bg-color-2: var(--white-color);
@@ -44,7 +44,7 @@
     opacity: 21%;
 }
 
-#top-bar .top-bar>ul>li ul li a {
+#top-bar .top-bar > ul > li ul li a {
     color: var(--text-color);
 }
 
@@ -60,11 +60,11 @@
     border-color: var(--fd-sidebar-text-color);
 }
 
-#login-status>a[href*="messages"]::before {
+#login-status > a[href*="messages"]::before {
     color: var(--fd-sidebar-text-color);
 }
 
-#login-status>a[href*="messages"]>strong {
+#login-status > a[href*="messages"] > strong {
     background-color: var(--fd-sidebar-text-color);
 }
 
@@ -72,8 +72,8 @@
     border-color: var(--fd-sidebar-text-color);
 }
 
-#login-status #account-topbutton:hover+#account-options::before,
-#login-status>a[href*="messages"]:hover::after,
+#login-status #account-topbutton:hover + #account-options::before,
+#login-status > a[href*="messages"]:hover::after,
 #login-status #account-options:hover::before {
     border-color: var(--fd-sidebar-text-color-trans);
 }
@@ -82,11 +82,11 @@
     background-color: var(--bg-color-2);
 }
 
-.toolBar>.list-pages-box:nth-of-type(1) p {
+.toolBar > .list-pages-box:nth-of-type(1) p {
     color: var(--header-text-color);
 }
 
-.toolBar>.list-pages-box:nth-of-type(2) {
+.toolBar > .list-pages-box:nth-of-type(2) {
     display: none;
 }
 

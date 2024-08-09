@@ -1,32 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
-@import url('https://rsms.me/inter/inter.css');
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap");
+@import url("https://rsms.me/inter/inter.css");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 :root {
     --icon: url("https://cdn.jsdelivr.net/gh/Nu-SCPTheme/Black-Highlighter@gh-pages/img/logo.svg");
     --title: "SCP基金会";
     --subtitle: "控制 · 收容 · 保护";
 
-    --header-font: 'Lexend', 'Noto Sans SC', Arial, sans-serif;
-    --UI-font: 'Jost', 'Noto Sans SC', sans-serif;
-    --body-font: 'Inter', 'Noto Sans SC', sans-serif;
-    --mono-font: 'JetBrains Mono', 'Noto Serif SC', monospace;
+    --header-font: "Lexend", "Noto Sans SC", Arial, sans-serif;
+    --UI-font: "Jost", "Noto Sans SC", sans-serif;
+    --body-font: "Inter", "Noto Sans SC", sans-serif;
+    --mono-font: "JetBrains Mono", "Noto Serif SC", monospace;
 
     --bg-color: #051122;
-    --bg-color-2: #022F41;
-    --bg-color-2-trans: #022f41EE;
+    --bg-color-2: #022f41;
+    --bg-color-2-trans: #022f41ee;
     --bg-color-2-trans-2: #022f4199;
-    --bg-color-3: #0F5B79;
-    --bg-color-3-trans: #0F5B79EE;
-    --bg-color-3-trans-2: #0F5B7999;
-    --white-color: #EEEEEE;
-    --white-color-trans: #EEEEEE11;
-    --white-color-trans-2: #EEEEEE99;
+    --bg-color-3: #0f5b79;
+    --bg-color-3-trans: #0f5b79ee;
+    --bg-color-3-trans-2: #0f5b7999;
+    --white-color: #eeeeee;
+    --white-color-trans: #eeeeee11;
+    --white-color-trans-2: #eeeeee99;
     --black-color: #111111;
     --black-color-trans: #11111111;
     --black-color-trans-2: #11111199;
@@ -34,7 +34,7 @@
     --red-color: #e13030;
     --text-color: #e6e6e6;
     --link-color: #0a82a8;
-    --link-color-2: #32D9CB;
+    --link-color-2: #32d9cb;
     --link-color-3: #84b1bf;
     --link-newpage-color: var(--link-color-2);
     --accent-color: #66c0f4;
@@ -187,7 +187,7 @@ h6 {
 }
 
 #header h1 a span::before {
-    content: var(--title, 'SCP基金会');
+    content: var(--title, "SCP基金会");
     font-size: 28px;
 }
 
@@ -203,7 +203,7 @@ h6 {
 }
 
 #header h2 span::before {
-    content: var(--subtitle, '控制 · 收容 · 保护');
+    content: var(--subtitle, "控制 · 收容 · 保护");
     font-size: 14px;
 }
 
@@ -230,12 +230,12 @@ h6 {
     color: transparent;
 }
 
-#top-bar [class*="top-bar"]>ul>li>a {
+#top-bar [class*="top-bar"] > ul > li > a {
     color: var(--link-color-2);
 }
 
 @media screen and (max-width: 375px) {
-    #top-bar [class*="top-bar"]>ul>li>a {
+    #top-bar [class*="top-bar"] > ul > li > a {
         padding: 3.5px 8px;
     }
 }
@@ -254,7 +254,7 @@ h6 {
     border: none;
 }
 
-#top-bar [class*="top-bar"]>ul>:is(li:hover, li.sfhover)>a,
+#top-bar [class*="top-bar"] > ul > :is(li:hover, li.sfhover) > a,
 #top-bar [class*="top-bar"] ul :is(li, li:hover, li.sfhover) ul li a:hover,
 #top-bar ul :is(li, li:hover, li.sfhover) a:hover {
     background-color: var(--white-color-trans);
@@ -262,7 +262,7 @@ h6 {
     color: var(--text-color);
 }
 
-#top-bar [class*="top-bar"]>ul>li:not(:first-of-type)>ul {
+#top-bar [class*="top-bar"] > ul > li:not(:first-of-type) > ul {
     left: -60px;
     right: unset;
 }
@@ -286,16 +286,16 @@ h6 {
     margin-right: 3px;
 }
 
-#login-status>a {
+#login-status > a {
     margin: 3px;
     color: var(--link-color-2);
 }
 
-#login-status>a:hover {
+#login-status > a:hover {
     color: var(--text-color);
 }
 
-#login-status>a[href*="account/messages"] strong {
+#login-status > a[href*="account/messages"] strong {
     text-decoration: none;
     animation: none;
 }
@@ -352,7 +352,7 @@ h6 {
     */
 }
 
-#search-top-box #search-top-box-form>input[type=submit] {
+#search-top-box #search-top-box-form > input[type="submit"] {
     background-image: var(--search-icon);
     background-repeat: no-repeat;
     background-size: 20px;
@@ -371,9 +371,9 @@ h6 {
 #search-top-box #search-top-box-form #search-top-box-input:hover,
 #search-top-box #search-top-box-form #search-top-box-input:focus,
 #search-top-box #search-top-box-form #search-top-box-input:target,
-#search-top-box #search-top-box-form>input[type=submit]:hover,
-#search-top-box #search-top-box-form>input[type=submit]:focus,
-#search-top-box #search-top-box-form>input[type=submit]:target {
+#search-top-box #search-top-box-form > input[type="submit"]:hover,
+#search-top-box #search-top-box-form > input[type="submit"]:focus,
+#search-top-box #search-top-box-form > input[type="submit"]:target {
     background-color: var(--header-bg-color);
 }
 
@@ -414,7 +414,7 @@ h6 {
     color: var(--link-color-2);
 }
 
-#side-bar .side-block .menu-item>img {
+#side-bar .side-block .menu-item > img {
     opacity: 0;
 }
 
@@ -504,8 +504,8 @@ h6 {
 }
 
 .page-rate-widget-box .btn a,
-div.creditRate .rate-box-with-credit-button .creditButton>p>a,
-div.creditRate .creditButtonStandalone>p>a {
+div.creditRate .rate-box-with-credit-button .creditButton > p > a,
+div.creditRate .creditButtonStandalone > p > a {
     display: block;
     width: 100%;
     height: 100%;
@@ -521,8 +521,8 @@ div.creditRate .creditButtonStandalone>p>a {
 }
 
 .page-rate-widget-box .btn a::before,
-div.creditRate .rate-box-with-credit-button .creditButton>p>a::before,
-div.creditRate .creditButtonStandalone>p>a::before {
+div.creditRate .rate-box-with-credit-button .creditButton > p > a::before,
+div.creditRate .creditButtonStandalone > p > a::before {
     content: "";
     display: block;
     background-color: var(--text-color);
@@ -557,8 +557,8 @@ div.creditRate .creditButtonStandalone>p>a::before {
     mask-image: var(--vote-cancel-icon);
 }
 
-div.creditRate .rate-box-with-credit-button .creditButton>p>a::before,
-div.creditRate .creditButtonStandalone>p>a::before {
+div.creditRate .rate-box-with-credit-button .creditButton > p > a::before,
+div.creditRate .creditButtonStandalone > p > a::before {
     -webkit-mask-image: var(--vote-info-icon);
     mask-image: var(--vote-info-icon);
     -webkit-mask-size: 27.5%;
@@ -574,14 +574,14 @@ div.creditRate .creditButtonStandalone>p>a::before {
 }
 
 .page-rate-widget-box .cancel a:hover,
-div.creditRate .rate-box-with-credit-button .creditButton>p>a:hover,
-div.creditRate .creditButtonStandalone>p>a:hover {
+div.creditRate .rate-box-with-credit-button .creditButton > p > a:hover,
+div.creditRate .creditButtonStandalone > p > a:hover {
     background-color: var(--bg-color-3);
     border-radius: 0;
 }
 
-.creditRate>.rateBox,
-div.creditRate .rate-box-with-credit-button>.page-rate-widget-box {
+.creditRate > .rateBox,
+div.creditRate .rate-box-with-credit-button > .page-rate-widget-box {
     display: contents;
 }
 
@@ -615,8 +615,8 @@ div.creditRate .rate-box-with-credit-button .creditButton {
     padding-left: 5px;
 }
 
-div.creditRate .rate-box-with-credit-button .creditButton>p,
-div.creditRate .creditButtonStandalone>p {
+div.creditRate .rate-box-with-credit-button .creditButton > p,
+div.creditRate .creditButtonStandalone > p {
     display: contents;
 }
 
@@ -625,7 +625,7 @@ div.creditRate .creditButtonStandalone {
     height: 26px;
 }
 
-div.creditRate .creditButtonStandalone>p>a {
+div.creditRate .creditButtonStandalone > p > a {
     box-shadow: none;
 }
 
@@ -644,7 +644,7 @@ div.creditRate .creditButtonStandalone>p>a {
     padding: 0;
 }
 
-[id*="u-credit"] .modalbox>div:first-of-type {
+[id*="u-credit"] .modalbox > div:first-of-type {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -653,7 +653,7 @@ div.creditRate .creditButtonStandalone>p>a {
     background-color: var(--bg-color);
 }
 
-[id*="u-credit"] .modalbox>div:first-of-type>h2 {
+[id*="u-credit"] .modalbox > div:first-of-type > h2 {
     color: var(--text-color);
 }
 
@@ -661,8 +661,8 @@ div.creditRate .creditButtonStandalone>p>a {
     height: auto !important;
 }
 
-[id*="u-credit"] .modalbox>.credit.first>p:first-of-type::before,
-[id*="u-credit"] .modalbox>.credit.first>p:first-of-type::after {
+[id*="u-credit"] .modalbox > .credit.first > p:first-of-type::before,
+[id*="u-credit"] .modalbox > .credit.first > p:first-of-type::after {
     content: "";
     position: absolute;
     top: 0;
@@ -673,12 +673,12 @@ div.creditRate .creditButtonStandalone>p>a {
     pointer-events: none;
 }
 
-[id*="u-credit"] .modalbox>.credit.first>p:first-of-type::before {
+[id*="u-credit"] .modalbox > .credit.first > p:first-of-type::before {
     background: transparent;
     transition: background-color var(--transition);
 }
 
-[id*="u-credit"] .modalbox>.credit.first>p:first-of-type::after {
+[id*="u-credit"] .modalbox > .credit.first > p:first-of-type::after {
     background: var(--text-color);
     -webkit-mask-image: var(--close-icon);
     mask-image: var(--close-icon);
@@ -690,7 +690,7 @@ div.creditRate .creditButtonStandalone>p>a {
     mask-repeat: no-repeat;
 }
 
-[id*="u-credit"] .modalbox>.credit.first>p:first-of-type:hover::before {
+[id*="u-credit"] .modalbox > .credit.first > p:first-of-type:hover::before {
     background: var(--bg-color-3);
 }
 
@@ -703,18 +703,18 @@ div.creditRate .creditButtonStandalone>p>a {
     opacity: 0;
 }
 
-[id*="u-credit"] .modalbox>hr:first-of-type {
+[id*="u-credit"] .modalbox > hr:first-of-type {
     display: none;
 }
 
-[id*="u-credit"] .modalbox>hr {
+[id*="u-credit"] .modalbox > hr {
     background-color: var(--border-color);
     margin: 20px 20px 10px;
 }
 
 div#toc {
-    max-width: calc(var(--main-content-width)*0.375);
-    min-width: min(100%, calc(var(--main-content-width)*0.25));
+    max-width: calc(var(--main-content-width) * 0.375);
+    min-width: min(100%, calc(var(--main-content-width) * 0.25));
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -783,23 +783,23 @@ div#toc {
     padding-right: 4px;
 }
 
-#toc-list>div[style*="2em"]>a {
+#toc-list > div[style*="2em"] > a {
     font-size: 9px;
 }
 
-#toc-list>div[style*="3em"]>a {
+#toc-list > div[style*="3em"] > a {
     font-size: 8px;
 }
 
-#toc-list>div[style*="4em"]>a {
+#toc-list > div[style*="4em"] > a {
     font-size: 7px;
 }
 
-#toc-list>div[style*="5em"]>a {
+#toc-list > div[style*="5em"] > a {
     font-size: 6px;
 }
 
-#toc-list>div[style*="6em"]>a {
+#toc-list > div[style*="6em"] > a {
     font-size: 5px;
 }
 
@@ -880,8 +880,8 @@ table.wiki-content-table tr:nth-of-type(2n) {
     background-color: var(--bg-color);
 }
 
-#page-content table tr:nth-of-type(2n+1),
-table.wiki-content-table tr:nth-of-type(2n+1) {
+#page-content table tr:nth-of-type(2n + 1),
+table.wiki-content-table tr:nth-of-type(2n + 1) {
     background-color: var(--bg-color-2);
 }
 
@@ -958,9 +958,7 @@ table.wiki-content-table tr:nth-of-type(2n+1) {
     background-color: var(--bg-color-2);
     border: 1px solid var(--border-color);
     cursor: pointer;
-    transition:
-        background-color var(--transition),
-        color var(--transition);
+    transition: background-color var(--transition), color var(--transition);
 }
 
 #page-content .pager .target:last-of-type a:hover,
@@ -1156,7 +1154,7 @@ textarea {
 
 #edit-page-form .edit-help-34,
 #new-post-div .edit-help-34 {
-    margin: -3.7em 0 1.7em
+    margin: -3.7em 0 1.7em;
 }
 
 #edit-page-form .edit-page-bottomtable {
@@ -1218,7 +1216,7 @@ textarea {
     cursor: pointer;
 }
 
-#view-diff-div>p a.button {
+#view-diff-div > p a.button {
     border: 1px solid var(--border-color);
     background-color: var(--bg-color-2);
     color: var(--text-color);
@@ -1239,9 +1237,7 @@ textarea {
     text-decoration: none;
     background-color: var(--bg-color-3);
     color: var(--link-color-2);
-    transition:
-        color var(--transition),
-        background-color var(--transition);
+    transition: color var(--transition), background-color var(--transition);
 }
 
 .inline-diff del {
@@ -1270,11 +1266,11 @@ button,
 .footnotes-footer .title,
 .hovertip .content .footnote .f-heading,
 .hovertip .content .reference .r-heading,
-.owindow .button-bar>a:not([onclick*="cleanAll"]),
+.owindow .button-bar > a:not([onclick*="cleanAll"]),
 .owindow div[style*="margin-top"] a,
-.owindow>.content.modal-body>img+h1+table>tbody>tr>td:first-child,
-#flag-user-options-flag>*,
-#flag-user-options-unflag>*,
+.owindow > .content.modal-body > img + h1 + table > tbody > tr > td:first-child,
+#flag-user-options-flag > *,
+#flag-user-options-unflag > *,
 #page-info,
 #page-options-container .page-watch-options,
 #action-area a.btn,
@@ -1284,23 +1280,23 @@ div.buttons input.btn,
 #history-subarea a.action-area-close,
 #view-diff-div a.button,
 form#edit-page-form,
-form[onsubmit*="PageTagsModule"]>table.form>tbody>tr>td:first-child,
-#history-form-1>table.form>tbody>tr:first-child>td:first-child,
-#history-form-1>table.form>tbody>tr:nth-child(2)>td,
+form[onsubmit*="PageTagsModule"] > table.form > tbody > tr > td:first-child,
+#history-form-1 > table.form > tbody > tr:first-child > td:first-child,
+#history-form-1 > table.form > tbody > tr:nth-child(2) > td,
 #main-content .pager .pager-no,
 #revision-list .page-history tr[id*="revision-row"] td:nth-child(4),
 #revision-list .page-history tr[id*="revision-row"] td:nth-child(6),
-div.site-changes-box>form>table.form>tbody>tr>td:first-child,
-#site-changes-list div.changes-list-item>table>tbody>tr>td.revision-no,
-#site-changes-list div.changes-list-item>table>tbody>tr>td.mod-date,
-#history-subarea>h2,
-#file-upload-form table.form>tbody>tr>td:nth-child(1),
-form[onsubmit*="setParent"]>table.form>tbody>tr>td:nth-child(1),
-#rename-option-rename table.form>tbody>tr>td:nth-child(1),
-#action-area table.page-files>thead>tr,
+div.site-changes-box > form > table.form > tbody > tr > td:first-child,
+#site-changes-list div.changes-list-item > table > tbody > tr > td.revision-no,
+#site-changes-list div.changes-list-item > table > tbody > tr > td.mod-date,
+#history-subarea > h2,
+#file-upload-form table.form > tbody > tr > td:nth-child(1),
+form[onsubmit*="setParent"] > table.form > tbody > tr > td:nth-child(1),
+#rename-option-rename table.form > tbody > tr > td:nth-child(1),
+#action-area table.page-files > thead > tr,
 input#upload-userfile::file-selector-button,
-#action-area>h1+p+h2+div[style*="padding-left"]>div>a[onclick*="EditMetaModule.listeners.deleteTag"],
-#action-area>a.action-area-close+h1+p+table.form>tbody>tr>td:first-child {
+#action-area > h1 + p + h2 + div[style*="padding-left"] > div > a[onclick*="EditMetaModule.listeners.deleteTag"],
+#action-area > a.action-area-close + h1 + p + table.form > tbody > tr > td:first-child {
     font-family: var(--UI-font);
 }
 
@@ -1310,11 +1306,11 @@ code,
 .code pre,
 .code p,
 tt,
-.yui-navset.yui-navset-top>ul.yui-nav,
-.footnotes-footer .footnote-footer>a:first-child,
+.yui-navset.yui-navset-top > ul.yui-nav,
+.footnotes-footer .footnote-footer > a:first-child,
 #revision-list .page-history tr[id*="revision-row"] td:nth-child(1),
-#action-area>h1+p+h2+div[style*="padding-left"]>div,
-#edit-meta-newtag-form>table {
+#action-area > h1 + p + h2 + div[style*="padding-left"] > div,
+#edit-meta-newtag-form > table {
     font-family: var(--mono-font);
 }
 
@@ -1351,7 +1347,7 @@ tt,
     z-index: 1;
 }
 
-.halloween-cards-container .anthology-card>a:first-child {
+.halloween-cards-container .anthology-card > a:first-child {
     font-size: 0;
     display: block;
     width: 100%;
@@ -1363,16 +1359,16 @@ tt,
     outline: none;
 }
 
-.halloween-cards-container .anthology-card>a:first-child:not([href*="scp-7"]) {
+.halloween-cards-container .anthology-card > a:first-child:not([href*="scp-7"]) {
     display: none;
 }
 
-.halloween-cards-container .anthology-card>a:first-child:not([href*="scp-7"])~img {
+.halloween-cards-container .anthology-card > a:first-child:not([href*="scp-7"]) ~ img {
     cursor: not-allowed;
 }
 
-.anthology-card>h1 {
-    font-family: 'Teko', 'Inter', sans-serif;
+.anthology-card > h1 {
+    font-family: "Teko", "Inter", sans-serif;
     font-weight: normal;
     font-size: 1.75em;
     line-height: 0.9;
@@ -1384,29 +1380,38 @@ tt,
     text-align: center;
     background-color: var(--bg-color-2);
     color: var(--text-color);
-    clip-path: polygon(0 0, 100% 0, 100% 0.5rem, calc(100% - 1.25rem) 0.5rem, calc(100% - 2.5rem) 100%, 2.5rem 100%, 1.25rem 0.5rem, 0% 0.5rem);
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 0.5rem,
+        calc(100% - 1.25rem) 0.5rem,
+        calc(100% - 2.5rem) 100%,
+        2.5rem 100%,
+        1.25rem 0.5rem,
+        0% 0.5rem
+    );
     transition: color var(--transition), background-color var(--transition);
 }
 
-.anthology-card:is(:hover, :focus-within)>h1 {
+.anthology-card:is(:hover, :focus-within) > h1 {
     color: var(--black-color);
     background-color: var(--link-color-2);
 }
 
-.anthology-card>img {
-    padding-top: .5rem;
+.anthology-card > img {
+    padding-top: 0.5rem;
     height: 17.5rem;
     width: 100%;
     object-fit: cover;
     z-index: -1;
 }
 
-.anthology-card>.antho-title {
+.anthology-card > .antho-title {
     display: flex;
     width: calc(100% + 1rem);
     max-width: unset !important;
     align-items: center;
-    font-family: 'Teko', 'Inter', sans-serif;
+    font-family: "Teko", "Inter", sans-serif;
     isolation: isolate;
     position: absolute;
     bottom: 2.625rem;
@@ -1416,11 +1421,11 @@ tt,
     pointer-events: none;
 }
 
-.anthology-card>.antho-title span {
+.anthology-card > .antho-title span {
     pointer-events: auto;
 }
 
-.anthology-card>.antho-title span:nth-child(1) {
+.anthology-card > .antho-title span:nth-child(1) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1438,12 +1443,12 @@ tt,
     z-index: 1;
 }
 
-.anthology-card.x4>.antho-title span:nth-child(1) {
+.anthology-card.x4 > .antho-title span:nth-child(1) {
     font-size: 0;
 }
 
-.anthology-card:not(.x4)>.antho-title span:nth-child(1)::before,
-.anthology-card>.antho-title span:nth-child(1)::after {
+.anthology-card:not(.x4) > .antho-title span:nth-child(1)::before,
+.anthology-card > .antho-title span:nth-child(1)::after {
     content: "";
     display: block;
     position: absolute;
@@ -1456,17 +1461,17 @@ tt,
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 
-.anthology-card:not(.x4)>.antho-title span:nth-child(1)::before {
+.anthology-card:not(.x4) > .antho-title span:nth-child(1)::before {
     background-color: var(--link-color-2);
     transition: transform var(--transition);
 }
 
-.anthology-card.x4>.antho-title span:nth-child(1)::before {
+.anthology-card.x4 > .antho-title span:nth-child(1)::before {
     content: "星";
     font-size: 1.675rem;
 }
 
-.anthology-card>.antho-title span:nth-child(2) {
+.anthology-card > .antho-title span:nth-child(2) {
     min-height: 2.375em;
     font-size: 1.675em;
     font-weight: normal;
@@ -1486,16 +1491,16 @@ tt,
     transition: all var(--transition);
 }
 
-.anthology-card:is(:hover, :focus-within)>.antho-title span:nth-child(1) {
+.anthology-card:is(:hover, :focus-within) > .antho-title span:nth-child(1) {
     color: var(--text-color);
     transition: color var(--transition);
 }
 
-.anthology-card:is(:hover, :focus-within)>.antho-title span:nth-child(1)::before {
+.anthology-card:is(:hover, :focus-within) > .antho-title span:nth-child(1)::before {
     transform: scale(1.15);
 }
 
-.anthology-card:is(:hover, :focus-within)>.antho-title span:nth-child(2) {
+.anthology-card:is(:hover, :focus-within) > .antho-title span:nth-child(2) {
     color: var(--black-color);
     background-size: 100% 100%;
 }

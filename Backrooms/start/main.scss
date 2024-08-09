@@ -8,7 +8,6 @@
 }
 
 #page-content {
-
     // 欢迎栏
     .bannerContainer {
         display: grid;
@@ -56,8 +55,6 @@
                 }
             }
 
-
-
             @media (max-width: 767px) {
                 & {
                     margin: 0 0 2rem 0;
@@ -75,13 +72,10 @@
                         padding: 1.5rem 0;
                     }
                 }
-
             }
         }
 
-        @each $grid-area in discord,
-        faq,
-        join {
+        @each $grid-area in discord, faq, join {
             .#{$grid-area} {
                 grid-area: #{$grid-area};
             }

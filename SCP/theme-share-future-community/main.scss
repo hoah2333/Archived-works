@@ -11,29 +11,29 @@
     --sp_header-logo: none;
     --sp_header-height: 15rem;
 
-    --bg-color-1: #76340F;
-    --bg-color-1-trans-1: #76340F33;
-    --bg-color-1-trans-2: #76340F77;
-    --bg-color-1-trans-3: #76340FAA;
-    --bg-color-2: #4090EE;
-    --bg-color-2-trans-1: #4090EE33;
-    --bg-color-2-trans-2: #4090EE77;
-    --bg-color-2-trans-3: #4090EEAA;
-    --bg-color-3: #C67513;
-    --bg-color-3-trans-1: #C6751333;
-    --bg-color-3-trans-2: #C6751377;
-    --bg-color-3-trans-3: #C67513AA;
-    --bg-color-3-trans-4: #C67513DD;
-    --bg-color-gradient-top: #D9851A;
-    --bg-color-gradient-bottom: #B1630C;
-    --bg-color-4: #DEB077;
+    --bg-color-1: #76340f;
+    --bg-color-1-trans-1: #76340f33;
+    --bg-color-1-trans-2: #76340f77;
+    --bg-color-1-trans-3: #76340faa;
+    --bg-color-2: #4090ee;
+    --bg-color-2-trans-1: #4090ee33;
+    --bg-color-2-trans-2: #4090ee77;
+    --bg-color-2-trans-3: #4090eeaa;
+    --bg-color-3: #c67513;
+    --bg-color-3-trans-1: #c6751333;
+    --bg-color-3-trans-2: #c6751377;
+    --bg-color-3-trans-3: #c67513aa;
+    --bg-color-3-trans-4: #c67513dd;
+    --bg-color-gradient-top: #d9851a;
+    --bg-color-gradient-bottom: #b1630c;
+    --bg-color-4: #deb077;
 
-    --link-color-1: #0A82A8;
+    --link-color-1: #0a82a8;
     --link-color-2: #771515;
-    --link-color-3: #CB2323;
-    --link-color-4: #B06307;
+    --link-color-3: #cb2323;
+    --link-color-4: #b06307;
 
-    --white-color: #EEEEEE;
+    --white-color: #eeeeee;
     --black-color: #111111;
     --black-color-trans-1: #11111133;
     --black-color-trans-2: #11111177;
@@ -194,10 +194,9 @@
                 backdrop-filter: blur(2px);
             }
 
-            >ul>li {
-
+            > ul > li {
                 a:hover,
-                &:is(.sfhover, :hover, :focus-within)>a {
+                &:is(.sfhover, :hover, :focus-within) > a {
                     transition: background-color var(--sfc_transition);
                 }
             }
@@ -217,10 +216,8 @@ body {
     background-color: var(--bg-color-3-trans-1);
 }
 
-
 #interwiki,
 #side-bar {
-
     a,
     a:visited {
         color: var(--sfc_side-bar-link-color);
@@ -246,7 +243,7 @@ body {
         }
 
         div.menu-item {
-            >img {
+            > img {
                 filter: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg"><defs><filter id="filter" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0.4666 0 0 0 0 0.0823 0 0 0 0 0.0823 0 0 0 1 0"/></filter></defs></svg>#filter');
             }
         }
@@ -323,9 +320,7 @@ h6 {
             border-radius: 0;
 
             :is(.rateup, .ratedown) a {
-                transition:
-                    background-color var(--sfc_transition),
-                    color var(--sfc_transition);
+                transition: background-color var(--sfc_transition), color var(--sfc_transition);
             }
         }
 
@@ -365,9 +360,7 @@ h6 {
                 flex-grow: 1;
 
                 a {
-                    transition:
-                        background-color var(--sfc_transition),
-                        color var(--sfc_transition);
+                    transition: background-color var(--sfc_transition), color var(--sfc_transition);
                 }
             }
         }
@@ -379,14 +372,12 @@ h6 {
     }
 
     @at-root {
-
         blockquote,
         div.blockquote {
             border: 1px solid var(--sfc_border-color);
             background: var(--bg-color-3-trans-1);
         }
     }
-
 
     table.wiki-content-table {
         th {

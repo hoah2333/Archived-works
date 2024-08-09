@@ -3,25 +3,25 @@
     margin: 0;
     list-style: none;
 
-    >li {
-        >br {
+    > li {
+        > br {
             display: none;
         }
 
-        >.foldable-list-container {
+        > .foldable-list-container {
             position: fixed;
             bottom: 1rem;
             right: 1rem;
             padding: 0.5rem;
             line-height: 1;
             z-index: 1;
-            background-color: #002B36;
+            background-color: #002b36;
             box-sizing: border-box;
-            border: 0.1rem solid #C0CDB0;
+            border: 0.1rem solid #c0cdb0;
             font-size: 0;
 
             a {
-                color: #C0CDB0;
+                color: #c0cdb0;
                 --wght: bold;
                 font-weight: bold;
                 text-decoration: none;
@@ -31,8 +31,9 @@
                 }
                 &.lang-tr + .trans-container {
                     --body-font: Inter, "Noto Sans TC", "Noto Sans SC", Arimo, Verdana, Geneva, sans-serif;
-                    --header-font: Inter, "Noto Sans TC", "Noto Sans SC", Franklin Gothic Medium, Franklin Gothic, ITC Franklin Gothic, Arial, sans-serif;
-                    --mono-font: Recursive, "Noto Serif TC", "Noto Serif SC", Consolas, monaco, monospace
+                    --header-font: Inter, "Noto Sans TC", "Noto Sans SC", Franklin Gothic Medium, Franklin Gothic,
+                        ITC Franklin Gothic, Arial, sans-serif;
+                    --mono-font: Recursive, "Noto Serif TC", "Noto Serif SC", Consolas, monaco, monospace;
                 }
             }
 
@@ -46,8 +47,8 @@
         }
     }
 
-    >li.unfolded>:is(.foldable-list-container:nth-of-type(1), .trans-container:nth-of-type(2)),
-    >li.folded>:is(.foldable-list-container:nth-of-type(3), .trans-container:nth-of-type(4)) {
+    > li.unfolded > :is(.foldable-list-container:nth-of-type(1), .trans-container:nth-of-type(2)),
+    > li.folded > :is(.foldable-list-container:nth-of-type(3), .trans-container:nth-of-type(4)) {
         display: none;
     }
 }

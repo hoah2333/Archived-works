@@ -60,9 +60,7 @@
     }
 
     .gradient-box {
-        background: linear-gradient(90deg,
-                rgba(var(--sd-border), 1) 0%,
-                rgba(235, 186, 13, 0) 36%);
+        background: linear-gradient(90deg, rgba(var(--sd-border), 1) 0%, rgba(235, 186, 13, 0) 36%);
         display: inline-block;
         height: 100%;
         width: 100%;
@@ -85,7 +83,6 @@
     }
 
     .bottom-text {
-
         p,
         &::after {
             font-family: var(--sd-font);
@@ -106,7 +103,6 @@
         }
 
         .bottom-text {
-
             p,
             &::after {
                 font-size: 1.4rem;
@@ -115,7 +111,6 @@
         }
     }
 }
-
 
 /* the right diamond thingy */
 .header-diamond {
@@ -170,7 +165,6 @@
     }
 }
 
-
 /* bottom stuff */
 
 .bottom-box {
@@ -215,23 +209,16 @@ div[class*="class"] ul li span[class$="}"] {
     }
 }
 
-div[class*="class"] ul li span[class$="}"]+.default {
+div[class*="class"] ul li span[class$="}"] + .default {
     display: flex;
 }
 
 /* class 0 to 5 */
-@each $class-number,
-$first-desc,
-$second-desc-cn,
-$second-desc-tr,
-$third-desc-cn,
-$third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
-(1, 安全, 稳定, 穩定, 极少量实体, 極少量實體),
-(2, 不安全, 稳定, 穩定, 少量实体, 少量實體),
-(3, 不安全, 不稳定, 不穩定, 少量实体, 少量實體),
-(4, 不安全, 不稳定, 不穩定, 中量实体, 中量實體),
-(5, 不安全, 不稳定, 不穩定, 实体横行, 實體橫行) {
-
+@each $class-number, $first-desc, $second-desc-cn, $second-desc-tr, $third-desc-cn,
+    $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡), (1, 安全, 稳定, 穩定, 极少量实体, 極少量實體),
+    (2, 不安全, 稳定, 穩定, 少量实体, 少量實體), (3, 不安全, 不稳定, 不穩定, 少量实体, 少量實體),
+    (4, 不安全, 不稳定, 不穩定, 中量实体, 中量實體), (5, 不安全, 不稳定, 不穩定, 实体横行, 實體橫行)
+{
     .top-box,
     .diamond-color {
         &.class-#{$class-number} {
@@ -244,13 +231,13 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
     }
 
     .bottom-box.class-#{$class-number} ul li {
-        &:nth-child(1)>.default::after {
+        &:nth-child(1) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn, .lang-tr) & {
                 content: "#{$first-desc}";
             }
         }
 
-        &:nth-child(2)>.default::after {
+        &:nth-child(2) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "#{$second-desc-cn}";
             }
@@ -260,7 +247,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
             }
         }
 
-        &:nth-child(3)>.default::after {
+        &:nth-child(3) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "#{$third-desc-cn}";
             }
@@ -275,7 +262,6 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
 /* class unknown */
 
 :is(.class-unknown, .class-未知) {
-
     &.top-box,
     &.diamond-color {
         background-color: rgb(var(--class-unknown));
@@ -330,7 +316,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
                 background-color: rgb(var(--sd-bullets));
             }
 
-            &:nth-child(1)>.default::after {
+            &:nth-child(1) > .default::after {
                 :is(.sd-container[class*="{"], .lang-cn) & {
                     content: "性质未解明";
                 }
@@ -340,13 +326,13 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
                 }
             }
 
-            &:nth-child(2)>.default::after {
+            &:nth-child(2) > .default::after {
                 :is(.sd-container[class*="{"], .lang-cn, .lang-tr) & {
                     content: "信息未知";
                 }
             }
 
-            &:nth-child(3)>.default::after {
+            &:nth-child(3) > .default::after {
                 :is(.sd-container[class*="{"], .lang-cn) & {
                     content: "未探明实体";
                 }
@@ -390,19 +376,19 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
     }
 
     &.bottom-box ul li {
-        &:nth-child(1)>.default::after {
+        &:nth-child(1) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn, .lang-tr) & {
                 content: "安全";
             }
         }
 
-        &:nth-child(2)>.default::after {
+        &:nth-child(2) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn, .lang-tr) & {
                 content: "长期聚居地";
             }
         }
 
-        &:nth-child(3)>.default::after {
+        &:nth-child(3) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "无有害实体";
             }
@@ -445,7 +431,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
     }
 
     &.bottom-box ul li {
-        &:nth-child(1)>.default::after {
+        &:nth-child(1) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "环境危害";
             }
@@ -455,7 +441,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
             }
         }
 
-        &:nth-child(2)>.default::after {
+        &:nth-child(2) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "极度不宜居";
             }
@@ -465,7 +451,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
             }
         }
 
-        &:nth-child(3)>.default::after {
+        &:nth-child(3) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "潜在异常实体";
             }
@@ -507,13 +493,13 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
     }
 
     &.bottom-box ul li {
-        &:nth-child(1)>.default::after {
+        &:nth-child(1) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn, .lang-tr) & {
                 content: "安全性未知";
             }
         }
 
-        &:nth-child(2)>.default::after {
+        &:nth-child(2) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "不稳定";
             }
@@ -523,7 +509,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
             }
         }
 
-        &:nth-child(3)>.default::after {
+        &:nth-child(3) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "未探明实体存在";
             }
@@ -584,13 +570,13 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
     }
 
     &.bottom-box ul li {
-        &:nth-child(1)>.default::after {
+        &:nth-child(1) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn, .lang-tr) & {
                 content: "不存在";
             }
         }
 
-        &:nth-child(2)>.default::after {
+        &:nth-child(2) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "缺失物质";
             }
@@ -600,7 +586,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
             }
         }
 
-        &:nth-child(3)>.default::after {
+        &:nth-child(3) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "不适合生命存在";
             }
@@ -614,7 +600,6 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
 
 /* amended */
 :is(.class-amended, .class-修正, .class-运变, .class-運變) {
-
     &.top-box,
     &.diamond-color {
         background: rgb(var(--class-amended));
@@ -643,7 +628,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
     }
 
     &.bottom-box ul li {
-        &:nth-child(1)>.default::after {
+        &:nth-child(1) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "不安全且不稳定";
             }
@@ -653,7 +638,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
             }
         }
 
-        &:nth-child(2)>.default::after {
+        &:nth-child(2) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "未知实体数量";
             }
@@ -663,7 +648,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
             }
         }
 
-        &:nth-child(3)>.default::after {
+        &:nth-child(3) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn, .lang-tr) & {
                 content: "文件被篡改";
             }
@@ -703,7 +688,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
     }
 
     &.bottom-box ul li {
-        &:nth-child(1)>.default::after {
+        &:nth-child(1) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "隐藏的档案";
             }
@@ -713,7 +698,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
             }
         }
 
-        &:nth-child(2)>.default::after {
+        &:nth-child(2) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "机密性质";
             }
@@ -723,7 +708,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
             }
         }
 
-        &:nth-child(3)>.default::after {
+        &:nth-child(3) > .default::after {
             :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "受保护的实体";
             }
@@ -736,7 +721,6 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
 }
 
 [class*="color-"]:not([class*="color-{"]) {
-
     &,
     .header-diamond & {
         background-color: var(--custom-color);
@@ -751,7 +735,7 @@ $third-desc-tr in (0, 安全, 稳定, 穩定, 实体绝迹, 實體絕跡),
 }
 
 .sd-container {
-    padding: 1.3rem 0 0.1rem
+    padding: 1.3rem 0 0.1rem;
 }
 
 .lang-tr {

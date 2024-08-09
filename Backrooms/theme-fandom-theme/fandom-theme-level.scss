@@ -1,9 +1,9 @@
 #page-content {
     .sd-container {
-        &>* {
-            --sd-bg-gradient: linear-gradient(to right, #ffffff 0%, #DCDCDC 20%);
+        & > * {
+            --sd-bg-gradient: linear-gradient(to right, #ffffff 0%, #dcdcdc 20%);
             --sd-font: var(--font);
-            --sd-border: #DCDCDC;
+            --sd-border: #dcdcdc;
             --sd-text-color: #696969;
             --sd-top-text-color: var(--sd-text-color);
             --sd-bottom-text-color: var(--sd-text-color);
@@ -100,17 +100,14 @@
             }
         }
 
-        @each $class,
-        $image,
-        $gd1,
-        $gd2,
-        $border,
-        $text-color in (0, "https://7bye.com/hoah/i/2023/03/23/ig6w.png", #FFFFFF 0%, #DCDCDC 20%, #DCDCDC, #696969),
-        (1, "https://7bye.com/hoah/i/2023/03/23/ko7h.png", #7FFF00 0%, #008000 40%, #008000, #696969),
-        (2, "https://7bye.com/hoah/i/2023/03/23/40p12.png", #94B020 0%, #C7E252 90%, #576D01, #576D01),
-        (3, "https://7bye.com/hoah/i/2023/03/23/kfu.svg", #AC9920 0%, #DFCC52 90%, #695B00, #695B00),
-        (4, "https://7bye.com/hoah/i/2023/03/23/4mte.svg", #C3772A 0%, #F6AA5D 90%, #7A4108, #7A4108),
-        (5, "https://7bye.com/hoah/i/2023/03/23/uh18.svg", #560602 0%, #AC0A02 90%, #E60000, #AA6000) {
+        @each $class, $image, $gd1, $gd2, $border,
+            $text-color in (0, "https://7bye.com/hoah/i/2023/03/23/ig6w.png", #ffffff 0%, #dcdcdc 20%, #dcdcdc, #696969),
+            (1, "https://7bye.com/hoah/i/2023/03/23/ko7h.png", #7fff00 0%, #008000 40%, #008000, #696969),
+            (2, "https://7bye.com/hoah/i/2023/03/23/40p12.png", #94b020 0%, #c7e252 90%, #576d01, #576d01),
+            (3, "https://7bye.com/hoah/i/2023/03/23/kfu.svg", #ac9920 0%, #dfcc52 90%, #695b00, #695b00),
+            (4, "https://7bye.com/hoah/i/2023/03/23/4mte.svg", #c3772a 0%, #f6aa5d 90%, #7a4108, #7a4108),
+            (5, "https://7bye.com/hoah/i/2023/03/23/uh18.svg", #560602 0%, #ac0a02 90%, #e60000, #aa6000)
+        {
             .class-#{$class} {
                 --sd-bg-gradient: linear-gradient(to right, #{$gd1}, #{$gd2});
                 --sd-border: #{$border};
@@ -119,30 +116,86 @@
             }
         }
 
-        @each $class,
-        $top-color in (0, #000000),
-        (5, #FFFFFF) {
+        @each $class, $top-color in (0, #000000), (5, #ffffff) {
             .class-#{$class} {
                 --sd-top-text-color: #{$top-color};
             }
         }
 
-        @each $class-en,
-        $class-cn,
-        $class-tr,
-        $image,
-        $gd1,
-        $gd2,
-        $border,
-        $text-color in (unknown, 未知, 未知, "https://7bye.com/hoah/i/2023/03/23/27vuk.png", #777777 30%, #444444 78%, #000000, #000000),
-        (habitable, 宜居, 宜居, "https://7bye.com/hoah/i/2023/03/23/bxu0.png", #077E0A 10%, #1A806F 70%, #2DDE2E, #077E0A),
-        (deadzone, 死区, 死區, "https://7bye.com/hoah/i/2023/03/23/1pil.png", #381146 20%, #714382 80%, #000000, #000000),
-        (pending, 等待分级, 等待分級, "https://7bye.com/hoah/i/2023/03/23/1q9d.png", #AAAAAA 30%, #777777 78%, #000000, #000000),
-        (n\/a, 不适用, 不適用, "https://7bye.com/hoah/i/2023/03/23/27vuk.png", #FFFFFF 0%, #FFFFFF 100%, #000000, #000000),
-        (amended, 运变, 運變, "https://7bye.com/hoah/i/2023/03/23/2iz64.png", #000080 20%, #4169E1 80%, #000080, #000000),
-        (omega, 终结, 終結, "https://7bye.com/hoah/i/2023/03/23/hzgza.png", #363636 0%, #00008B 90%, #0000CD, #0000CD) {
+        @each $class-en, $class-cn, $class-tr, $image, $gd1, $gd2, $border,
+            $text-color
+                in (
+                    unknown,
+                    未知,
+                    未知,
+                    "https://7bye.com/hoah/i/2023/03/23/27vuk.png",
+                    #777777 30%,
+                    #444444 78%,
+                    #000000,
+                    #000000
+                ),
+            (
+                habitable,
+                宜居,
+                宜居,
+                "https://7bye.com/hoah/i/2023/03/23/bxu0.png",
+                #077e0a 10%,
+                #1a806f 70%,
+                #2dde2e,
+                #077e0a
+            ),
+            (
+                deadzone,
+                死区,
+                死區,
+                "https://7bye.com/hoah/i/2023/03/23/1pil.png",
+                #381146 20%,
+                #714382 80%,
+                #000000,
+                #000000
+            ),
+            (
+                pending,
+                等待分级,
+                等待分級,
+                "https://7bye.com/hoah/i/2023/03/23/1q9d.png",
+                #aaaaaa 30%,
+                #777777 78%,
+                #000000,
+                #000000
+            ),
+            (
+                n\/a,
+                不适用,
+                不適用,
+                "https://7bye.com/hoah/i/2023/03/23/27vuk.png",
+                #ffffff 0%,
+                #ffffff 100%,
+                #000000,
+                #000000
+            ),
+            (
+                amended,
+                运变,
+                運變,
+                "https://7bye.com/hoah/i/2023/03/23/2iz64.png",
+                #000080 20%,
+                #4169e1 80%,
+                #000080,
+                #000000
+            ),
+            (
+                omega,
+                终结,
+                終結,
+                "https://7bye.com/hoah/i/2023/03/23/hzgza.png",
+                #363636 0%,
+                #00008b 90%,
+                #0000cd,
+                #0000cd
+            )
+        {
             .class- {
-
                 &#{$class-en},
                 &#{$class-cn},
                 &#{$class-tr} {
@@ -154,15 +207,10 @@
             }
         }
 
-        @each $class-en,
-        $class-cn,
-        $class-tr,
-        $top-color in (unknown, 未知, 未知, #333333),
-        (habitable, 宜居, 宜居, #7FFF00),
-        (deadzone, 死区, 死區, #C0C0C0),
-        (pending, 等待分级, 等待分級, #333333),
-        (amended, 运变, 運變, #FFFFFF),
-        (omega, 终结, 終結, #4169E1) {
+        @each $class-en, $class-cn, $class-tr, $top-color in (unknown, 未知, 未知, #333333),
+            (habitable, 宜居, 宜居, #7fff00), (deadzone, 死区, 死區, #c0c0c0), (pending, 等待分级, 等待分級, #333333),
+            (amended, 运变, 運變, #ffffff), (omega, 终结, 終結, #4169e1)
+        {
             .class- {
                 &#{$class-en},
                 &#{$class-cn},

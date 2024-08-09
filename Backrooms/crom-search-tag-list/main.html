@@ -1,57 +1,62 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//ZH" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
+    <head>
+        <title>标签搜索 TOML 生成器</title>
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            type="text/javascript"
+            src="https://fastly.jsdelivr.net/gh/jquery/jquery@3.6.4/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="./main.js"></script>
+        <style type="text/css">
+            @import url("./main.css");
+        </style>
+    </head>
 
-<head>
-    <title>标签搜索 TOML 生成器</title>
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="https://fastly.jsdelivr.net/gh/jquery/jquery@3.6.4/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="./main.js"></script>
-    <style type="text/css">
-        @import url("./main.css");
-    </style>
-</head>
-
-<body>
-    <div id="main-wrapper">
-        <h1 class="title">标签搜索 TOML 生成器</h1>
-        <div class="info">
-            <h3>用法如下：</h3>
-            <ul>
-                <li>在<b>总输入</b>处黏贴下方配置文件。此处已由生成器自动填写；</li>
-                <li>在<b>添加输入</b>处填写标签名及其描述，通过右方的 <b>—</b> 与 <b>＋</b> 控制输入标签数量；</li>
-                <li>在<b>输出</b>处复制所有代码，并黏贴至<a
-                        href="http://backrooms-oversight-cn.wikidot.com/crom-search-tag-list">此处</a>。</li>
-            </ul>
-        </div>
-        <div id="component-wrapper">
-            <div class="total">
-                <p>总输入：</p>
-                <textarea id="main-input" class="input" rows="5"></textarea>
+    <body>
+        <div id="main-wrapper">
+            <h1 class="title">标签搜索 TOML 生成器</h1>
+            <div class="info">
+                <h3>用法如下：</h3>
+                <ul>
+                    <li>在<b>总输入</b>处黏贴下方配置文件。此处已由生成器自动填写；</li>
+                    <li>在<b>添加输入</b>处填写标签名及其描述，通过右方的 <b>—</b> 与 <b>＋</b> 控制输入标签数量；</li>
+                    <li>
+                        在<b>输出</b>处复制所有代码，并黏贴至<a
+                            href="http://backrooms-oversight-cn.wikidot.com/crom-search-tag-list"
+                            >此处</a
+                        >。
+                    </li>
+                </ul>
             </div>
-            <hr>
-            <div class="addition">
-                <p>添加输入：</p>
-                <button id="minus" type="button">—</button>
-                <button id="add" type="button">＋</button>
-                <div id="addition-wrapper">
-                    <p class="name">name:</p><br>
-                    <p class="description">description:</p>
-                    <div class="input-wrapper wrapper1">
-                        <textarea class="input textarea1" rows="1"></textarea>
-                        <p class="arrow">-></p>
-                        <textarea class="input textarea2" rows="1"></textarea>
-                    </div>
+            <div id="component-wrapper">
+                <div class="total">
+                    <p>总输入：</p>
+                    <textarea id="main-input" class="input" rows="5"></textarea>
                 </div>
-                <button id="confirm" type="button">生成！</button>
-            </div>
-            <hr>
-            <div class="output">
-                <p>输出：</p>
-                <textarea id="output" class="output" rows="5" readonly></textarea>
+                <hr />
+                <div class="addition">
+                    <p>添加输入：</p>
+                    <button id="minus" type="button">—</button>
+                    <button id="add" type="button">＋</button>
+                    <div id="addition-wrapper">
+                        <p class="name">name:</p>
+                        <br />
+                        <p class="description">description:</p>
+                        <div class="input-wrapper wrapper1">
+                            <textarea class="input textarea1" rows="1"></textarea>
+                            <p class="arrow">-></p>
+                            <textarea class="input textarea2" rows="1"></textarea>
+                        </div>
+                    </div>
+                    <button id="confirm" type="button">生成！</button>
+                </div>
+                <hr />
+                <div class="output">
+                    <p>输出：</p>
+                    <textarea id="output" class="output" rows="5" readonly></textarea>
+                </div>
             </div>
         </div>
-    </div>
-</body>
-
+    </body>
 </html>

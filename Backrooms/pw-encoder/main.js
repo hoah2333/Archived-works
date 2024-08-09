@@ -93,7 +93,7 @@ $(function () {
     });
 
     function characterEncode(input) {
-        var contentReg = new RegExp("content:(\\s?)(\"|\')[^\"|^\']+(\"|\')(;?)");
+        var contentReg = new RegExp("content:(\\s?)(\"|')[^\"|^']+(\"|')(;?)");
         var content = [""];
         var convert = [""];
         if (!contentReg.test(input)) {
@@ -104,7 +104,10 @@ $(function () {
         }
         for (var contentAmount = 0; contentReg.test(input); contentAmount++) {
             content[contentAmount] = input.match(contentReg)[0];
-            input = input.replace(new RegExp(content[contentAmount].replace(/\\/g, "\\\\")), "content$" + contentAmount);
+            input = input.replace(
+                new RegExp(content[contentAmount].replace(/\\/g, "\\\\")),
+                "content$" + contentAmount
+            );
         }
         for (var i = 0; i < content.length; i++) {
             convert[i] = stringToUTF8(content[i]);
@@ -126,7 +129,7 @@ $(function () {
     }
 
     function characterDecode(input) {
-        var contentReg = new RegExp("content:(\\s?)(\"|\')[^\"|^\']+(\"|\')(;?)");
+        var contentReg = new RegExp("content:(\\s?)(\"|')[^\"|^']+(\"|')(;?)");
         var content = [""];
         var convert = [""];
         if (!contentReg.test(input)) {
@@ -137,7 +140,10 @@ $(function () {
         }
         for (var contentAmount = 0; contentReg.test(input); contentAmount++) {
             content[contentAmount] = input.match(contentReg)[0];
-            input = input.replace(new RegExp(content[contentAmount].replace(/\\/g, "\\\\")), "content$" + contentAmount);
+            input = input.replace(
+                new RegExp(content[contentAmount].replace(/\\/g, "\\\\")),
+                "content$" + contentAmount
+            );
         }
         for (var i = 0; i < content.length; i++) {
             convert[i] = UTF8ToString(content[i]);
@@ -155,7 +161,7 @@ $(function () {
             console.log("Decode-3: 未找到可解密内容");
             $("#info").append("Decode-3: 未找到可解密内容\n");
             $("#info").scrollTop($("#info")[0].scrollHeight);
-            return (UTF8);
+            return UTF8;
         }
         for (var UTF8Amount = 0; UTF8Reg.test(UTF8); UTF8Amount++) {
             codes[UTF8Amount] = UTF8.match(UTF8Reg)[0].replace(/\\/, "");
@@ -165,7 +171,7 @@ $(function () {
             convert[i] = String.fromCharCode(parseInt(codes[i], 16));
             UTF8 = UTF8.replace(new RegExp("UTF8\\$" + i), convert[i]);
         }
-        return (UTF8);
+        return UTF8;
     }
 
     function base64Encode(input) {
@@ -199,13 +205,13 @@ $(function () {
     }
 
     function shell(input) {
-        input = "@import url(\"data:text/css;charset=UTF-8;base64," + input + "\");";
+        input = '@import url("data:text/css;charset=UTF-8;base64,' + input + '");';
         return input;
     }
 
     function unshell(input) {
-        var prefix = new RegExp("@import[\\s]url\\\(\"data:text\\\/css;charset=UTF-8;base64,");
-        var suffix = new RegExp("\\\"\\\);");
+        var prefix = new RegExp('@import[\\s]url\\("data:text\\/css;charset=UTF-8;base64,');
+        var suffix = new RegExp('\\"\\);');
         if (!prefix.test(input) || !suffix.test(input)) {
             console.log("Decode-1: 未检测到 @import");
             $("#info").append("Decode-1: 未检测到 @import\n");

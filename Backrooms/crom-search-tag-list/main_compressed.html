@@ -1,218 +1,223 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//ZH" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh">
-
-<head>
-    <title>标签搜索 TOML 生成器</title>
-    <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="https://fastly.jsdelivr.net/gh/jquery/jquery@3.6.4/dist/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#main-input").load(
-                "http://backrooms-oversight-cn.wdfiles.com/local--code/crom-search-tag-list/1 pre",
-                function (responseTxt) {
-                    $("#main-input").val(responseTxt.slice(0, -1));
-                });
-            var wrapper_number = 1;
-
-            $("#add").click(function () {
-                wrapper_number = wrapper_number + 1;
-                append_content();
-            });
-            $("#minus").click(function () {
-                $(".wrapper" + wrapper_number).remove();
-                wrapper_number = wrapper_number - 1;
-                if (wrapper_number <= 1) {
-                    wrapper_number = 1;
-                }
-            });
-
-            function append_content() {
-                var append_content = "";
-                append_content += "<div class=\"input-wrapper wrapper" + wrapper_number + "\">";
-                append_content += "<textarea class=\"input textarea1\" rows=\"1\"></textarea>";
-                append_content += "<p class=\"arrow\">-></p>";
-                append_content += "<textarea class=\"input textarea2\" rows=\"1\"></textarea>";
-                append_content += "</div>";
-                $("#addition-wrapper").append(append_content);
-            }
-
-            $("#confirm").click(function () {
-                var description =
-                    "这是一个 [https://toml.io/cn/v1.0.0 TOML] 配置文件，被 [https://backrooms-wiki-cn.wikidot.com/tag-search Crom 标签搜索]利用以为终端用户提供标签的纯文本描述。\n";
-                description += "\n";
-                description +=
-                    "配置文件生成器在[http://backrooms-oversight-cn.wdfiles.com/local--code/crom-search-tag-list-manifester/1 此处]。\n";
-                description += "[[code type=\"toml\"]]\n";
-                var total_input = description;
-                total_input += $("#main-input").val();
-                for (output_number = 1; output_number <= wrapper_number; output_number++) {
-                    if (total_input != description) {
-                        total_input += "\n\n";
+    <head>
+        <title>标签搜索 TOML 生成器</title>
+        <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            type="text/javascript"
+            src="https://fastly.jsdelivr.net/gh/jquery/jquery@3.6.4/dist/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#main-input").load(
+                    "http://backrooms-oversight-cn.wdfiles.com/local--code/crom-search-tag-list/1 pre",
+                    function (responseTxt) {
+                        $("#main-input").val(responseTxt.slice(0, -1));
                     }
-                    total_input += "[[tags]]\n";
-                    total_input += "name = \"" + $(".wrapper" + output_number + " .textarea1").val() +
-                        "\"\n";
-                    total_input += "description = \"" + $(".wrapper" + output_number + " .textarea2")
-                        .val() + "\"";
+                );
+                var wrapper_number = 1;
+
+                $("#add").click(function () {
+                    wrapper_number = wrapper_number + 1;
+                    append_content();
+                });
+                $("#minus").click(function () {
+                    $(".wrapper" + wrapper_number).remove();
+                    wrapper_number = wrapper_number - 1;
+                    if (wrapper_number <= 1) {
+                        wrapper_number = 1;
+                    }
+                });
+
+                function append_content() {
+                    var append_content = "";
+                    append_content += '<div class="input-wrapper wrapper' + wrapper_number + '">';
+                    append_content += '<textarea class="input textarea1" rows="1"></textarea>';
+                    append_content += '<p class="arrow">-></p>';
+                    append_content += '<textarea class="input textarea2" rows="1"></textarea>';
+                    append_content += "</div>";
+                    $("#addition-wrapper").append(append_content);
                 }
-                total_input += "\n[[/code]]";
-                $("#output").val(total_input);
-            })
 
-            function check_input() {
-                var total_input = $("#main-input").val();
-                /* to do */
+                $("#confirm").click(function () {
+                    var description =
+                        "这是一个 [https://toml.io/cn/v1.0.0 TOML] 配置文件，被 [https://backrooms-wiki-cn.wikidot.com/tag-search Crom 标签搜索]利用以为终端用户提供标签的纯文本描述。\n";
+                    description += "\n";
+                    description +=
+                        "配置文件生成器在[http://backrooms-oversight-cn.wdfiles.com/local--code/crom-search-tag-list-manifester/1 此处]。\n";
+                    description += '[[code type="toml"]]\n';
+                    var total_input = description;
+                    total_input += $("#main-input").val();
+                    for (output_number = 1; output_number <= wrapper_number; output_number++) {
+                        if (total_input != description) {
+                            total_input += "\n\n";
+                        }
+                        total_input += "[[tags]]\n";
+                        total_input += 'name = "' + $(".wrapper" + output_number + " .textarea1").val() + '"\n';
+                        total_input += 'description = "' + $(".wrapper" + output_number + " .textarea2").val() + '"';
+                    }
+                    total_input += "\n[[/code]]";
+                    $("#output").val(total_input);
+                });
+
+                function check_input() {
+                    var total_input = $("#main-input").val();
+                    /* to do */
+                }
+            });
+        </script>
+        <style type="text/css">
+            @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap");
+
+            body,
+            textarea {
+                font-family: Inter, "Noto Sans SC", "Noto Sans TC";
+                font-size: 1rem;
+                line-height: 1.5;
             }
-        });
-    </script>
-    <style type="text/css">
-        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap");
-        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap");
 
-        body,
-        textarea {
-            font-family: Inter, "Noto Sans SC", "Noto Sans TC";
-            font-size: 1rem;
-            line-height: 1.5;
-        }
+            #main-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+            }
 
-        #main-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-        }
+            #component-wrapper {
+                position: relative;
+                max-width: 960px;
+                width: 100%;
+            }
 
-        #component-wrapper {
-            position: relative;
-            max-width: 960px;
-            width: 100%;
-        }
+            #component-wrapper p {
+                margin: 0;
+            }
 
-        #component-wrapper p {
-            margin: 0;
-        }
+            #component-wrapper .addition {
+                display: grid;
+                grid-template-areas: "text . button1 button2" "textarea textarea textarea textarea" ". . confirm confirm";
+                grid-template-columns: max-content 1fr max-content max-content;
+                -moz-column-gap: 1rem;
+                column-gap: 1rem;
+                row-gap: 0.25rem;
+            }
 
-        #component-wrapper .addition {
-            display: grid;
-            grid-template-areas: "text . button1 button2""textarea textarea textarea textarea"". . confirm confirm";
-            grid-template-columns: max-content 1fr max-content max-content;
-            -moz-column-gap: 1rem;
-            column-gap: 1rem;
-            row-gap: 0.25rem;
-        }
+            button {
+                font-family: Inter, "Noto Sans SC", "Noto Sans TC";
+            }
 
-        button {
-            font-family: Inter, "Noto Sans SC", "Noto Sans TC";
-        }
+            #component-wrapper .addition button#minus {
+                grid-area: button1;
+            }
 
-        #component-wrapper .addition button#minus {
-            grid-area: button1;
-        }
+            #component-wrapper .addition button#add {
+                grid-area: button2;
+            }
 
-        #component-wrapper .addition button#add {
-            grid-area: button2;
-        }
+            #component-wrapper .addition button#confirm {
+                grid-area: confirm;
+            }
 
-        #component-wrapper .addition button#confirm {
-            grid-area: confirm;
-        }
+            #addition-wrapper {
+                grid-area: textarea;
+                display: grid;
+                grid-template-areas: "name . description";
+                grid-template-columns: 1fr 10rem 1fr;
+                grid-template-rows: 1fr;
+            }
 
-        #addition-wrapper {
-            grid-area: textarea;
-            display: grid;
-            grid-template-areas: "name . description";
-            grid-template-columns: 1fr 10rem 1fr;
-            grid-template-rows: 1fr;
-        }
+            #addition-wrapper > p.name {
+                grid-area: name;
+            }
 
-        #addition-wrapper>p.name {
-            grid-area: name;
-        }
+            #addition-wrapper > p.description {
+                grid-area: description;
+            }
 
-        #addition-wrapper>p.description {
-            grid-area: description;
-        }
+            #addition-wrapper .input-wrapper {
+                grid-column: 1/4;
+                display: grid;
+                grid-template-columns: 1fr 10rem 1fr;
+                grid-template-rows: 1fr;
+            }
 
-        #addition-wrapper .input-wrapper {
-            grid-column: 1/4;
-            display: grid;
-            grid-template-columns: 1fr 10rem 1fr;
-            grid-template-rows: 1fr;
-        }
+            #addition-wrapper .input-wrapper textarea {
+                margin-bottom: 1rem;
+            }
 
-        #addition-wrapper .input-wrapper textarea {
-            margin-bottom: 1rem;
-        }
+            #addition-wrapper .input-wrapper textarea.textarea1 {
+                grid-column: 1/2;
+            }
 
-        #addition-wrapper .input-wrapper textarea.textarea1 {
-            grid-column: 1/2;
-        }
+            #addition-wrapper .input-wrapper textarea.textarea2 {
+                grid-column: 3/4;
+            }
 
-        #addition-wrapper .input-wrapper textarea.textarea2 {
-            grid-column: 3/4;
-        }
+            #addition-wrapper .input-wrapper .arrow {
+                grid-column: 2/3;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 1rem;
+            }
 
-        #addition-wrapper .input-wrapper .arrow {
-            grid-column: 2/3;
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
+            textarea {
+                width: 100%;
+                padding: 0.5rem;
+                box-sizing: border-box;
+            }
 
-        textarea {
-            width: 100%;
-            padding: 0.5rem;
-            box-sizing: border-box;
-        }
+            /*# sourceMappingURL=main.css.map */
+        </style>
+    </head>
 
-        /*# sourceMappingURL=main.css.map */
-    </style>
-</head>
-
-<body>
-    <div id="main-wrapper">
-        <h1 class="title">标签搜索 TOML 生成器</h1>
-        <div class="info">
-            <h3>用法如下：</h3>
-            <ul>
-                <li>在<b>总输入</b>处黏贴下方配置文件。此处已由生成器自动填写；</li>
-                <li>在<b>添加输入</b>处填写标签名及其描述，通过右方的 <b>—</b> 与 <b>＋</b> 控制输入标签数量；</li>
-                <li>在<b>输出</b>处复制所有代码，并黏贴至<a href="http://backrooms-oversight-cn.wikidot.com/crom-search-tag-list">此处</a>。</li>
-            </ul>
-        </div>
-        <div id="component-wrapper">
-            <div class="total">
-                <p>总输入：</p>
-                <textarea id="main-input" class="input" rows="5"></textarea>
+    <body>
+        <div id="main-wrapper">
+            <h1 class="title">标签搜索 TOML 生成器</h1>
+            <div class="info">
+                <h3>用法如下：</h3>
+                <ul>
+                    <li>在<b>总输入</b>处黏贴下方配置文件。此处已由生成器自动填写；</li>
+                    <li>在<b>添加输入</b>处填写标签名及其描述，通过右方的 <b>—</b> 与 <b>＋</b> 控制输入标签数量；</li>
+                    <li>
+                        在<b>输出</b>处复制所有代码，并黏贴至<a
+                            href="http://backrooms-oversight-cn.wikidot.com/crom-search-tag-list"
+                            >此处</a
+                        >。
+                    </li>
+                </ul>
             </div>
-            <hr>
-            <div class="addition">
-                <p>添加输入：</p>
-                <button id="minus" type="button">—</button>
-                <button id="add" type="button">＋</button>
-                <div id="addition-wrapper">
-                    <p class="name">name:</p><br>
-                    <p class="description">description:</p>
-                    <div class="input-wrapper wrapper1">
-                        <textarea class="input textarea1" rows="1"></textarea>
-                        <p class="arrow">-></p>
-                        <textarea class="input textarea2" rows="1"></textarea>
-                    </div>
+            <div id="component-wrapper">
+                <div class="total">
+                    <p>总输入：</p>
+                    <textarea id="main-input" class="input" rows="5"></textarea>
                 </div>
-                <button id="confirm" type="button">生成！</button>
-            </div>
-            <hr>
-            <div class="output">
-                <p>输出：</p>
-                <textarea id="output" class="output" rows="5" readonly></textarea>
+                <hr />
+                <div class="addition">
+                    <p>添加输入：</p>
+                    <button id="minus" type="button">—</button>
+                    <button id="add" type="button">＋</button>
+                    <div id="addition-wrapper">
+                        <p class="name">name:</p>
+                        <br />
+                        <p class="description">description:</p>
+                        <div class="input-wrapper wrapper1">
+                            <textarea class="input textarea1" rows="1"></textarea>
+                            <p class="arrow">-></p>
+                            <textarea class="input textarea2" rows="1"></textarea>
+                        </div>
+                    </div>
+                    <button id="confirm" type="button">生成！</button>
+                </div>
+                <hr />
+                <div class="output">
+                    <p>输出：</p>
+                    <textarea id="output" class="output" rows="5" readonly></textarea>
+                </div>
             </div>
         </div>
-    </div>
-</body>
-
+    </body>
 </html>
