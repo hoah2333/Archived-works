@@ -28,7 +28,9 @@
     --header-subtitle-color: var(--basalt-main-text-color);
     --title-size: 3.5rem;
     --subtitle-size: 1rem;
-    --base-header-height: calc((var(--title-size) * 2 + var(--subtitle-size)) * 1.325 + 1rem + var(--search-button-width));
+    --base-header-height: calc(
+        (var(--title-size) * 2 + var(--subtitle-size)) * 1.325 + 1rem + var(--search-button-width)
+    );
     --header-border-width: 0px;
     --header-mobile-height: var(--header-desktop-height);
     --search-icon-color: var(--basalt-main-text-color);
@@ -64,7 +66,7 @@
 }
 
 #header h1 a {
-    padding-right: calc(var(--base-header-height) * .05);
+    padding-right: calc(var(--base-header-height) * 0.05);
 }
 
 #header h1 a::before {
@@ -100,11 +102,11 @@ div#account-options {
 }
 
 #account-options,
-:where(#login-status)> :is(.login-status-create-account, .login-status-sign-in) {
+:where(#login-status) > :is(.login-status-create-account, .login-status-sign-in) {
     clip-path: inset(0 100% 0 0);
 }
 
-div#account-options>ul>li>a::before,
+div#account-options > ul > li > a::before,
 #login-status a:is(.login-status-create-account, .login-status-sign-in)::before {
     right: initial;
     left: 0;
@@ -116,7 +118,7 @@ div#account-options>ul>li>a::before,
 }
 
 #login-status a.login-status-create-account {
-    inset-inline-start: calc(var(--login-status-width)/2);
+    inset-inline-start: calc(var(--login-status-width) / 2);
     inset-inline-end: unset;
 }
 
@@ -171,7 +173,6 @@ div#account-options>ul>li>a::before,
 #footer {
     border-top: 0.125rem solid var(--general-border-color);
 }
-
 
 /* ------------- */
 /* --- Basic --- */
@@ -284,7 +285,7 @@ form#new-thread-form table.form td input.text:focus-visible,
     order: 2;
 }
 
-form#new-thread-form table.form tr td>div.sub {
+form#new-thread-form table.form tr td > div.sub {
     position: absolute;
     inset-block-end: 0.125ch;
     inset-inline-end: 1.75ch;
@@ -307,19 +308,19 @@ form#new-thread-form table.form tr td>div.sub {
     margin-top: 0.5rem;
 }
 
-#post-edit-panel>div {
+#post-edit-panel > div {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     height: auto;
-    gap: calc(var(--edit-area-toolbar-icon-size)/4);
+    gap: calc(var(--edit-area-toolbar-icon-size) / 4);
 }
 
-#post-edit-panel>div>ul {
+#post-edit-panel > div > ul {
     display: contents;
 }
 
-#post-edit-panel>div>ul>li {
+#post-edit-panel > div > ul > li {
     float: none;
     position: relative;
     margin: 0;
@@ -384,16 +385,16 @@ form#new-thread-form table.form tr td>div.sub {
 /* --- Comments --- */
 /* ---------------- */
 
-form:is(#edit-page-form, #edit-post-form, #new-post-form, #new-thread-form)>div:nth-of-type(2) {
+form:is(#edit-page-form, #edit-post-form, #new-post-form, #new-thread-form) > div:nth-of-type(2) {
     min-width: 100%;
 }
 
-#thread-container .post .long .head>.info .odate {
+#thread-container .post .long .head > .info .odate {
     display: inline-flex;
     pointer-events: none;
 }
 
-:is(#thread-container, #message-preview) .post .long>.signature {
+:is(#thread-container, #message-preview) .post .long > .signature {
     display: none;
 }
 
@@ -409,11 +410,11 @@ form:is(#edit-page-form, #edit-post-form, #new-post-form, #new-thread-form)>div:
     align-items: center;
 }
 
-:is(#edit-post-form, #new-thread-form)>br {
+:is(#edit-post-form, #new-thread-form) > br {
     display: none;
 }
 
-:is(#edit-post-form, #new-thread-form)>* {
+:is(#edit-post-form, #new-thread-form) > * {
     grid-column: 1/4;
 }
 
@@ -439,7 +440,7 @@ form:is(#edit-page-form, #edit-post-form, #new-post-form, #new-thread-form)>div:
     margin: 0.325rem 0;
 }
 
-:is(#new-post-form, #edit-post-form, #new-thread-form) div.buttons>input {
+:is(#new-post-form, #edit-post-form, #new-thread-form) div.buttons > input {
     flex-grow: 1;
     flex-basis: 14.25em;
 }

@@ -30,7 +30,10 @@
     box-sizing: border-box;
 }
 
-#page-content .navigator-container :is(.navigator, .navigator .nav-menu > div, .navigator .nav-menu .nav-submenu span)>a {
+#page-content
+    .navigator-container
+    :is(.navigator, .navigator .nav-menu > div, .navigator .nav-menu .nav-submenu span)
+    > a {
     position: relative;
     width: 100%;
     height: 100%;
@@ -42,11 +45,16 @@
     z-index: 2;
 }
 
-#page-content .navigator-container :is(.navigator, .navigator .nav-menu > div, .navigator .nav-menu .nav-submenu span)>a:is(:hover, :focus) {
+#page-content
+    .navigator-container
+    :is(.navigator, .navigator .nav-menu > div, .navigator .nav-menu .nav-submenu span)
+    > a:is(:hover, :focus) {
     text-decoration: none;
 }
 
-#page-content .navigator-container :is(.navigator, .navigator .nav-menu > div, .navigator .nav-menu .nav-submenu span)::before {
+#page-content
+    .navigator-container
+    :is(.navigator, .navigator .nav-menu > div, .navigator .nav-menu .nav-submenu span)::before {
     content: "";
     display: block;
     position: absolute;
@@ -58,7 +66,13 @@
     transition: width 0.15s ease 0.05s;
 }
 
-#page-content .navigator-container :is(.navigator, .navigator .nav-menu > div, .navigator .nav-menu .nav-submenu span):is(:hover, :focus, :focus-within)::before {
+#page-content
+    .navigator-container
+    :is(.navigator, .navigator .nav-menu > div, .navigator .nav-menu .nav-submenu span):is(
+        :hover,
+        :focus,
+        :focus-within
+    )::before {
     width: 100%;
 }
 
@@ -101,7 +115,7 @@
     position: relative;
 }
 
-#page-content .navigator-container .navigator .nav-menu>div:is(:hover, :focus, :focus-within) .nav-submenu,
+#page-content .navigator-container .navigator .nav-menu > div:is(:hover, :focus, :focus-within) .nav-submenu,
 #page-content .navigator-container .navigator .nav-menu .nav-submenu:is(:hover, :focus, :focus-within) {
     clip-path: inset(0 0 -100% 0);
 }

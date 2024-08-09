@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap");
 
 body,
 textarea {
@@ -56,17 +56,16 @@ button {
 #addition-wrapper {
     grid-area: textarea;
     display: grid;
-    grid-template-areas:
-        "name . description";
+    grid-template-areas: "name . description";
     grid-template-columns: 1fr 10rem 1fr;
     grid-template-rows: 1fr;
 }
 
-#addition-wrapper>p.name {
+#addition-wrapper > p.name {
     grid-area: name;
 }
 
-#addition-wrapper>p.description {
+#addition-wrapper > p.description {
     grid-area: description;
 }
 

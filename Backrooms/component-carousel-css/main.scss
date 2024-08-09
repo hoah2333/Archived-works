@@ -3,7 +3,7 @@
     Made by hoah2333
     Inspired form Carousel Component by Croquembouche
 */
-@use 'sass:math';
+@use "sass:math";
 
 :root {
     --base-roll-time: 0.5s;
@@ -46,14 +46,17 @@
     }
 }
 
-
 /* ============== */
 /* 图片切换动画部分 */
 /* ============== */
 @for $endnumber from 2 through 6 {
     @for $number from 1 through $endnumber {
         .carousel-container .rolling.img-#{$endnumber} a:nth-of-type(#{$number}) {
-            animation: rolling#{$endnumber}-#{$number} var(--img-#{$endnumber}-time) var(--base-wait-time) cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            animation: rolling#{$endnumber}-#{$number}
+                var(--img-#{$endnumber}-time)
+                var(--base-wait-time)
+                cubic-bezier(0.4, 0, 0.2, 1)
+                infinite;
         }
     }
 
@@ -84,9 +87,7 @@
                     left: 0;
                 }
             }
-        }
-
-        @else {
+        } @else {
             @keyframes rolling#{$endnumber}-#{$number} {
                 #{math.percentage(calc(0 / ($endnumber * 5.5)))} {
                     left: 100%;
@@ -109,7 +110,7 @@
                 }
 
                 #{math.percentage(calc(($endnumber * 5.5) / ($endnumber * 5.5))) - 0.01%} {
-                    left: -100%
+                    left: -100%;
                 }
 
                 #{math.percentage(calc(($endnumber * 5.5) / ($endnumber * 5.5)))} {
@@ -126,11 +127,19 @@
 @for $endnumber from 2 through 6 {
     .carousel-container {
         .progress.width-#{$endnumber} {
-            animation: progress-#{$endnumber} var(--img-#{$endnumber}-time) var(--base-wait-time) cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            animation: progress-#{$endnumber}
+                var(--img-#{$endnumber}-time)
+                var(--base-wait-time)
+                cubic-bezier(0.4, 0, 0.2, 1)
+                infinite;
         }
 
         .progress.fake-#{$endnumber} {
-            animation: fake-#{$endnumber} var(--img-#{$endnumber}-time) var(--base-wait-time) cubic-bezier(0.4, 0, 0.2, 1) infinite;
+            animation: fake-#{$endnumber}
+                var(--img-#{$endnumber}-time)
+                var(--base-wait-time)
+                cubic-bezier(0.4, 0, 0.2, 1)
+                infinite;
         }
 
         .progress.width-#{$endnumber},
@@ -165,7 +174,6 @@
         #{math.percentage(calc($endnumber / $endnumber))} {
             left: 0;
         }
-
     }
 
     @keyframes fake-#{$endnumber} {
@@ -201,9 +209,7 @@
     width: 50px;
     height: 50px;
     background-color: rgba(255, 255, 255, 0);
-    transition:
-        background-color 0.25s 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-        width 0.25s 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    transition: background-color 0.25s 0.25s cubic-bezier(0.4, 0, 0.2, 1), width 0.25s 0.5s cubic-bezier(0.4, 0, 0.2, 1),
         height 0.25s 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
     &.none {
@@ -275,7 +281,7 @@
             box-sizing: border-box;
             border-left: 5px solid rgba(0, 0, 0, 0.4);
             padding-left: 10px;
-            color: #3A3A3A;
+            color: #3a3a3a;
             font-size: 1.15rem;
             text-decoration: none;
             clip-path: inset(0 0 100% 0);
@@ -323,7 +329,6 @@
 
 /* 一个 a:not(a:last-of-type) 就能解决的事 */
 .carousel-container .navigator .navigator-links {
-
     a:nth-of-type(1),
     &.links-3 :is(a:nth-of-type(2)),
     &.links-4 :is(a:nth-of-type(2), a:nth-of-type(3)),
@@ -333,7 +338,7 @@
     }
 }
 
-.carousel-container :is(.progress, .fake-1+.navigator) {
+.carousel-container :is(.progress, .fake-1 + .navigator) {
     display: none;
 }
 
