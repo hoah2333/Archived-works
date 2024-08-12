@@ -12,6 +12,10 @@
         margin: 0.25rem 0.125rem;
     }
 
+    img {
+        image-rendering: pixelated;
+    }
+
     .page-container {
         display: grid;
         grid-template-areas:
@@ -127,6 +131,11 @@
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 80px;
+                }
 
                 a {
                     width: 100%;
@@ -160,15 +169,16 @@
         .title {
             position: absolute;
             top: -2rem;
-            left: calc(50% - 11rem);
-            padding: 0.5rem 0;
+            left: 50%;
+            translate: -50% 0;
+            padding: 0.5rem 2.5rem;
             font-size: 2rem;
-            width: 21rem;
             text-align: center;
             color: rgb(var(--ha_black-color));
             border-image-source: url("https://7bye.com/hoah/i/2023/11/02/2x4z.png");
             border-image-slice: calc(11 / 46 * 100%) calc(52 / 244 * 100%) calc(32 / 46 * 100%) fill;
             border-image-width: 0.6875rem 3.25rem 2rem;
+            white-space: nowrap;
         }
 
         .text {
