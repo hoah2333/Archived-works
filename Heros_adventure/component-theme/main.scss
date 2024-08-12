@@ -488,7 +488,7 @@ div#container-wrap {
                     border: none;
                     margin: 0.5rem 0;
                     transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-    
+
                     &::before {
                         content: "";
                         display: block;
@@ -505,12 +505,12 @@ div#container-wrap {
                         transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
                     }
                 }
-    
+
                 a:is(:hover, :focus),
                 &:is(.sfhover, :hover, :focus-within) a {
                     color: rgb(var(--ha_top-bar-link-hover-color));
                     background-color: transparent;
-    
+
                     &::before {
                         opacity: 1;
                         transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -667,7 +667,7 @@ table.wiki-content-table {
             color: rgb(var(--ha_text-color));
             width: 2rem;
             text-align: center;
-            transition: background-color 0.2s;
+            transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
             &:hover {
                 text-decoration: none;
@@ -745,6 +745,31 @@ table.wiki-content-table {
     background-color: rgba(var(--ha_brown-color));
     border: 2px solid rgb(var(--ha_border-color));
     color: rgb(var(--ha_text-color));
+
+    .title {
+        background-color: rgba(var(--ha_secondary-black-color));
+    }
+
+    .content .modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+
+        a {
+            padding: 0.5rem 1rem;
+            background-color: rgba(var(--ha_border-color), 0.7);
+            border: none;
+            color: rgb(var(--ha_text-color));
+            cursor: pointer;
+            transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+            &:hover {
+                text-decoration: none;
+                background-color: rgb(var(--ha_secondary-black-color));
+            }
+        }
+    }
 }
 
 #odialog-hovertips .hovertip {

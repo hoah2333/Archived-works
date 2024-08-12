@@ -1,0 +1,108 @@
+.infobox-container {
+    float: right;
+    min-width: 12rem;
+    width: fit-content;
+    max-width: 20rem;
+    border: 2px solid rgb(var(--ha_border-color));
+    box-sizing: border-box;
+    margin: 1rem 0.5rem 1rem 1.5rem;
+    display: grid;
+    align-items: center;
+    grid-template-areas: "title" "img" "description" "properties";
+
+    .title {
+        --wght: 800;
+        grid-area: title;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        font-size: 1.25rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(var(--ha_secondary-black-color), 0.7);
+    }
+
+    .image {
+        grid-area: img;
+        text-align: center;
+        padding: 0.75rem 0;
+
+        @each $number, $color in (0, #7dc447), (1, #2cb9d8), (2, #af5fd2), (3, #d67b28) {
+            &.rarity-#{$number} {
+                --rarity-color: #{$color};
+            }
+        }
+
+        img {
+            min-width: 4.5rem;
+            image-rendering: pixelated;
+            object-fit: contain;
+            border: 4px solid var(--rarity-color);
+            border-radius: 4px;
+            padding: 0;
+        }
+
+        &[data-title*="{$"] {
+            display: none;
+        }
+    }
+
+    .description {
+        grid-area: description;
+        border: solid var(--ha_border-color) {
+            width: 2px 0;
+        }
+        box-sizing: border-box;
+        text-align: center;
+        padding: 0.5rem 1rem;
+    }
+
+    .properties {
+        grid-area: properties;
+        border-width: 1px 0;
+        display: grid;
+        grid-template: 1fr / max-content auto;
+        grid-column-gap: 2rem;
+        padding: 0.75rem;
+        font-size: 0.85rem;
+        line-height: 1.75;
+
+        .name {
+            --wght: 700;
+            position: relative;
+        }
+
+        .value img {
+            min-height: 18px;
+            image-rendering: pixelated;
+        }
+
+        div[data-title*="{$"] {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        float: initial;
+        width: 100%;
+        margin: 0 auto;
+        border-bottom: 2px groove rgb(var(--etg_border-color));
+
+        .title {
+            padding: 0;
+        }
+
+        .img {
+            padding: 0;
+
+            img {
+                max-height: 44px;
+                object-fit: contain;
+            }
+        }
+
+        .properties {
+            justify-content: center;
+        }
+    }
+}
