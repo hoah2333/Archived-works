@@ -50,19 +50,27 @@
     .description {
         grid-area: description;
         border: solid rgb(var(--ha_border-color)) {
-            width: 2px 0;
+            top-width: 2px;
         }
         box-sizing: border-box;
         text-align: center;
         padding: 0.5rem 1rem;
+
+        &[data-title*="{$"] {
+            display: none;
+        }
     }
 
     .properties {
         grid-area: properties;
-        border-width: 1px 0;
+        border: solid rgb(var(--ha_border-color)) {
+            top-width: 2px;
+        }
         display: grid;
-        grid-template: 1fr / max-content auto;
-        grid-column-gap: 2rem;
+        grid: {
+            template: 1fr / max-content auto;
+            column-gap: 2rem;
+        }
         padding: 0.75rem;
         font-size: 0.85rem;
         line-height: 1.75;

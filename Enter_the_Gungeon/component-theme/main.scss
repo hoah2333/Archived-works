@@ -25,7 +25,9 @@
 
     --sp_header-logo: url("none");
     --sp_area-max-width: 85.5rem;
-    --sp_header-height: 5rem;
+    --sp_header-title-scale: 0.5;
+    --sp_header-height: 3rem;
+    --sp_top-bar-height: 0.01rem;
 
     --etg_body-font: Inter, "Microsoft YaHei UI", "微软雅黑", "黑体", "Heiti SC", "Microsoft JhengHei UI",
         "Microsoft JhengHei", Geneva, sans-serif, STXihei, "华文细黑";
@@ -228,6 +230,14 @@ body {
             margin-right: 1rem;
         }
     }
+
+    @media screen and (max-width: 540px) {
+        font-size: 0;
+
+        a {
+            font-size: 0.7rem;
+        }
+    }
 }
 
 #license-area {
@@ -253,6 +263,7 @@ body {
     @media screen and (max-width: 405px) {
         a::before {
             content: "遵守 CC BY-SA 3.0 协议";
+            font-size: 0.7rem;
         }
     }
 }
@@ -366,6 +377,13 @@ tt {
     &:focus,
     &:focus-within {
         opacity: 1;
+    }
+}
+
+#login-status {
+    font-size: 0.7rem;
+    img {
+        display: none;
     }
 }
 

@@ -44,6 +44,16 @@
     --sp_header-height: 7.25rem;
     --sp_top-bar-height: 3.125rem;
 
+    --sp_tab-text-color: rgb(var(--ha_text-color));
+    --sp_tab-background: rgb(var(--ha_brown-color));
+    --sp_tab-border-color: rgb(var(--ha_border-color));
+    --sp_tab-hover-text-color: var(--sp_tab-text-color);
+    --sp_tab-hover-background: rgb(var(--ha_secondary-black-color), 0.7);
+    --sp_tab-hover-border-color: var(--sp_tab-border-color);
+    --sp_tab-selected-text-color: var(--sp_tab-text-color);
+    --sp_tab-selected-background: rgb(var(--ha_secondary-black-color));
+    --sp_tab-selected-border-color: var(--sp_tab-border-color);
+
     --ha_white-color: 252, 252, 252;
     --ha_black-color: 0, 0, 0;
     --ha_secondary-black-color: 91, 79, 62;
@@ -776,4 +786,37 @@ table.wiki-content-table {
     background-color: rgba(var(--ha_brown-color)) !important;
     border: 2px solid rgb(var(--ha_border-color)) !important;
     color: rgb(var(--ha_text-color));
+}
+
+#toc {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(var(--ha_brown-color), 0.7);
+    border: 2px solid rgb(var(--ha_border-color));
+    min-width: 10rem;
+    padding: 0.5rem;
+}
+
+.code {
+    background-color: rgba(var(--ha_brown-color), 0.7);
+    border: 2px solid rgb(var(--ha_border-color));
+}
+
+.yui-navset {
+    ul.yui-nav {
+        border-color: rgb(var(--ha_border-color));
+
+        li {
+            flex-grow: 1;
+
+            a {
+                transition: background-color 0.2s;
+            }
+        }
+    }
+    
+    .yui-content {
+        background-color: rgba(var(--ha_brown-color), 0.7);
+        border-color: rgb(var(--ha_border-color));
+    }
 }
