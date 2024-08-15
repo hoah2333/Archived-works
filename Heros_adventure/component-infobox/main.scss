@@ -49,7 +49,7 @@
 
     .description {
         grid-area: description;
-        border: solid rgb(var(--ha_border-color)) {
+        border: 0 solid rgb(var(--ha_border-color)) {
             top-width: 2px;
         }
         box-sizing: border-box;
@@ -63,7 +63,7 @@
 
     .properties {
         grid-area: properties;
-        border: solid rgb(var(--ha_border-color)) {
+        border: 0 solid rgb(var(--ha_border-color)) {
             top-width: 2px;
         }
         display: grid;
