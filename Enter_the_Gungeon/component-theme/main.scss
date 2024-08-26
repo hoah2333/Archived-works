@@ -338,6 +338,15 @@ tt {
     }
 }
 
+blockquote,
+div.blockquote {
+    display: flow-root;
+    margin: 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #BEBAB9;
+}
+
 #side-bar {
     background-color: rgba(var(--etg_bg-color), 0.1);
 
