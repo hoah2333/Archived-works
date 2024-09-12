@@ -36,6 +36,8 @@ jobs:
             Heros_adventure/component-item-table/main.scss
             Heros_adventure/component-theme/image.scss
             Heros_adventure/component-theme/main.scss
+            Heros_adventure/lib/css/sigma-10.scss
+            Heros_adventure/lib/css/sigma-plus.scss
             Heros_adventure/start/main.scss
             Oblivion_override/component-theme/main.scss
             Oblivion_override/dev-blogs/main.scss
@@ -65,6 +67,8 @@ jobs:
             Heros_adventure/component-item-table/main.css
             Heros_adventure/component-theme/image.css
             Heros_adventure/component-theme/main.css
+            Heros_adventure/lib/css/sigma-10.css
+            Heros_adventure/lib/css/sigma-plus.css
             Heros_adventure/start/main.css
             Oblivion_override/component-theme/main.css
             Oblivion_override/dev-blogs/main.css

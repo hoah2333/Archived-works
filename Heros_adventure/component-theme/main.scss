@@ -8,10 +8,10 @@
 */
 
 /* 引用版式 - Sigma-10 */
-@import url("https://cdn.scpwiki.com/theme/en/sigma/css/sigma.min.css");
+@import url("../lib/css/sigma-10.css");
 
 /* 引用组件 - Sigma+ */
-@import url("https://scp-wiki.wdfiles.com/local--code/component%3Asigma-plus/1");
+@import url("../lib/css/sigma-plus.css");
 
 /* 引用经 base64 转义后的图片 */
 @import url("./image.css");
