@@ -401,6 +401,8 @@ div#container-wrap {
 }
 
 #search-top-box {
+    display: none;
+    /* Not used anymore
     position: relative;
     right: 6rem;
     width: auto;
@@ -440,6 +442,7 @@ div#container-wrap {
             }
         }
     }
+    */
 }
 
 #top-bar {
