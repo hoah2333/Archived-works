@@ -19,10 +19,11 @@
     .page-container {
         display: grid;
         grid-template-areas:
-            "join join join"
-            "about news info"
-            "nav nav nav";
-        grid-template-columns: 1.25fr 1fr 0.75fr;
+            "join join"
+            "about news"
+            "info info"
+            "nav nav";
+        grid-template-columns: 1fr 1fr;
 
         @media screen and (max-width: 768px) {
             grid-template-areas: "join" "about" "news" "info" "nav";
