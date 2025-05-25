@@ -163,7 +163,7 @@ body {
     position: relative;
     left: 66px;
     line-height: 1.75;
-    max-width: calc(100vw - 75px);
+    max-width: calc(100% - 75px);
 }
 
 *:focus-visible {
