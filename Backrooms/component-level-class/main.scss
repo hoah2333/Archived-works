@@ -382,8 +382,12 @@ div[class*="class"] ul li span[class$="}"] + .default {
         }
 
         &:nth-child(2) > .default::after {
-            :is(.sd-container[class*="{"], .lang-cn, .lang-tr) & {
+            :is(.sd-container[class*="{"], .lang-cn) & {
                 content: "长期聚居地";
+            }
+
+            .lang-tr & {
+                content: "長期聚居地";
             }
         }
 
